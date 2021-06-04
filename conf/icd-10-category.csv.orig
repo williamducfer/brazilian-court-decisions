@@ -1,0 +1,2046 @@
+category;description;description_stem
+A00;colera;col
+A01;febres tifoide paratifoide;febr tifoid paratifoid
+A02;outras infeccoes salmonella;outr infecco salmonell
+A03;shiguelose;shiguelos
+A04;outras infeccoes intestinais bacterianas;outr infecco intestin bacterian
+A05;outras intoxicacoes alimentares bacterianas , classificadas outra parte;outr intoxic aliment bacterian , classific outr part
+A06;amebiase;amebias
+A07;outras doencas intestinais protozoarios;outr doenc intestin protozoari
+A08;infeccoes intestinais virais , outras especificadas;infecco intestin vir , outr especific
+A09;diarreia gastroenterite origem infecciosa presumivel;diarr gastroenterit orig infecc presum
+A15;tuberculose respiratoria , confirmacao bacteriologica histologica;tuberculos respirator , confirm bacteriolog histolog
+A16;tuberculose vias respiratorias , confirmacao bacteriologica histologica;tuberculos vias respirator , confirm bacteriolog histolog
+A17;tuberculose sistema nervoso;tuberculos sistem nervos
+A18;tuberculose outros orgaos;tuberculos outr orga
+A19;tuberculose miliar;tuberculos mili
+A20;peste;pest
+A21;tularemia;tularem
+A22;carbunculo;carbuncul
+A23;brucelose;brucelos
+A24;mormo melioidose;morm melioidos
+A25;febres transmitidas mordedura rato;febr transmit mordedur rat
+A26;erisipeloide;erisipeloid
+A27;leptospirose;leptospiros
+A28;outras doencas bacterianas zoonoticas classificadas outra parte;outr doenc bacterian zoonot classific outr part
+A30;hanseniase [ doenca hansen ] [ lepra ];hansenias [ doenc hansen ] [ lepr ]
+A31;infeccoes devidas outras micobacterias;infecco dev outr micobacter
+A32;listeriose [ listeriase ];listerios [ listerias ]
+A33;tetano recem - nascido [ neonatal ];tetan recem - nasc [ neonatal ]
+A34;tetano obstetrico;tetan obstetr
+A35;outros tipos tetano;outr tip tetan
+A36;difteria;dift
+A37;coqueluche;coqueluch
+A38;escarlatina;escarlatin
+A39;infeccao meningogocica;infecca meningogoc
+A40;septicemia estreptococica;septicem estreptococ
+A41;outras septicemias;outr septicem
+A42;actinomicose;actinomicos
+A43;nocardiose;nocardios
+A44;bartonelose;bartonelos
+A46;erisipela;erisipel
+A48;outras doencas bacterianas classificadas outra parte;outr doenc bacterian classific outr part
+A49;infeccao bacteriana localizacao especificada;infecca bacterian localiz especific
+A50;sifilis congenita;sifil congenit
+A51;sifilis precoce;sifil precoc
+A52;sifilis tardia;sifil tard
+A53;outras formas especificadas sifilis;outr form especific sifil
+A54;infeccao gonococica;infecca gonococ
+A55;linfogranuloma ( venereo ) clamidia;linfogranulom ( vener ) clamid
+A56;outras infeccoes causadas clamidias transmitidas via sexual;outr infecco caus clamid transmit via sexual
+A57;cancro mole;cancr mol
+A58;granuloma inguinal;granulom inguinal
+A59;tricomoniase;tricomonias
+A60;infeccoes anogenitais virus herpes [ herpes simples ];infecco anogenit virus herp [ herp simpl ]
+A63;outras doencas transmissao predominantemente sexual , classificadas outra parte;outr doenc transmissa predomin sexual , classific outr part
+A64;doencas sexualmente transmitidas , especificadas;doenc sexual transmit , especific
+A65;sifilis - venerea;sifil - vener
+A66;bouba;boub
+A67;pinta [ carate ];pint [ carat ]
+A68;febres recorrentes [ borrelioses ];febr recorrent [ borrelios ]
+A69;outras infeccoes espiroquetas;outr infecco espiroquet
+A70;infeccoes causadas clamidia psittaci;infecco caus clamid psittac
+A71;tracoma;tracom
+A74;outras doencas causadas clamidias;outr doenc caus clamid
+A75;tifo exantematico;tif exantemat
+A77;febre maculosa [ rickettsioses transmitidas carrapatos ];febr macul [ rickettsios transmit carrapat ]
+A78;febre;febr
+A79;outras rickettsioses;outr rickettsios
+A80;poliomielite aguda;poliomielit agud
+A81;infeccoes virus atipicos sistema nervoso central;infecco virus atip sistem nervos central
+A82;raiva;raiv
+A83;encefalite virus transmitidos mosquitos;encefalit virus transmit mosquit
+A84;encefalite virus transmitido carrapatos;encefalit virus transmit carrapat
+A85;outras encefalites virais , classificadas outra parte;outr encefalit vir , classific outr part
+A86;encefalite viral , especificada;encefalit viral , especific
+A87;meningite viral;meningit viral
+A88;outras infeccoes virais sistema nervoso central classificadas outra parte;outr infecco vir sistem nervos central classific outr part
+A89;infeccoes virais especificadas sistema nervoso central;infecco vir especific sistem nervos central
+A90;dengue [ dengue classico ];deng [ deng classic ]
+A91;febre hemorragica devida virus dengue;febr hemorrag dev virus deng
+A92;outras febres virais transmitidas mosquitos;outr febr vir transmit mosquit
+A93;outras febres virus transmitidas artropodes classificadas outra parte;outr febr virus transmit artropod classific outr part
+A94;febre viral transmitida artropodes , especificada;febr viral transmit artropod , especific
+A95;febre amarela;febr amarel
+A96;febre hemorragica arenavirus;febr hemorrag arenavirus
+A98;outras febres hemorragicas virus , classificadas outra parte;outr febr hemorrag virus , classific outr part
+A99;febres hemorragicas virais especificadas;febr hemorrag vir especific
+B00;infeccoes virus herpes [ herpes simples ];infecco virus herp [ herp simpl ]
+B01;varicela [ catapora ];varicel [ catapor ]
+B02;herpes zoster [ zona ];herp zost [ zon ]
+B03;variola;variol
+B04;variola macacos [ monkeypox ];variol macac [ monkeypox ]
+B05;sarampo;saramp
+B06;rubeola;rubeol
+B07;verrugas origem viral;verrug orig viral
+B08;outras infeccoes virais caracterizadas lesoes pele membranas mucosas , classificadas outra parte;outr infecco vir caracteriz leso pel membran mucos , classific outr part
+B09;infeccao viral especificada caracterizada lesoes pele membranas mucosas;infecca viral especific caracteriz leso pel membran mucos
+B15;hepatite aguda;hepatit agud
+B16;hepatite aguda;hepatit agud
+B17;outras hepatites virais agudas;outr hepatit vir agud
+B18;hepatite viral cronica;hepatit viral cronic
+B19;hepatite viral especificada;hepatit viral especific
+B20;doenca virus imunodeficiencia humana [ hiv ] , resultando doencas infecciosas parasitarias;doenc virus imunodeficient human [ hiv ] , result doenc infecc parasitar
+B21;doenca virus imunodeficiencia humana [ hiv ] , resultando neoplasias malignas;doenc virus imunodeficient human [ hiv ] , result neoplas malign
+B22;doenca virus imunodeficiencia humana [ hiv ] resultando outras doencas especificadas;doenc virus imunodeficient human [ hiv ] result outr doenc especific
+B23;doenca virus imunodeficiencia humana [ hiv ] resultando outras doencas;doenc virus imunodeficient human [ hiv ] result outr doenc
+B24;doenca virus imunodeficiencia humana [ hiv ] especificada;doenc virus imunodeficient human [ hiv ] especific
+B25;doenca citomegalovirus;doenc citomegalovirus
+B26;caxumba [ parotidite epidemica ];caxumb [ parotidit epidem ]
+B27;mononucleose infecciosa;mononucleos infecc
+B30;conjuntivite viral;conjuntivit viral
+B33;outras doencas virus classificada outra parte;outr doenc virus classific outr part
+B34;doencas virus , localizacao especificada;doenc virus , localiz especific
+B35;dermatofitose;dermatofitos
+B36;outras micoses superficiais;outr micos superfic
+B37;candidiase;candidias
+B38;coccidioidomicose;coccidioidomicos
+B39;histoplasmose;histoplasmos
+B40;blastomicose;blastomicos
+B41;paracoccidioidomicose;paracoccidioidomicos
+B42;esporotricose;esporotricos
+B43;cromomicose abscesso feomicotico;cromomicos abscess feomicot
+B44;aspergilose;aspergilos
+B45;criptococose;criptococos
+B46;zigomicose;zigomicos
+B47;micetoma;micetom
+B48;outras micoses , classificadas outra parte;outr micos , classific outr part
+B49;micose especificada;micos especific
+B50;malaria plasmodium falciparum;malar plasmodium falciparum
+B51;malaria plasmodium vivax;malar plasmodium vivax
+B52;malaria plasmodium malariae;malar plasmodium malaria
+B53;outras formas malaria confirmadas exames parasitologicos;outr form malar confirm exam parasitolog
+B54;malaria especificada;malar especific
+B55;leishmaniose;leishmanios
+B56;tripanossomiase africana;tripanossomias african
+B57;doenca chagas;doenc chag
+B58;toxoplasmose;toxoplasmos
+B59;pneumocistose;pneumocistos
+B60;outras doencas devidas protozoarios , classificadas outra parte;outr doenc dev protozoari , classific outr part
+B64;doenca especificada devida protozoarios;doenc especific dev protozoari
+B65;esquistossomose [ bilharziose ] [ schistosomiase ];esquistossomos [ bilharzios ] [ schistosomias ]
+B66;outras infestacoes trematodeos;outr infest trematod
+B67;equinococose;equinococos
+B68;infestacao taenia;infest taen
+B69;cisticercose;cisticercos
+B70;difilobotriase esparganose;difilobotrias esparganos
+B71;outras infestacoes cestoides;outr infest cestoid
+B72;dracontiase;dracontias
+B73;oncocercose;oncocercos
+B74;filariose;filarios
+B75;triquinose;triquinos
+B76;ancilostomiase;ancilostomias
+B77;ascaridiase;ascaridias
+B78;estrongiloidiase;estrongiloidias
+B79;tricuriase;tricurias
+B80;oxiuriase;oxiurias
+B81;outras helmintiases intestinais , classificadas outra parte;outr helmintias intestin , classific outr part
+B82;parasitose intestinal especificada;parasitos intestinal especific
+B83;outras helmintiases;outr helmintias
+B85;pediculose ftiriase;pediculos ftirias
+B86;escabiose [ sarna ];escabios [ sarn ]
+B87;miiase;miias
+B88;outras infestacoes;outr infest
+B89;doenca parasitaria especificada;doenc parasitar especific
+B90;sequelas tuberculose;sequel tuberculos
+B91;sequelas poliomielite;sequel poliomielit
+B92;sequelas hanseniase [ lepra ];sequel hansenias [ lepr ]
+B94;sequelas outras doencas infecciosas parasitarias especificadas;sequel outr doenc infecc parasitar especific
+B95;estreptococos estafilococos causa doencas classificadas outros capitulos;estreptococ estafilococ caus doenc classific outr capitul
+B96;outros agentes bacterianos , causa doencas classificadas outros capitulos;outr agent bacterian , caus doenc classific outr capitul
+B97;virus causa doencas classificadas outros capitulos;virus caus doenc classific outr capitul
+B99;doencas infecciosas , outras especificadas;doenc infecc , outr especific
+C00;neoplasia maligna labio;neoplas malign labi
+C01;neoplasia maligna base lingua;neoplas malign bas lingu
+C02;neoplasia maligna outras partes partes especificadas lingua;neoplas malign outr part part especific lingu
+C03;neoplasia maligna gengiva;neoplas malign gengiv
+C04;neoplasia maligna assoalho boca;neoplas malign assoalh boc
+C05;neoplasia maligna palato;neoplas malign palat
+C06;neoplasia maligna outras partes partes especificadas boca;neoplas malign outr part part especific boc
+C07;neoplasia maligna glandula parotida;neoplas malign glandul parot
+C08;neoplasia maligna outras glandulas salivares maiores especificadas;neoplas malign outr glandul saliv maior especific
+C09;neoplasia maligna amigdala;neoplas malign amigdal
+C10;neoplasia maligna orofaringe;neoplas malign orofaring
+C11;neoplasia maligna nasofaringe;neoplas malign nasofaring
+C12;neoplasia maligna seio piriforme;neoplas malign sei piriform
+C13;neoplasia maligna hipofaringe;neoplas malign hipofaring
+C14;neoplasia maligna outras localizacoes localizacoes mal definida , labio , cavidade oral faringe;neoplas malign outr localiz localiz mal defin , labi , cavidad oral faring
+C15;neoplasia maligna esofago;neoplas malign esofag
+C16;neoplasia maligna estomago;neoplas malign estomag
+C17;neoplasia maligna intestino delgado;neoplas malign intestin delg
+C18;neoplasia maligna colon;neoplas malign colon
+C19;neoplasia maligna juncao retossigmoide;neoplas malign junca retossigmoid
+C20;neoplasia maligna reto;neoplas malign ret
+C21;neoplasia maligna anus canal anal;neoplas malign anus canal anal
+C22;neoplasia maligna figado vias biliares intra - hepaticas;neoplas malign fig vias bili intra - hepat
+C23;neoplasia maligna vesicula biliar;neoplas malign vesicul bili
+C24;neoplasia maligna outras partes , partes especificadas vias biliares;neoplas malign outr part , part especific vias bili
+C25;neoplasia maligna pancreas;neoplas malign pancr
+C26;neoplasia maligna outros orgaos digestivos localizacoes mal definidas aparelho digestivo;neoplas malign outr orga digest localiz mal defin aparelh digest
+C30;neoplasia maligna cavidade nasal ouvido medio;neoplas malign cavidad nasal ouv medi
+C31;neoplasia maligna seios face;neoplas malign sei fac
+C32;neoplasia maligna laringe;neoplas malign laring
+C33;neoplasia maligna traqueia;neoplas malign traqu
+C34;neoplasia maligna bronquios pulmoes;neoplas malign bronqui pulmo
+C37;neoplasia maligna timo;neoplas malign tim
+C38;neoplasia maligna coracao , mediastino pleura;neoplas malign coraca , mediastin pleur
+C39;neoplasia maligna outras localizacoes localizacoes mal definidas aparelho respiratorio orgaos intratoracicos;neoplas malign outr localiz localiz mal defin aparelh respiratori orga intratorac
+C40;neoplasia maligna ossos cartilagens articulares membros;neoplas malign ossos cartilagens articul membr
+C41;neoplasia maligna ossos cartilagens articulares outras localizacoes localizacoes especificadas;neoplas malign ossos cartilagens articul outr localiz localiz especific
+C43;melanoma maligno pele;melanom malign pel
+C44;outras neoplasias malignas pele;outr neoplas malign pel
+C45;mesotelioma;mesoteliom
+C46;sarcoma kaposi;sarcom kapos
+C47;neoplasia maligna nervos perifericos sistema nervoso autonomo;neoplas malign nerv perifer sistem nervos autonom
+C48;neoplasia maligna tecidos moles retroperitonio peritonio;neoplas malign tec mol retroperitoni peritoni
+C49;neoplasia maligna tecido conjuntivo outros tecidos moles;neoplas malign tec conjunt outr tec mol
+C50;neoplasia maligna mama;neoplas malign mam
+C51;neoplasia maligna vulva;neoplas malign vulv
+C52;neoplasia maligna vagina;neoplas malign vagin
+C53;neoplasia maligna colo utero;neoplas malign col uter
+C54;neoplasia maligna corpo utero;neoplas malign corp uter
+C55;neoplasia maligna utero , porcao especificada;neoplas malign uter , porca especific
+C56;neoplasia maligna ovario;neoplas malign ovari
+C57;neoplasia maligna outros orgaos genitais femininos especificados;neoplas malign outr orga genit feminin especific
+C58;neoplasia maligna placenta;neoplas malign placent
+C60;neoplasia maligna penis;neoplas malign pen
+C61;neoplasia maligna prostata;neoplas malign prostat
+C62;neoplasia maligna testiculos;neoplas malign testicul
+C63;neoplasia maligna outros orgaos genitais masculinos especificados;neoplas malign outr orga genit masculin especific
+C64;neoplasia maligna rim , exceto pelve renal;neoplas malign rim , excet pelv renal
+C65;neoplasia maligna pelve renal;neoplas malign pelv renal
+C66;neoplasia maligna ureteres;neoplas malign uret
+C67;neoplasia maligna bexiga;neoplas malign bexig
+C68;neoplasia maligna outros orgaos urinarios especificados;neoplas malign outr orga urinari especific
+C69;neoplasia maligna olho anexos;neoplas malign olho anex
+C70;neoplasia maligna meninges;neoplas malign mening
+C71;neoplasia maligna encefalo;neoplas malign encefal
+C72;neoplasia maligna medula espinhal , nervos cranianos outras partes sistema nervoso central;neoplas malign medul espinhal , nerv cranian outr part sistem nervos central
+C73;neoplasia maligna glandula tireoide;neoplas malign glandul tireoid
+C74;neoplasia maligna glandula supra - renal [ glandula adrenal ];neoplas malign glandul supr - renal [ glandul adrenal ]
+C75;neoplasia maligna outras glandulas endocrinas estruturas relacionadas;neoplas malign outr glandul endocrin estrutur relacion
+C76;neoplasia maligna outras localizacoes localizacoes mal definidas;neoplas malign outr localiz localiz mal defin
+C77;neoplasia maligna secundaria especificada ganglios linfaticos;neoplas malign secundar especific gangli linfat
+C78;neoplasia maligna secundaria orgaos respiratorios digestivos;neoplas malign secundar orga respiratori digest
+C79;neoplasia maligna secundaria outras localizacoes;neoplas malign secundar outr localiz
+C80;neoplasia maligna , especificacao localizacao;neoplas malign , especific localiz
+C81;doenca hodgkin;doenc hodgkin
+C82;linfoma - hodgkin , folicular ( nodular );linfom - hodgkin , folicul ( nodul )
+C83;linfoma - hodgkin difuso;linfom - hodgkin difus
+C84;linfomas celulas cutaneas perifericas;linfom celul cutan perifer
+C85;linfoma - hodgkin outros tipos tipo especificado;linfom - hodgkin outr tip tip especific
+C88;doencas imunoproliferativas malignas;doenc imunoprolifer malign
+C90;mieloma multiplo neoplasias malignas plasmocitos;mielom multipl neoplas malign plasmocit
+C91;leucemia linfoide;leucem linfoid
+C92;leucemia mieloide;leucem mieloid
+C93;leucemia monocitica;leucem monocit
+C94;outras leucemias celulas tipo especificado;outr leucem celul tip especific
+C95;leucemia tipo celular especificado;leucem tip celul especific
+C96;outras neoplasias malignas especificadas tecidos linfatico , hematopoetico tecidos correlatos;outr neoplas malign especific tec linfat , hematopoet tec correlat
+C97;neoplasias malignas localizacoes multiplas independentes ( primarias );neoplas malign localiz multipl independent ( primar )
+D00;carcinoma situ cavidade oral , esofago estomago;carcinom situ cavidad oral , esofag estomag
+D01;carcinoma situ outros orgaos digestivos;carcinom situ outr orga digest
+D02;carcinoma situ ouvido medio aparelho respiratorio;carcinom situ ouv medi aparelh respiratori
+D03;melanoma situ;melanom situ
+D04;carcinoma situ pele;carcinom situ pel
+D05;carcinoma situ mama;carcinom situ mam
+D06;carcinoma situ colo utero ( cervix );carcinom situ col uter ( cervix )
+D07;carcinoma situ outros orgaos genitais especificados;carcinom situ outr orga genit especific
+D09;carcinoma situ outras localizacoes especificadas;carcinom situ outr localiz especific
+D10;neoplasia benigna boca faringe;neoplas benign boc faring
+D11;neoplasia benigna glandulas salivares maiores;neoplas benign glandul saliv maior
+D12;neoplasia benigna colon , reto , canal anal anus;neoplas benign colon , ret , canal anal anus
+D13;neoplasia benigna outras partes partes mal definidas aparelho digestivo;neoplas benign outr part part mal defin aparelh digest
+D14;neoplasia benigna ouvido medio aparelho respiratorio;neoplas benign ouv medi aparelh respiratori
+D15;neoplasia benigna outros orgaos intratoracicos especificados;neoplas benign outr orga intratorac especific
+D16;neoplasia benigna osso cartilagem articular;neoplas benign osso cartilag articul
+D17;neoplasia lipomatosa benigna;neoplas lipomat benign
+D18;hemangioma linfangioma qualquer localizacao;hemangiom linfangiom qualqu localiz
+D19;neoplasia benigna tecido mesotelial;neoplas benign tec mesotelial
+D20;neoplasia benigna tecido mole retroperitonio peritonio;neoplas benign tec mol retroperitoni peritoni
+D21;outras neoplasias benignas tecido conjuntivo outros tecidos moles;outr neoplas benign tec conjunt outr tec mol
+D22;nevos melanociticos;nev melanocit
+D23;outras neoplasias benignas pele;outr neoplas benign pel
+D24;neoplasia benigna mama;neoplas benign mam
+D25;leiomioma utero;leiomiom uter
+D26;outras neoplasias benignas utero;outr neoplas benign uter
+D27;neoplasia benigna ovario;neoplas benign ovari
+D28;neoplasia benigna outros orgaos genitais femininos orgaos especificados;neoplas benign outr orga genit feminin orga especific
+D29;neoplasia benigna orgaos genitais masculinos;neoplas benign orga genit masculin
+D30;neoplasia benigna orgaos urinarios;neoplas benign orga urinari
+D31;neoplasia benigna olho anexos;neoplas benign olho anex
+D32;neoplasia benigna meninges;neoplas benign mening
+D33;neoplasia benigna encefalo outras partes sistema nervoso central;neoplas benign encefal outr part sistem nervos central
+D34;neoplasia benigna glandula tireoide;neoplas benign glandul tireoid
+D35;neoplasia benigna outras glandulas endocrinas especificadas;neoplas benign outr glandul endocrin especific
+D36;neoplasia benigna outras localizacoes localizacoes especificadas;neoplas benign outr localiz localiz especific
+D37;neoplasia comportamento incerto desconhecido cavidade oral orgaos digestivos;neoplas comport incert desconhec cavidad oral orga digest
+D38;neoplasia comportamento incerto desconhecido ouvido medio orgaos respiratorios intratoracicos;neoplas comport incert desconhec ouv medi orga respiratori intratorac
+D39;neoplasia comportamento incerto desconhecido orgaos genitais femininos;neoplas comport incert desconhec orga genit feminin
+D40;neoplasia comportamento incerto desconhecido orgaos genitais masculinos;neoplas comport incert desconhec orga genit masculin
+D41;neoplasia comportamento incerto desconhecido orgaos urinarios;neoplas comport incert desconhec orga urinari
+D42;neoplasia comportamento incerto desconhecido meninges;neoplas comport incert desconhec mening
+D43;neoplasia comportamento incerto desconhecido encefalo sistema nervoso central;neoplas comport incert desconhec encefal sistem nervos central
+D44;neoplasia comportamento incerto desconhecido glandulas endocrinas;neoplas comport incert desconhec glandul endocrin
+D45;policitemia vera;policitem ver
+D46;sindromes mielodisplasicas;sindrom mielodisplas
+D47;outras neoplasias comportamento incerto desconhecido tecidos linfatico , hematopoetico tecidos correlatos;outr neoplas comport incert desconhec tec linfat , hematopoet tec correlat
+D48;neoplasia comportamento incerto desconhecido outras localizacoes localizacoes especificadas;neoplas comport incert desconhec outr localiz localiz especific
+D50;anemia deficiencia ferro;anem deficient ferr
+D51;anemia deficiencia vitamina b12;anem deficient vitamin b12
+D52;anemia deficiencia folato;anem deficient folat
+D53;outras anemias nutricionais;outr anem nutricion
+D55;anemia devida transtornos enzimaticos;anem dev transtorn enzimat
+D56;talassemia;talassem
+D57;transtornos falciformes;transtorn falciform
+D58;outras anemias hemoliticas hereditarias;outr anem hemolit hereditar
+D59;anemia hemolitica adquirida;anem hemolit adquir
+D60;aplasia pura serie vermelha , adquirida [ eritroblastopenia ];aplas pur seri vermelh , adquir [ eritroblastopen ]
+D61;outras anemias aplasticas;outr anem aplast
+D62;anemia aguda pos - hemorragica;anem agud pos - hemorrag
+D63;anemia doencas cronicas classificadas outra parte;anem doenc cronic classific outr part
+D64;outras anemias;outr anem
+D65;coagulacao intravascular disseminada [ sindrome desfibrinacao ];coagul intravascul dissemin [ sindrom desfibrin ]
+D66;deficiencia hereditaria fator viii;deficient hereditar fator vii
+D67;deficiencia hereditaria fator;deficient hereditar fator
+D68;outros defeitos coagulacao;outr defeit coagul
+D69;purpura outras afeccoes hemorragicas;purpur outr afecco hemorrag
+D70;agranulocitose;agranulocitos
+D71;transtornos funcionais neutrofilos polimorfonucleares;transtorn funcion neutrofil polimorfonucl
+D72;outros transtornos globulos brancos;outr transtorn globul branc
+D73;doencas baco;doenc bac
+D74;metemoglobinemia;metemoglobinem
+D75;outras doencas sangue orgaos hematopoeticos;outr doenc sang orga hematopoet
+D76;algumas doencas envolvem tecido linforreticular sistema reticulohistiocitico;algum doenc envolv tec linforreticul sistem reticulohistiocit
+D77;outros transtornos sangue orgaos hematopoeticos doencas classificadas outra parte;outr transtorn sang orga hematopoet doenc classific outr part
+D80;imunodeficiencia predominancia defeitos anticorpos;imunodeficient predomin defeit anticorp
+D81;deficiencias imunitarias combinadas;deficient imunitar combin
+D82;"imunodeficiencia associada outros defeitos "" major """;"imunodeficient assoc outr defeit "" major """
+D83;imunodeficiencia comum variavel;imunodeficient comum variavel
+D84;outras imunodeficiencias;outr imunodeficient
+D86;sarcoidose;sarcoidos
+D89;outros transtornos comprometem mecanismo imunitario classificados outra parte;outr transtorn compromet mecan imunitari classific outr part
+E00;sindrome deficiencia congenita iodo;sindrom deficient congenit iod
+E01;transtornos tireoidianos afeccoes associadas , relacionados deficiencia iodo;transtorn tireoidian afecco assoc , relacion deficient iod
+E02;hipotireoidismo subclinico deficiencia iodo;hipotireoid subclin deficient iod
+E03;outros hipotireoidismos;outr hipotireoid
+E04;outros bocios - toxicos;outr boci - toxic
+E05;tireotoxicose [ hipertireoidismo ];tireotoxicos [ hipertireoid ]
+E06;tireoidite;tireoidit
+E07;outros transtornos tireoide;outr transtorn tireoid
+E10;diabetes mellitus insulino - dependente;diabet mellitus insulin - dependent
+E11;diabetes mellitus - insulino - dependente;diabet mellitus - insulin - dependent
+E12;diabetes mellitus relacionado desnutricao;diabet mellitus relacion desnutrica
+E13;outros tipos especificados diabetes mellitus;outr tip especific diabet mellitus
+E14;diabetes mellitus especificado;diabet mellitus especific
+E15;coma hipoglicemico - diabetico;com hipoglicem - diabet
+E16;outros transtornos secrecao pancreatica interna;outr transtorn secreca pancreat intern
+E20;hipoparatireoidismo;hipoparatireoid
+E21;hiperparatireoidismo outros transtornos glandula paratireoide;hiperparatireoid outr transtorn glandul paratireoid
+E22;hiperfuncao hipofise;hiperfunca hipofis
+E23;hipofuncao outros transtornos hipofise;hipofunca outr transtorn hipofis
+E24;sindrome cushing;sindrom cushing
+E25;transtornos adrenogenitais;transtorn adrenogenit
+E26;hiperaldosteronismo;hiperaldosteron
+E27;outros transtornos glandula supra - renal;outr transtorn glandul supr - renal
+E28;disfuncao ovariana;disfunca ovarian
+E29;disfuncao testicular;disfunca testicul
+E30;transtornos puberdade classificados outra parte;transtorn puberdad classific outr part
+E31;disfuncao poliglandular;disfunca poliglandul
+E32;doencas timo;doenc tim
+E34;outros transtornos endocrinos;outr transtorn endocrin
+E35;transtornos glandulas endocrinas doencas classificadas outra parte;transtorn glandul endocrin doenc classific outr part
+E40;kwashiorkor;kwashiorkor
+E41;marasmo nutricional;marasm nutricional
+E42;kwashiorkor marasmatico;kwashiorkor marasmat
+E43;desnutricao proteico - calorica grave especificada;desnutrica proteic - calor grav especific
+E44;desnutricao proteico - calorica graus moderado leve;desnutrica proteic - calor graus moder lev
+E45;atraso desenvolvimento devido desnutricao proteico - calorica;atras desenvolv dev desnutrica proteic - calor
+E46;desnutricao proteico - calorica especificada;desnutrica proteic - calor especific
+E50;deficiencia vitamina;deficient vitamin
+E51;deficiencia tiamina;deficient tiamin
+E52;deficiencia niacina [ pelagra ];deficient niacin [ pelagr ]
+E53;deficiencia outras vitaminas grupo;deficient outr vitamin grup
+E54;deficiencia acido ascorbico;deficient acid ascorb
+E55;deficiencia vitamina;deficient vitamin
+E56;outras deficiencias vitaminicas;outr deficient vitamin
+E58;deficiencia calcio dieta;deficient calci diet
+E59;deficiencia selenio dieta;deficient seleni diet
+E60;deficiencia zinco dieta;deficient zinc diet
+E61;deficiencia outros elementos nutrientes;deficient outr element nutrient
+E63;outras deficiencias nutricionais;outr deficient nutricion
+E64;sequelas desnutricao outras deficiencias nutricionais;sequel desnutrica outr deficient nutricion
+E65;adiposidade localizada;adipos localiz
+E66;obesidade;obes
+E67;outras formas hiperalimentacao;outr form hiperaliment
+E68;sequelas hiperalimentacao;sequel hiperaliment
+E70;disturbios metabolismo aminoacidos aromaticos;disturbi metabol aminoac aromat
+E71;disturbios metabolismo aminoacidos cadeia ramificada metabolismo acidos graxos;disturbi metabol aminoac cad ramific metabol acid grax
+E72;outros disturbios metabolismo aminoacidos;outr disturbi metabol aminoac
+E73;intolerancia lactose;intoler lactos
+E74;outros disturbios metabolismo carboidratos;outr disturbi metabol carboidrat
+E75;disturbios metabolismo esfingolipides outros disturbios deposito lipides;disturbi metabol esfingolipid outr disturbi deposit lipid
+E76;disturbios metabolismo glicosaminoglicano;disturbi metabol glicosaminoglican
+E77;disturbios metabolismo glicoproteinas;disturbi metabol glicoprotein
+E78;disturbios metabolismo lipoproteinas outras lipidemias;disturbi metabol lipoprotein outr lipidem
+E79;disturbios metabolismo purina pirimidina;disturbi metabol purin pirimidin
+E80;disturbios metabolismo porfirina bilirrubina;disturbi metabol porfirin bilirrubin
+E83;disturbios metabolismo minerais;disturbi metabol miner
+E84;fibrose cistica;fibros cistic
+E85;amiloidose;amiloidos
+E86;deplecao volume;depleca volum
+E87;outros transtornos equilibrio hidroeletrolitico acido - basico;outr transtorn equilibri hidroeletrolit acid - basic
+E88;outros disturbios metabolicos;outr disturbi metabol
+E89;transtornos endocrinos metabolicos pos - procedimentos , classificados outra parte;transtorn endocrin metabol pos - proced , classific outr part
+E90;transtornos nutricionais metabolicos doencas classificadas outra parte;transtorn nutricion metabol doenc classific outr part
+F00;demencia doenca alzheimer;demenc doenc alzheim
+F01;demencia vascular;demenc vascul
+F02;demencia outras doencas classificadas outra parte;demenc outr doenc classific outr part
+F03;demencia especificada;demenc especific
+F04;sindrome amnesica organica induzida alcool outras substancias psicoativas;sindrom amnes organ induz alcool outr substanc psicoat
+F05;delirium induzido alcool outras substancias psicoativas;delirium induz alcool outr substanc psicoat
+F06;outros transtornos mentais devidos lesao disfuncao cerebral doenca fisica;outr transtorn ment dev lesa disfunca cerebral doenc fisic
+F07;transtornos personalidade comportamento devidos doenca , lesao disfuncao cerebral;transtorn personal comport dev doenc , lesa disfunca cerebral
+F09;transtorno mental organico sintomatico especificado;transtorn mental organ sintomat especific
+F10;transtornos mentais comportamentais devidos uso alcool;transtorn ment comportament dev uso alcool
+F11;transtornos mentais comportamentais devidos uso opiaceos;transtorn ment comportament dev uso opiac
+F12;transtornos mentais comportamentais devidos uso canabinoides;transtorn ment comportament dev uso canabinoid
+F13;transtornos mentais comportamentais devidos uso sedativos hipnoticos;transtorn ment comportament dev uso sedat hipnot
+F14;transtornos mentais comportamentais devidos uso cocaina;transtorn ment comportament dev uso cocain
+F15;transtornos mentais comportamentais devidos uso outros estimulantes , inclusive cafeina;transtorn ment comportament dev uso outr estimul , inclusiv cafein
+F16;transtornos mentais comportamentais devidos uso alucinogenos;transtorn ment comportament dev uso alucinogen
+F17;transtornos mentais comportamentais devidos uso fumo;transtorn ment comportament dev uso fum
+F18;transtornos mentais comportamentais devidos uso solventes volateis;transtorn ment comportament dev uso solvent volat
+F19;transtornos mentais comportamentais devidos uso multiplas drogas uso outras substancias psicoativas;transtorn ment comportament dev uso multipl drog uso outr substanc psicoat
+F20;esquizofrenia;esquizofren
+F21;transtorno esquizotipico;transtorn esquizotip
+F22;transtornos delirantes persistentes;transtorn delir persistent
+F23;transtornos psicoticos agudos transitorios;transtorn psicot agud transitori
+F24;transtorno delirante induzido;transtorn delir induz
+F25;transtornos esquizoafetivos;transtorn esquizoafet
+F28;outros transtornos psicoticos - organicos;outr transtorn psicot - organ
+F29;psicose - organica especificada;psicos - organ especific
+F30;episodio maniaco;episodi maniac
+F31;transtorno afetivo bipolar;transtorn afet bipol
+F32;episodios depressivos;episodi depress
+F33;transtorno depressivo recorrente;transtorn depress recorrent
+F34;transtornos humor [ afetivos ] persistentes;transtorn humor [ afet ] persistent
+F38;outros transtornos humor [ afetivos ];outr transtorn humor [ afet ]
+F39;transtorno humor [ afetivo ] especificado;transtorn humor [ afet ] especific
+F40;transtornos fobico - ansiosos;transtorn fobic - ansios
+F41;outros transtornos ansiosos;outr transtorn ansios
+F42;transtorno obsessivo - compulsivo;transtorn obsess - compuls
+F43;"reacoes "" stress "" grave transtornos adaptacao";"reaco "" stress "" grav transtorn adapt"
+F44;transtornos dissociativos [ conversao ];transtorn dissoc [ conversa ]
+F45;transtornos somatoformes;transtorn somatoform
+F48;outros transtornos neuroticos;outr transtorn neurot
+F50;transtornos alimentacao;transtorn aliment
+F51;transtornos - organicos sono devidos fatores emocionais;transtorn - organ son dev fator emocion
+F52;disfuncao sexual , causada transtorno doenca organica;disfunca sexual , caus transtorn doenc organ
+F53;transtornos mentais comportamentais associados puerperio , classificados outra parte;transtorn ment comportament assoc puerperi , classific outr part
+F54;fatores psicologicos comportamentais associados doenca transtornos classificados outra parte;fator psicolog comportament assoc doenc transtorn classific outr part
+F55;abuso substancias produzem dependencia;abus substanc produz dependent
+F59;sindromes comportamentais associados transtornos funcoes fisiologicas fatores fisicos , especificadas;sindrom comportament assoc transtorn funco fisiolog fator fisic , especific
+F60;transtornos especificos personalidade;transtorn especif personal
+F61;transtornos mistos personalidade outros transtornos personalidade;transtorn mist personal outr transtorn personal
+F62;modificacoes duradouras personalidade atribuiveis lesao doenca cerebral;modific duradour personal atribuiv lesa doenc cerebral
+F63;transtornos habitos impulsos;transtorn habit impuls
+F64;transtornos identidade sexual;transtorn ident sexual
+F65;transtornos preferencia sexual;transtorn preferent sexual
+F66;transtornos psicologicos comportamentais associados desenvolvimento sexual orientacao;transtorn psicolog comportament assoc desenvolv sexual orient
+F68;outros transtornos personalidade comportamento adulto;outr transtorn personal comport adult
+F69;transtorno personalidade comportamento adulto , especificado;transtorn personal comport adult , especific
+F70;retardo mental leve;retard mental lev
+F71;retardo mental moderado;retard mental moder
+F72;retardo mental grave;retard mental grav
+F73;retardo mental profundo;retard mental profund
+F78;outro retardo mental;outr retard mental
+F79;retardo mental especificado;retard mental especific
+F80;transtornos especificos desenvolvimento fala linguagem;transtorn especif desenvolv fal linguag
+F81;transtornos especificos desenvolvimento habilidades escolares;transtorn especif desenvolv habil escol
+F82;transtorno especifico desenvolvimento motor;transtorn especif desenvolv motor
+F83;transtornos especificos misto desenvolvimento;transtorn especif mist desenvolv
+F84;transtornos globais desenvolvimento;transtorn glob desenvolv
+F88;outros transtornos desenvolvimento psicologico;outr transtorn desenvolv psicolog
+F89;transtorno desenvolvimento psicologico especificado;transtorn desenvolv psicolog especific
+F90;transtornos hipercineticos;transtorn hipercinet
+F91;disturbios conduta;disturbi condut
+F92;transtornos mistos conduta emocoes;transtorn mist condut emoco
+F93;transtornos emocionais inicio especificamente infancia;transtorn emocion inici especif infanc
+F94;transtornos funcionamento social inicio especificamente durante infancia adolescencia;transtorn funcion social inici especif durant infanc adolescent
+F95;tiques;tiqu
+F98;outros transtornos comportamentais emocionais inicio habitualmente durante infancia adolescencia;outr transtorn comportament emocion inici habitual durant infanc adolescent
+F99;transtorno mental especificado outra parte;transtorn mental especific outr part
+G00;meningite bacteriana classificada outra parte;meningit bacterian classific outr part
+G01;meningite doencas bacterianas classificadas outra parte;meningit doenc bacterian classific outr part
+G02;meningite outras doencas infecciosas parasitarias classificadas outra parte;meningit outr doenc infecc parasitar classific outr part
+G03;meningite devida outras causas causas especificadas;meningit dev outr caus caus especific
+G04;encefalite , mielite encefalomielite;encefalit , mielit encefalomielit
+G05;encefalite , mielite encefalomielite doencas classificadas outra parte;encefalit , mielit encefalomielit doenc classific outr part
+G06;abscesso granuloma intracranianos intra - raquidianos;abscess granulom intracranian intra - raquidian
+G07;abscesso granuloma intracranianos intraspinais doencas classificadas outra parte;abscess granulom intracranian intraspin doenc classific outr part
+G08;flebite tromboflebite intracranianas intra - raquidianas;flebit tromboflebit intracranian intra - raquidian
+G09;sequelas doencas inflamatorias sistema nervoso central;sequel doenc inflamator sistem nervos central
+G10;doenca huntington;doenc huntington
+G11;ataxia hereditaria;atax hereditar
+G12;atrofia muscular espinal sindromes correlatas;atrof muscul espinal sindrom correlat
+G13;atrofias sistemicas afetam principalmente sistema nervoso central doencas classificadas outra parte;atrof sistem afet principal sistem nervos central doenc classific outr part
+G20;doenca parkinson;doenc parkinson
+G21;parkinsonismo secundario;parkinson secundari
+G22;parkinsonismo doencas classificadas outra parte;parkinson doenc classific outr part
+G23;outras doencas degenerativas ganglios base;outr doenc degener gangli bas
+G24;distonia;diston
+G25;outras doencas extrapiramidais transtornos movimentos;outr doenc extrapiramid transtorn moviment
+G26;doencas extrapiramidais transtornos movimentos doencas classificadas outra parte;doenc extrapiramid transtorn moviment doenc classific outr part
+G30;doenca alzheimer;doenc alzheim
+G31;outras doencas degenerativas sistema nervoso classificadas outra parte;outr doenc degener sistem nervos classific outr part
+G32;outros transtornos degenerativos sistema nervoso doencas classificadas outra parte;outr transtorn degener sistem nervos doenc classific outr part
+G35;esclerose multipla;escleros multipl
+G36;outras desmielinizacoes disseminadas agudas;outr desmieliniz dissemin agud
+G37;outras doencas desmielinizantes sistema nervoso central;outr doenc desmieliniz sistem nervos central
+G40;epilepsia;epileps
+G41;estado mal epileptico;estad mal epilept
+G43;enxaqueca;enxaquec
+G44;outras sindromes algias cefalicas;outr sindrom algi cefal
+G45;acidentes vasculares cerebrais isquemicos transitorios sindromes correlatas;acident vascul cerebr isquem transitori sindrom correlat
+G46;sindromes vasculares cerebrais ocorrem doencas cerebrovasculares;sindrom vascul cerebr ocorr doenc cerebrovascul
+G47;disturbios sono;disturbi son
+G50;transtornos nervo trigemeo;transtorn nerv trigem
+G51;transtornos nervo facial;transtorn nerv facial
+G52;transtornos outros nervos cranianos;transtorn outr nerv cranian
+G53;transtornos nervos cranianos doencas classificadas outra parte;transtorn nerv cranian doenc classific outr part
+G54;transtornos raizes plexos nervosos;transtorn raiz plex nervos
+G55;compressoes raizes plexos nervosos doencas classificadas outra parte;compresso raiz plex nervos doenc classific outr part
+G56;mononeuropatias membros superiores;mononeuropat membr superior
+G57;mononeuropatias membros inferiores;mononeuropat membr inferior
+G58;outras mononeuropatias;outr mononeuropat
+G59;mononeuropatias doencas classificadas outra parte;mononeuropat doenc classific outr part
+G60;neuropatia hereditaria idiopatica;neuropat hereditar idiopat
+G61;polineuropatia inflamatoria;polineuropat inflamator
+G62;outras polineuropatias;outr polineuropat
+G63;polineuropatia doencas classificadas outra parte;polineuropat doenc classific outr part
+G64;outros transtornos sistema nervoso periferico;outr transtorn sistem nervos perifer
+G70;miastenia gravis outros transtornos neuromusculares;miasten grav outr transtorn neuromuscul
+G71;transtornos primarios musculos;transtorn primari muscul
+G72;outras miopatias;outr miopat
+G73;transtornos juncao mioneural musculos doencas classificadas outra parte;transtorn junca mioneural muscul doenc classific outr part
+G80;paralisia cerebral;paralis cerebral
+G81;hemiplegia;hemipleg
+G82;paraplegia tetraplegia;parapleg tetrapleg
+G83;outras sindromes paraliticas;outr sindrom paralit
+G90;transtornos sistema nervoso autonomo;transtorn sistem nervos autonom
+G91;hidrocefalia;hidrocefal
+G92;encefalopatia toxica;encefalopat toxic
+G93;outros transtornos encefalo;outr transtorn encefal
+G94;outros transtornos encefalo doencas classificadas outra parte;outr transtorn encefal doenc classific outr part
+G95;outras doencas medula espinal;outr doenc medul espinal
+G96;outros transtornos sistema nervoso central;outr transtorn sistem nervos central
+G97;transtornos pos - procedimento sistema nervoso classificados outra parte;transtorn pos - proced sistem nervos classific outr part
+G98;outros transtornos sistema nervoso classificados outra parte;outr transtorn sistem nervos classific outr part
+G99;outros transtornos sistema nervoso doencas classificadas outra parte;outr transtorn sistem nervos doenc classific outr part
+H00;hordeolo calazio;hordeol calazi
+H01;outras inflamacoes palpebra;outr inflam palpebr
+H02;outros transtornos palpebra;outr transtorn palpebr
+H03;transtornos palpebra doencas classificadas outras partes;transtorn palpebr doenc classific outr part
+H04;transtornos aparelho lacrimal;transtorn aparelh lacrimal
+H05;transtornos orbita;transtorn orbit
+H06;transtornos aparelho lacrimal orbita doencas classificadas outra parte;transtorn aparelh lacrimal orbit doenc classific outr part
+H10;conjuntivite;conjuntivit
+H11;outros transtornos conjuntiva;outr transtorn conjunt
+H13;transtornos conjuntiva doencas classificadas outra parte;transtorn conjunt doenc classific outr part
+H15;transtornos esclerotica;transtorn esclerot
+H16;ceratite;ceratit
+H17;cicatrizes opacidades cornea;cicatriz opac corn
+H18;outros transtornos cornea;outr transtorn corn
+H19;transtorno esclerotica cornea doencas classificadas outra parte;transtorn esclerot corn doenc classific outr part
+H20;iridociclite;iridociclit
+H21;outros transtornos iris corpo ciliar;outr transtorn iris corp cili
+H22;transtornos iris corpo ciliar doencas classificadas outra parte;transtorn iris corp cili doenc classific outr part
+H25;catarata senil;catarat senil
+H26;outras cataratas;outr catarat
+H27;outros transtornos cristalino;outr transtorn cristalin
+H28;catarata outros transtornos cristalino doencas classificadas outra parte;catarat outr transtorn cristalin doenc classific outr part
+H30;inflamacao coriorretiniana;inflam coriorretinian
+H31;outros transtornos coroide;outr transtorn coroid
+H32;transtornos coriorretinianos doencas classificadas outra parte;transtorn coriorretinian doenc classific outr part
+H33;descolamentos defeitos retina;descol defeit retin
+H34;oclusoes vasculares retina;ocluso vascul retin
+H35;outros transtornos retina;outr transtorn retin
+H36;transtornos retina doencas classificadas outra parte;transtorn retin doenc classific outr part
+H40;glaucoma;glaucom
+H42;glaucoma doencas classificadas outra parte;glaucom doenc classific outr part
+H43;transtornos humor vitreo;transtorn humor vitr
+H44;transtornos globo ocular;transtorn glob ocul
+H45;transtornos humor vitreo globo ocular doencas classificadas outra parte;transtorn humor vitr glob ocul doenc classific outr part
+H46;neurite optica;neurit optic
+H47;outros transtornos nervo optico vias opticas;outr transtorn nerv optic vias optic
+H48;transtornos nervo optico [ segundo par ] vias opticas doencas classificadas outra parte;transtorn nerv optic [ segund par ] vias optic doenc classific outr part
+H49;estrabismo paralitico;estrab paralit
+H50;outros estrabismos;outr estrab
+H51;outros transtornos movimento binocular;outr transtorn moviment binocul
+H52;transtornos refracao acomodacao;transtorn refraca acomod
+H53;disturbios visuais;disturbi visu
+H54;cegueira visao subnormal;cegueir visa subnormal
+H55;nistagmo outros movimentos irregulares olho;nistagm outr moviment irregul olho
+H57;outros transtornos olho anexos;outr transtorn olho anex
+H58;outros transtornos olho anexos doencas classificadas outra parte;outr transtorn olho anex doenc classific outr part
+H59;transtornos olho anexos pos - procedimento classificados outra parte;transtorn olho anex pos - proced classific outr part
+H60;otite externa;otit extern
+H61;outros transtornos ouvido externo;outr transtorn ouv extern
+H62;transtornos ouvido externo doencas classificadas outra parte;transtorn ouv extern doenc classific outr part
+H65;otite media - supurativa;otit med - supur
+H66;otite media supurativa especificadas;otit med supur especific
+H67;otite media doencas classificadas outra parte;otit med doenc classific outr part
+H68;salpingite obstrucao trompa eustaquio;salpingit obstruca tromp eustaqui
+H69;outros transtornos trompa eustaquio;outr transtorn tromp eustaqui
+H70;mastoidite afeccoes correlatas;mastoidit afecco correlat
+H71;colesteatoma ouvido medio;colesteatom ouv medi
+H72;perfuracao membrana timpano;perfur membran timpan
+H73;outros transtornos membrana timpano;outr transtorn membran timpan
+H74;outros transtornos ouvido medio mastoide;outr transtorn ouv medi mastoid
+H75;outros transtornos ouvido medio mastoide doencas classificadas outra parte;outr transtorn ouv medi mastoid doenc classific outr part
+H80;otosclerose;otoscleros
+H81;transtornos funcao vestibular;transtorn funca vestibul
+H82;sindromes vertiginosas doencas classificadas outra parte;sindrom vertigin doenc classific outr part
+H83;outros transtornos ouvido interno;outr transtorn ouv intern
+H90;perda audicao transtorno conducao / neuro - sensorial;perd audica transtorn conduca / neur - sensorial
+H91;outras perdas audicao;outr perd audica
+H92;otalgia secrecao auditiva;otalg secreca audit
+H93;outros transtornos ouvido classificados outra parte;outr transtorn ouv classific outr part
+H94;outros transtornos ouvido doencas classificadas outra parte;outr transtorn ouv doenc classific outr part
+H95;transtornos ouvido apofise mastoide pos - procedimentos , classificados outra parte;transtorn ouv apofis mastoid pos - proced , classific outr part
+I00;febre reumatica mencao comprometimento coracao;febr reumat menca compromet coraca
+I01;febre reumatica comprometimento coracao;febr reumat compromet coraca
+I02;coreia reumatica;cor reumat
+I05;doencas reumaticas valva mitral;doenc reumat valv mitral
+I06;doencas reumaticas valva aortica;doenc reumat valv aortic
+I07;doencas reumaticas valva tricuspide;doenc reumat valv tricuspid
+I08;doencas multiplas valvas;doenc multipl valv
+I09;outras doencas reumaticas coracao;outr doenc reumat coraca
+I10;hipertensao essencial ( primaria );hipertensa essencial ( primar )
+I11;doenca cardiaca hipertensiva;doenc cardiac hipertens
+I12;doenca renal hipertensiva;doenc renal hipertens
+I13;doenca cardiaca renal hipertensiva;doenc cardiac renal hipertens
+I15;hipertensao secundaria;hipertensa secundar
+I20;angina pectoris;angin pector
+I21;infarto agudo miocardio;infart agud miocardi
+I22;infarto miocardio recorrente;infart miocardi recorrent
+I23;algumas complicacoes atuais subsequentes infarto agudo miocardio;algum complic atu subsequent infart agud miocardi
+I24;outras doencas isquemicas agudas coracao;outr doenc isquem agud coraca
+I25;doenca isquemica cronica coracao;doenc isquem cronic coraca
+I26;embolia pulmonar;embol pulmon
+I27;outras formas doenca cardiaca pulmonar;outr form doenc cardiac pulmon
+I28;outras doencas vasos pulmonares;outr doenc vas pulmon
+I30;pericardite aguda;pericardit agud
+I31;outras doencas pericardio;outr doenc pericardi
+I32;pericardite doencas classificadas outra parte;pericardit doenc classific outr part
+I33;endocardite aguda subaguda;endocardit agud subagud
+I34;transtornos - reumaticos valva mitral;transtorn - reumat valv mitral
+I35;transtornos - reumaticos valva aortica;transtorn - reumat valv aortic
+I36;transtornos - reumaticos valva tricuspide;transtorn - reumat valv tricuspid
+I37;transtornos valva pulmonar;transtorn valv pulmon
+I38;endocardite valva especificada;endocardit valv especific
+I39;endocardite transtornos valvulares cardiacos doencas classificadas outra parte;endocardit transtorn valvul cardiac doenc classific outr part
+I40;miocardite aguda;miocardit agud
+I41;miocardite doencas classificadas outra parte;miocardit doenc classific outr part
+I42;cardiomiopatias;cardiomiopat
+I43;cardiomiopatia doencas classificadas outra parte;cardiomiopat doenc classific outr part
+I44;bloqueio atrioventricular ramo esquerdo;bloquei atrioventricul ram esquerd
+I45;outros transtornos conducao;outr transtorn conduca
+I46;parada cardiaca;par cardiac
+I47;taquicardia paroxistica;taquicard paroxist
+I48;flutter fibrilacao atrial;flutt fibril atrial
+I49;outras arritmias cardiacas;outr arritm cardiac
+I50;insuficiencia cardiaca;insuficient cardiac
+I51;complicacoes cardiopatias doencas cardiacas mal definidas;complic cardiopat doenc cardiac mal defin
+I52;outras afeccoes cardiacas doencas classificadas outra parte;outr afecco cardiac doenc classific outr part
+I60;hemorragia subaracnoide;hemorrag subaracnoid
+I61;hemorragia intracerebral;hemorrag intracerebral
+I62;outras hemorragias intracranianas - traumaticas;outr hemorrag intracranian - traumat
+I63;infarto cerebral;infart cerebral
+I64;acidente vascular cerebral , especificado hemorragico isquemico;acident vascul cerebral , especific hemorrag isquem
+I65;oclusao estenose arterias pre - cerebrais resultam infarto cerebral;oclusa estenos arter pre - cerebr result infart cerebral
+I66;oclusao estenose arterias cerebrais resultam infarto cerebral;oclusa estenos arter cerebr result infart cerebral
+I67;outras doencas cerebrovasculares;outr doenc cerebrovascul
+I68;transtornos cerebrovasculares doencas classificadas outra parte;transtorn cerebrovascul doenc classific outr part
+I69;sequelas doencas cerebrovasculares;sequel doenc cerebrovascul
+I70;aterosclerose;ateroscleros
+I71;aneurisma disseccao aorta;aneurism dissecca aort
+I72;outros aneurismas;outr aneurism
+I73;outras doencas vasculares perifericas;outr doenc vascul perifer
+I74;embolia trombose arteriais;embol trombos arteri
+I77;outras afeccoes arterias arteriolas;outr afecco arter arteriol
+I78;doencas capilares;doenc capil
+I79;transtornos arterias , arteriolas capilares doencas classificadas outra parte;transtorn arter , arteriol capil doenc classific outr part
+I80;flebite tromboflebite;flebit tromboflebit
+I81;trombose veia porta;trombos vei port
+I82;outra embolia trombose venosas;outr embol trombos venos
+I83;varizes membros inferiores;variz membr inferior
+I84;hemorroidas;hemorro
+I85;varizes esofagianas;variz esofagian
+I86;varizes outras localizacoes;variz outr localiz
+I87;outros transtornos veias;outr transtorn vei
+I88;linfadenite inespecifica;linfadenit inespecif
+I89;outros transtornos - infecciosos vasos linfaticos ganglios linfaticos;outr transtorn - infecc vas linfat gangli linfat
+I95;hipotensao;hipotensa
+I97;transtornos aparelho circulatorio , subsequentes procedimentos classificados outra parte;transtorn aparelh circulatori , subsequent proced classific outr part
+I98;outros transtornos aparelho circulatorio doencas classificadas outra parte;outr transtorn aparelh circulatori doenc classific outr part
+I99;outros transtornos aparelho circulatorio especificados;outr transtorn aparelh circulatori especific
+J00;nasofaringite aguda [ resfriado comum ];nasofaringit agud [ resfri comum ]
+J01;sinusite aguda;sinusit agud
+J02;faringite aguda;faringit agud
+J03;amigdalite aguda;amigdalit agud
+J04;laringite traqueite agudas;laringit traqueit agud
+J05;laringite obstrutiva aguda [ crupe ] epiglotite;laringit obstrut agud [ crup ] epiglotit
+J06;infeccoes agudas vias aereas superiores localizacoes multiplas especificadas;infecco agud vias aer superior localiz multipl especific
+J09;influenza [ gripe ] devida virus identificado gripe aviaria;influenz [ grip ] dev virus identific grip aviar
+J10;influenza devida outro virus influenza [ gripe ] identificado;influenz dev outr virus influenz [ grip ] identific
+J11;influenza [ gripe ] devida virus identificado;influenz [ grip ] dev virus identific
+J12;pneumonia viral classificada outra parte;pneumon viral classific outr part
+J13;pneumonia devida streptococcus pneumoniae;pneumon dev streptococcus pneumonia
+J14;pneumonia devida haemophilus infuenzae;pneumon dev haemophilus infuenza
+J15;pneumonia bacteriana classificada outra parte;pneumon bacterian classific outr part
+J16;pneumonia devida outros microorganismos infecciosos especificados classificados outra parte;pneumon dev outr microorgan infecc especific classific outr part
+J17;pneumonia doencas classificadas outra parte;pneumon doenc classific outr part
+J18;pneumonia microorganismo especificada;pneumon microorgan especific
+J20;bronquite aguda;bronquit agud
+J21;bronquiolite aguda;bronquiolit agud
+J22;infeccoes agudas especificada vias aereas inferiores;infecco agud especific vias aer inferior
+J30;rinite alergica vasomotora;rinit alerg vasomotor
+J31;rinite , nasofaringite faringite cronicas;rinit , nasofaringit faringit cronic
+J32;sinusite cronica;sinusit cronic
+J33;polipo nasal;polip nasal
+J34;outros transtornos nariz seios paranasais;outr transtorn nariz sei paranas
+J35;doencas cronicas amigdalas adenoides;doenc cronic amigdal adenoid
+J36;abscesso periamigdaliano;abscess periamigdalian
+J37;laringite laringotraqueite cronicas;laringit laringotraqueit cronic
+J38;doencas cordas vocais laringe classificadas outra parte;doenc cord voc laring classific outr part
+J39;outras doencas vias aereas superiores;outr doenc vias aer superior
+J40;bronquite especificada aguda cronica;bronquit especific agud cronic
+J41;bronquite cronica simples mucopurulenta;bronquit cronic simpl mucopurulent
+J42;bronquite cronica especificada;bronquit cronic especific
+J43;enfisema;enfisem
+J44;outras doencas pulmonares obstrutivas cronicas;outr doenc pulmon obstrut cronic
+J45;asma;asma
+J46;estado mal asmatico;estad mal asmat
+J47;bronquectasia;bronquectas
+J60;pneumoconiose mineiros carvao;pneumoconios mineir carva
+J61;pneumoconiose devida amianto [ asbesto ] outras fibras minerais;pneumoconios dev amiant [ asbest ] outr fibr miner
+J62;pneumoconiose devida poeira contenham silica;pneumoconios dev poeir contenh silic
+J63;pneumoconiose devida outras poeiras inorganicas;pneumoconios dev outr poeir inorgan
+J64;pneumoconiose especificada;pneumoconios especific
+J65;pneumoconiose associada tuberculose;pneumoconios assoc tuberculos
+J66;doencas vias aereas devida poeiras organicas especificas;doenc vias aer dev poeir organ especif
+J67;pneumonite hipersensibilidade devida poeiras organicas;pneumonit hipersensibil dev poeir organ
+J68;afeccoes respiratorias devidas inalacao produtos quimicos , gases , fumacas vapores;afecco respirator dev inal produt quimic , gas , fumac vapor
+J69;pneumonite devida solidos liquidos;pneumonit dev sol liqu
+J70;afeccoes respiratorias devida outros agentes externos;afecco respirator dev outr agent extern
+J80;sindrome desconforto respiratorio adulto;sindrom desconfort respiratori adult
+J81;edema pulmonar , especificado outra forma;edem pulmon , especific outr form
+J82;eosinofilia pulmonar , classificada outra parte;eosinofil pulmon , classific outr part
+J84;outras doencas pulmonares intersticiais;outr doenc pulmon interstic
+J85;abscesso pulmao mediastino;abscess pulma mediastin
+J86;piotorax;piotorax
+J90;derrame pleural classificado outra parte;derram pleural classific outr part
+J91;derrame pleural afeccoes classificadas outra parte;derram pleural afecco classific outr part
+J92;placas pleurais;plac pleur
+J93;pneumotorax;pneumotorax
+J94;outras afeccoes pleurais;outr afecco pleur
+J95;afeccoes respiratorias pos - procedimentos classificadas outra parte;afecco respirator pos - proced classific outr part
+J96;insuficiencia respiratoria classificada outra parte;insuficient respirator classific outr part
+J98;outros transtornos respiratorios;outr transtorn respiratori
+J99;transtornos respiratorios doencas classificadas outra parte;transtorn respiratori doenc classific outr part
+K00;disturbios desenvolvimento erupcao dentes;disturbi desenvolv erupca dent
+K01;dentes inclusos impactados;dent inclus impact
+K02;carie dentaria;cari dentar
+K03;outras doencas tecidos dentarios duros;outr doenc tec dentari dur
+K04;doencas polpa tecidos periapicais;doenc polp tec periapic
+K05;gengivite doencas periodontais;gengivit doenc periodont
+K06;outros transtornos gengiva rebordo alveolar dentes;outr transtorn gengiv rebord alveol dent
+K07;anomalias dentofaciais ( inclusive maloclusao );anomal dentofac ( inclusiv maloclusa )
+K08;outros transtornos dentes estruturas sustentacao;outr transtorn dent estrutur sustent
+K09;cistos regiao bucal classificados outra parte;cist regia bucal classific outr part
+K10;outras doencas maxilares;outr doenc maxil
+K11;doencas glandulas salivares;doenc glandul saliv
+K12;estomatite lesoes correlatas;estomatit leso correlat
+K13;outras doencas labio mucosa oral;outr doenc labi mucos oral
+K14;doencas lingua;doenc lingu
+K20;esofagite;esofagit
+K21;doenca refluxo gastroesofagico;doenc reflux gastroesofag
+K22;outras doencas esofago;outr doenc esofag
+K23;transtornos esofago doencas classificadas outra parte;transtorn esofag doenc classific outr part
+K25;ulcera gastrica;ulcer gastric
+K26;ulcera duodenal;ulcer duodenal
+K27;ulcera peptica localizacao especificada;ulcer peptic localiz especific
+K28;ulcera gastrojejunal;ulcer gastrojejunal
+K29;gastrite duodenite;gastrit duodenit
+K30;dispepsia;dispeps
+K31;outras doencas estomago duodeno;outr doenc estomag duoden
+K35;apendicite aguda;apendicit agud
+K36;outras formas apendicite;outr form apendicit
+K37;apendicite , outras especificacoes;apendicit , outr especific
+K38;outras doencas apendice;outr doenc apendic
+K40;hernia inguinal;hern inguinal
+K41;hernia femoral;hern femoral
+K42;hernia umbilical;hern umbilical
+K43;hernia ventral;hern ventral
+K44;hernia diafragmatica;hern diafragmat
+K45;outras hernias abdominais;outr hern abdomin
+K46;hernia abdominal especificada;hern abdominal especific
+K50;doenca crohn [ enterite regional ];doenc crohn [ enterit regional ]
+K51;colite ulcerativa;colit ulcer
+K52;outras gastroenterites colites - infecciosas;outr gastroenterit colit - infecc
+K55;transtornos vasculares intestino;transtorn vascul intestin
+K56;ileo paralitico obstrucao intestinal hernia;ile paralit obstruca intestinal hern
+K57;doenca diverticular intestino;doenc diverticul intestin
+K58;sindrome colon irritavel;sindrom colon irrit
+K59;outros transtornos funcionais intestino;outr transtorn funcion intestin
+K60;fissura fistula regioes anal retal;fissur fistul regio anal retal
+K61;abscesso regioes anal retal;abscess regio anal retal
+K62;outras doencas reto anus;outr doenc ret anus
+K63;outras doencas intestino;outr doenc intestin
+K65;peritonite;peritonit
+K66;outros transtornos peritonio;outr transtorn peritoni
+K67;comprometimento peritonio , doencas infecciosas classificadas outra parte;compromet peritoni , doenc infecc classific outr part
+K70;doenca alcoolica figado;doenc alcool fig
+K71;doenca hepatica toxica;doenc hepat toxic
+K72;insuficiencia hepatica classificada outra parte;insuficient hepat classific outr part
+K73;hepatite cronica classificada outra parte;hepatit cronic classific outr part
+K74;fibrose cirrose hepaticas;fibros cirros hepat
+K75;outras doencas inflamatorias figado;outr doenc inflamator fig
+K76;outras doencas figado;outr doenc fig
+K77;transtornos figado doencas classificadas outra parte;transtorn fig doenc classific outr part
+K80;colelitiase;colelitias
+K81;colecistite;colecistit
+K82;outras doencas vesicula biliar;outr doenc vesicul bili
+K83;outras doencas vias biliares;outr doenc vias bili
+K85;pancreatite aguda;pancreatit agud
+K86;outras doencas pancreas;outr doenc pancr
+K87;transtornos vesicula biliar , vias biliares pancreas doencas classificadas outra parte;transtorn vesicul bili , vias bili pancr doenc classific outr part
+K90;- absorcao intestinal;- absorca intestinal
+K91;transtornos aparelho digestivo pos - procedimentos , classificados outra parte;transtorn aparelh digest pos - proced , classific outr part
+K92;outras doencas aparelho digestivo;outr doenc aparelh digest
+K93;transtornos outros orgaos digestivos doencas classificadas outra parte;transtorn outr orga digest doenc classific outr part
+L00;sindrome pele escaldada estafilococica recem - nascido;sindrom pel escald estafilococ recem - nasc
+L01;impetigo;impetig
+L02;abscesso cutaneo , furunculo antraz;abscess cutan , furuncul antraz
+L03;celulite ( flegmao );celulit ( flegma )
+L04;linfadenite aguda;linfadenit agud
+L05;cisto pilonidal;cist pilonidal
+L08;outras infeccoes localizadas pele tecido subcutaneo;outr infecco localiz pel tec subcutan
+L10;penfigo;penfig
+L11;outras afeccoes acantoliticas;outr afecco acantolit
+L12;penfigoide;penfigoid
+L13;outras afeccoes bolhosas;outr afecco bolhos
+L14;afeccoes bolhosas doencas classificadas outra parte;afecco bolhos doenc classific outr part
+L20;dermatite atopica;dermatit atop
+L21;dermatite seborreica;dermatit seborr
+L22;dermatite fraldas;dermatit frald
+L23;dermatites alergicas contato;dermatit alerg contat
+L24;dermatites contato irritantes;dermatit contat irrit
+L25;dermatite contato especificada;dermatit contat especific
+L26;dermatite esfoliativa;dermatit esfoli
+L27;dermatite devida substancias uso interno;dermatit dev substanc uso intern
+L28;liquen simples cronico prurigo;liquen simpl cronic prurig
+L29;prurido;prur
+L30;outras dermatites;outr dermatit
+L40;psoriase;psorias
+L41;parapsoriase;parapsorias
+L42;pitiriase rosea;pitirias ros
+L43;liquen plano;liquen plan
+L44;outras afeccoes papulo - descamativas;outr afecco papul - descam
+L45;afeccoes papulo - descamativas doencas classificadas outra parte;afecco papul - descam doenc classific outr part
+L50;urticaria;urticar
+L51;eritema polimorfo ( eritema multiforme );eritem polimorf ( eritem multiform )
+L52;eritema nodoso;eritem nodos
+L53;outras afeccoes eritematosas;outr afecco eritemat
+L54;eritema doencas classificadas outra parte;eritem doenc classific outr part
+L55;queimadura solar;queimadur sol
+L56;outras alteracoes agudas pele devidas radiacao ultravioleta;outr alter agud pel dev radiaca ultraviolet
+L57;alteracoes pele devidas exposicao cronica radiacao ionizante;alter pel dev exposica cronic radiaca ioniz
+L58;radiodermatite;radiodermatit
+L59;outras afeccoes pele tecido subcutaneo relacionadas radiacao;outr afecco pel tec subcutan relacion radiaca
+L60;afeccoes unhas;afecco unhas
+L62;afeccoes unhas doencas classificadas outra parte;afecco unhas doenc classific outr part
+L63;alopecia areata;alopec areat
+L64;alopecia androgenica;alopec androgen
+L65;outras formas cicatriciais perda cabelos pelos;outr form cicatric perd cabel pel
+L66;alopecia cicatricial [ perda cabelos pelos , cicatricial ];alopec cicatricial [ perd cabel pel , cicatricial ]
+L67;anormalidades cor pediculo cabelos pelos;anormal cor pedicul cabel pel
+L68;hipertricose;hipertricos
+L70;acne;acne
+L71;rosacea;rosac
+L72;cistos foliculares pele tecido subcutaneo;cist folicul pel tec subcutan
+L73;outras afeccoes foliculares;outr afecco folicul
+L74;afeccoes glandulas sudoriparas ecrinas;afecco glandul sudorip ecrin
+L75;afeccoes glandulas sudoriparas apocrinas;afecco glandul sudorip apocrin
+L80;vitiligo;vitilig
+L81;outros transtornos pigmentacao;outr transtorn pigment
+L82;ceratose seborreica;ceratos seborr
+L83;acantose nigricans;acantos nigricans
+L84;calos calosidades;cal calos
+L85;outras formas espessamento epidermico;outr form espess epiderm
+L86;ceratodermia doencas classificadas outra parte;ceratoderm doenc classific outr part
+L87;transtornos eliminacao transepidermica;transtorn elimin transepiderm
+L88;piodermite gangrenosa;piodermit gangren
+L89;ulcera decubito;ulcer decubit
+L90;afeccoes atroficas pele;afecco atrof pel
+L91;afeccoes hipertroficas pele;afecco hipertrof pel
+L92;afeccoes granulomatosas pele tecido subcutaneo;afecco granulomat pel tec subcutan
+L93;lupus eritematoso;lupus eritemat
+L94;outras afeccoes localizadas tecido conjuntivo;outr afecco localiz tec conjunt
+L95;vasculite limitada pele classificadas outra parte;vasculit limit pel classific outr part
+L97;ulcera membros inferiores classificada outra parte;ulcer membr inferior classific outr part
+L98;outras afeccoes pele tecido subcutaneo classificadas outra parte;outr afecco pel tec subcutan classific outr part
+L99;outras afeccoes pele tecido subcutaneo doencas classificadas outra parte;outr afecco pel tec subcutan doenc classific outr part
+M00;artrite piogenica;artrit piogen
+M01;infeccoes diretas articulacao doencas infecciosas parasitarias classificadas outra parte;infecco diret articul doenc infecc parasitar classific outr part
+M02;artropatias reacionais;artropat reacion
+M03;artropatias pos - infecciosas reacionais doencas infecciosas classificadas outra parte;artropat pos - infecc reacion doenc infecc classific outr part
+M05;artrite reumatoide soro - positiva;artrit reumatoid sor - posit
+M06;outras artrites reumatoides;outr artrit reumatoid
+M07;artropatias psoriasicas enteropaticas;artropat psorias enteropat
+M08;artrite juvenil;artrit juvenil
+M09;artrite juvenil doencas classificadas outra parte;artrit juvenil doenc classific outr part
+M10;gota;got
+M11;outras artropatias deposicao cristais;outr artropat deposica crist
+M12;outras artropatias especificadas;outr artropat especific
+M13;outras artrites;outr artrit
+M14;artropatias outras doencas classificadas outra parte;artropat outr doenc classific outr part
+M15;poliartrose;poliartros
+M16;coxartrose [ artrose quadril ];coxartros [ artros quadril ]
+M17;gonartrose [ artrose joelho ];gonartros [ artros joelh ]
+M18;artrose primeira articulacao carpometacarpiana;artros primeir articul carpometacarpian
+M19;outras artroses;outr artros
+M20;deformidades adquiridas dedos maos pes;deform adquir ded ma pes
+M21;outras deformidades adquiridas membros;outr deform adquir membr
+M22;transtornos rotula [ patela ];transtorn rotul [ patel ]
+M23;transtornos internos joelhos;transtorn intern joelh
+M24;outros transtornos articulares especificos;outr transtorn articul especif
+M25;outros transtornos articulares classificados outra parte;outr transtorn articul classific outr part
+M30;poliarterite nodosa afeccoes correlatas;poliarterit nodos afecco correlat
+M31;outras vasculopatias necrotizantes;outr vasculopat necrotiz
+M32;lupus eritematoso disseminado [ sistemico ];lupus eritemat dissemin [ sistem ]
+M33;dermatopoliomiosite;dermatopoliomiosit
+M34;esclerose sistemica;escleros sistem
+M35;outras afeccoes sistemicas tecido conjuntivo;outr afecco sistem tec conjunt
+M36;doencas sistemicas tecido conjuntivo doencas classificadas outra parte;doenc sistem tec conjunt doenc classific outr part
+M40;cifose lordose;cifos lordos
+M41;escoliose;escolios
+M42;osteocondrose coluna vertebral;osteocondros colun vertebral
+M43;outras dorsopatias deformantes;outr dorsopat deform
+M45;espondilite ancilosante;espondilit ancilos
+M46;outras espondilopatias inflamatorias;outr espondilopat inflamator
+M47;espondilose;espondilos
+M48;outras espondilopatias;outr espondilopat
+M49;espondilopatias doencas classificadas outra parte;espondilopat doenc classific outr part
+M50;transtornos discos cervicais;transtorn disc cervic
+M51;outros transtornos discos intervertebrais;outr transtorn disc intervertebr
+M53;outras dorsopatias classificadas outra parte;outr dorsopat classific outr part
+M54;dorsalgia;dorsalg
+M60;miosite;miosit
+M61;calcificacao ossificacao musculo;calcific ossific muscul
+M62;outros transtornos musculares;outr transtorn muscul
+M63;transtornos musculo doencas classificadas outra parte;transtorn muscul doenc classific outr part
+M65;sinovite tenossinovite;sinovit tenossinovit
+M66;ruptura espontanea sinovia tendao;ruptur espontan sinov tenda
+M67;outros transtornos sinovias tendoes;outr transtorn sinov tendo
+M68;transtorno sinovias tendoes doencas classificadas outra parte;transtorn sinov tendo doenc classific outr part
+M70;transtornos tecidos moles relacionados uso , uso excessivo pressao;transtorn tec mol relacion uso , uso excess pressa
+M71;outras bursopatias;outr bursopat
+M72;transtornos fibroblasticos;transtorn fibroblast
+M73;transtornos tecidos moles doencas classificadas outra parte;transtorn tec mol doenc classific outr part
+M75;lesoes ombro;leso ombro
+M76;entesopatias membros inferiores , excluindo;entesopat membr inferior , exclu
+M77;outras entesopatias;outr entesopat
+M79;outros transtornos tecidos moles , classificados outra parte;outr transtorn tec mol , classific outr part
+M80;osteoporose fratura patologica;osteoporos fratur patolog
+M81;osteoporose fratura patologica;osteoporos fratur patolog
+M82;osteoporose doencas classificadas outra parte;osteoporos doenc classific outr part
+M83;osteomalacia adulto;osteomalac adult
+M84;transtornos continuidade osso;transtorn continu osso
+M85;outros transtornos densidade estrutura osseas;outr transtorn densidad estrutur osse
+M86;osteomielite;osteomielit
+M87;osteonecrose;osteonecros
+M88;doenca paget osso ( osteite deformante );doenc paget osso ( osteit deform )
+M89;outros transtornos osseos;outr transtorn osse
+M90;osteopatias doencas classificadas outra parte;osteopat doenc classific outr part
+M91;osteocondrose juvenil quadril pelve;osteocondros juvenil quadril pelv
+M92;outras osteocondroses juvenis;outr osteocondros juven
+M93;outras osteocondropatias;outr osteocondropat
+M94;outros transtornos cartilagens;outr transtorn cartilagens
+M95;outras deformidades adquiridas sistema osteomuscular tecido conjuntivo;outr deform adquir sistem osteomuscul tec conjunt
+M96;transtornos osteomusculares pos - procedimentos classificados outra parte;transtorn osteomuscul pos - proced classific outr part
+M99;lesoes biomecanicas classificadas outra parte;leso biomecan classific outr part
+N00;sindrome nefritica aguda;sindrom nefrit agud
+N01;sindrome nefritica rapidamente progressiva;sindrom nefrit rapid progress
+N02;hematuria recidivante persistente;hematur recidiv persistent
+N03;sindrome nefritica cronica;sindrom nefrit cronic
+N04;sindrome nefrotica;sindrom nefrot
+N05;sindrome nefritica especificada;sindrom nefrit especific
+N06;proteinuria isolada lesao morfologica especificada;proteinur isol lesa morfolog especific
+N07;nefropatia hereditaria classificada outra parte;nefropat hereditar classific outr part
+N08;transtornos glomerulares doencas classificadas outra parte;transtorn glomerul doenc classific outr part
+N10;nefrite tubulo - intersticial aguda;nefrit tubul - intersticial agud
+N11;nefrite tubulo - intersticial cronica;nefrit tubul - intersticial cronic
+N12;nefrite tubulo - intersticial especificada aguda cronica;nefrit tubul - intersticial especific agud cronic
+N13;uropatia obstrutiva refluxo;uropat obstrut reflux
+N14;afeccoes tubulares tubulo - intersticiais induzidas drogas metais pesados;afecco tubul tubul - interstic induz drog met pes
+N15;outras doencas renais tubulo - intersticiais;outr doenc ren tubul - interstic
+N16;transtornos renais tubulo - intersticiais doencas classificadas outra parte;transtorn ren tubul - interstic doenc classific outr part
+N17;insuficiencia renal aguda;insuficient renal agud
+N18;insuficiencia renal cronica;insuficient renal cronic
+N19;insuficiencia renal especificada;insuficient renal especific
+N20;calculose rim ureter;calculos rim uret
+N21;calculose trato urinario inferior;calculos trat urinari inferior
+N22;calculose trato urinario inferior doencas classificadas outra parte;calculos trat urinari inferior doenc classific outr part
+N23;colica nefretica especificada;colic nefret especific
+N25;transtornos resultantes funcao renal tubular alterada;transtorn result funca renal tubul alter
+N26;rim contraido , especificado;rim contraid , especific
+N27;hipoplasia renal causa desconhecida;hipoplas renal caus desconhec
+N28;outros transtornos rim ureter classificado outra parte;outr transtorn rim uret classific outr part
+N29;outros transtornos rim ureter doencas classificadas outra parte;outr transtorn rim uret doenc classific outr part
+N30;cistite;cistit
+N31;disfuncoes neuromusculares bexiga classificados outra parte;disfunco neuromuscul bexig classific outr part
+N32;outros transtornos bexiga;outr transtorn bexig
+N33;transtornos bexiga doencas classificadas outra parte;transtorn bexig doenc classific outr part
+N34;uretrite sindrome uretral;uretrit sindrom uretral
+N35;estenose uretra;estenos uretr
+N36;outros transtornos uretra;outr transtorn uretr
+N37;transtornos uretra doencas classificadas outra parte;transtorn uretr doenc classific outr part
+N39;outros transtornos trato urinario;outr transtorn trat urinari
+N40;hiperplasia prostata;hiperplas prostat
+N41;doencas inflamatorias prostata;doenc inflamator prostat
+N42;outras afeccoes prostata;outr afecco prostat
+N43;hidrocele espermatocele;hidrocel espermatocel
+N44;torcao testiculo;torca testicul
+N45;orquite epididimite;orquit epididimit
+N46;infertilidade masculina;infertil masculin
+N47;hipertrofia prepucio , fimose parafimose;hipertrof prepuci , fimos parafimos
+N48;outros transtornos penis;outr transtorn pen
+N49;transtornos inflamatorios orgaos genitais masculinos , classificados outra parte;transtorn inflamatori orga genit masculin , classific outr part
+N50;outros transtornos orgaos genitais masculinos;outr transtorn orga genit masculin
+N51;transtornos orgaos genitais masculinos doencas classificadas outra parte;transtorn orga genit masculin doenc classific outr part
+N60;displasias mamarias benignas;displas mamar benign
+N61;transtornos inflamatorios mama;transtorn inflamatori mam
+N62;hipertrofia mama;hipertrof mam
+N63;nodulo mamario especificado;nodul mamari especific
+N64;outras doencas mama;outr doenc mam
+N70;salpingite ooforite;salpingit ooforit
+N71;doenca inflamatoria utero , exceto colo;doenc inflamator uter , excet col
+N72;doenca inflamatoria colo utero;doenc inflamator col uter
+N73;outras doencas inflamatorias pelvicas femininas;outr doenc inflamator pelvic feminin
+N74;transtornos inflamatorios pelve feminina doencas classificadas outra parte;transtorn inflamatori pelv feminin doenc classific outr part
+N75;doencas glandula bartholin;doenc glandul bartholin
+N76;outras afeccoes inflamatorias vagina vulva;outr afecco inflamator vagin vulv
+N77;ulceracao inflamacao vulvovaginais doencas classificadas outra parte;ulcer inflam vulvovagin doenc classific outr part
+N80;endometriose;endometrios
+N81;prolapso genital feminino;prolaps genital feminin
+N82;fistulas trato genital feminino;fistul trat genital feminin
+N83;transtornos - inflamatorios ovario , trompa falopio ligamento largo;transtorn - inflamatori ovari , tromp falopi ligament larg
+N84;polipo trato genital feminino;polip trat genital feminin
+N85;outros transtornos - inflamatorios utero , exceto colo utero;outr transtorn - inflamatori uter , excet col uter
+N86;erosao ectropio colo utero;erosa ectropi col uter
+N87;displasia colo utero;displas col uter
+N88;outros transtornos - inflamatorios colo utero;outr transtorn - inflamatori col uter
+N89;outros transtornos - inflamatorios vagina;outr transtorn - inflamatori vagin
+N90;outros transtornos - inflamatorios vulva perineo;outr transtorn - inflamatori vulv perin
+N91;menstruacao ausente , escassa pouco frequente;menstruaca ausent , escass pouc frequent
+N92;menstruacao excessiva , frequente irregular;menstruaca excess , frequent irregul
+N93;outros sangramentos anormais utero vagina;outr sangrament anorm uter vagin
+N94;dor outras afeccoes associadas orgaos genitais femininos ciclo menstrual;dor outr afecco assoc orga genit feminin cicl menstrual
+N95;transtornos menopausa perimenopausa;transtorn menopaus perimenopaus
+N96;abortamento habitual;abort habitual
+N97;infertilidade feminina;infertil feminin
+N98;complicacoes associadas fecundacao artificial;complic assoc fecund artificial
+N99;transtornos trato geniturinario pos - procedimentos classificados outra parte;transtorn trat geniturinari pos - proced classific outr part
+O00;gravidez ectopica;gravidez ectop
+O01;mola hidatiforme;mol hidatiform
+O02;outros produtos anormais concepcao;outr produt anorm concepca
+O03;aborto espontaneo;abort espontan
+O04;aborto razoes medicas legais;abort razo medic leg
+O05;outros tipos aborto;outr tip abort
+O06;aborto especificado;abort especific
+O07;falha tentativa aborto;falh tentat abort
+O08;complicacoes consequentes aborto gravidez ectopica molar;complic consequent abort gravidez ectop mol
+O10;hipertensao pre - existente complicando gravidez , parto puerperio;hipertensa pre - existent complic gravidez , part puerperi
+O11;disturbio hipertensivo pre - existente proteinuria superposta;disturbi hipertens pre - existent proteinur superpost
+O12;edema proteinuria gestacionais [ induzidos gravidez ] , hipertensao;edem proteinur gestacion [ induz gravidez ] , hipertensa
+O13;hipertensao gestacional [ induzida gravidez ] proteinuria significativa;hipertensa gestacional [ induz gravidez ] proteinur signific
+O14;hipertensao gestacional [ induzida gravidez ] proteinuria significativa;hipertensa gestacional [ induz gravidez ] proteinur signific
+O15;eclampsia;eclamps
+O16;hipertensao materna especificada;hipertensa matern especific
+O20;hemorragia inicio gravidez;hemorrag inici gravidez
+O21;vomitos excessivos gravidez;vomit excess gravidez
+O22;complicacoes venosas gravidez;complic venos gravidez
+O23;infeccoes trato geniturinario gravidez;infecco trat geniturinari gravidez
+O24;diabetes mellitus gravidez;diabet mellitus gravidez
+O25;desnutricao gravidez;desnutrica gravidez
+O26;assistencia materna outras complicacoes ligadas predominantemente gravidez;assistent matern outr complic lig predomin gravidez
+O28;"achados anormais rastreamento [ "" screening "" ] antenatal mae";"achad anorm rastreament [ "" screening "" ] antenatal ma"
+O29;complicacoes anestesia administrada durante gravidez;complic anestes administr durant gravidez
+O30;gestacao multipla;gestaca multipl
+O31;complicacoes especificas gestacao multipla;complic especif gestaca multipl
+O32;assistencia prestada mae motivo apresentacao anormal , conhecida suspeitada , feto;assistent prest ma motiv apresent anormal , conhec suspeit , fet
+O33;assistencia prestada mae desproporcao conhecida suspeita;assistent prest ma desproporca conhec suspeit
+O34;assistencia prestada mae anormalidade , conhecida suspeita , orgaos pelvicos maternos;assistent prest ma anormal , conhec suspeit , orga pelvic matern
+O35;assistencia prestada mae anormalidade lesao fetais , conhecidas suspeitadas;assistent prest ma anormal lesa fet , conhec suspeit
+O36;assistencia prestada mae outros problemas fetais conhecidos suspeitados;assistent prest ma outr problem fet conhec suspeit
+O40;polihidramnio;polihidramni
+O41;outros transtornos membranas liquido amniotico;outr transtorn membran liqu amniot
+O42;ruptura prematura membranas;ruptur prematur membran
+O43;transtornos placenta;transtorn placent
+O44;placenta previa;placent prev
+O45;descolamento prematuro placenta [ abruptio placentae ];descol prematur placent [ abrupti placenta ]
+O46;hemorragia anteparto classificada outra parte;hemorrag antepart classific outr part
+O47;falso trabalho parto;fals trabalh part
+O48;gravidez prolongada;gravidez prolong
+O60;trabalho parto pre - termo;trabalh part pre - term
+O61;falha inducao trabalho parto;falh induca trabalh part
+O62;anormalidades contracao uterina;anormal contraca uterin
+O63;trabalho parto prolongado;trabalh part prolong
+O64;obstrucao trabalho parto devida - posicao - apresentacao feto;obstruca trabalh part dev - posica - apresent fet
+O65;obstrucao trabalho parto devida anormalidade pelvica mae;obstruca trabalh part dev anormal pelvic ma
+O66;outras formas obstrucao trabalho parto;outr form obstruca trabalh part
+O67;trabalho parto parto complicados hemorragia intraparto classificados outra parte;trabalh part part complic hemorrag intrapart classific outr part
+O68;trabalho parto parto complicados sofrimento fetal;trabalh part part complic sofriment fetal
+O69;trabalho parto parto complicados anormalidade cordao umbilical;trabalh part part complic anormal corda umbilical
+O70;laceracao perineo durante parto;lacer perin durant part
+O71;outros traumatismos obstetricos;outr traumat obstetr
+O72;hemorragia pos - parto;hemorrag pos - part
+O73;retencao placenta membranas , hemorragias;retenca placent membran , hemorrag
+O74;complicacoes anestesia durante trabalho parto parto;complic anestes durant trabalh part part
+O75;outras complicacoes trabalho parto parto classificadas outra parte;outr complic trabalh part part classific outr part
+O80;parto unico espontaneo;part unic espontan
+O81;parto unico forceps vacuo - extrator;part unic forceps vacu - extrator
+O82;parto unico cesariana;part unic cesarian
+O83;outros tipos parto unico assistido;outr tip part unic assist
+O84;parto multiplo;part multipl
+O85;infeccao puerperal;infecca puerperal
+O86;outras infeccoes puerperais;outr infecco puerper
+O87;complicacoes venosas puerperio;complic venos puerperi
+O88;embolia origem obstetrica;embol orig obstetr
+O89;complicacoes anestesia administrada durante puerperio;complic anestes administr durant puerperi
+O90;complicacoes puerperio classificadas outra parte;complic puerperi classific outr part
+O91;infeccoes mamarias associadas parto;infecco mamar assoc part
+O92;outras afeccoes mama lactacao associadas parto;outr afecco mam lactaca assoc part
+O94;sequelas complicacoes gravidez , parto puerperio;sequel complic gravidez , part puerperi
+O95;morte obstetrica causa especificada;mort obstetr caus especific
+O96;morte , qualquer causa obstetrica , ocorre 42 dias , menos 1 ano , apos parto;mort , qualqu caus obstetr , ocorr 42 dias , men 1 ano , apos part
+O97;morte sequelas causas obstetricas diretas;mort sequel caus obstetr diret
+O98;doencas infecciosas parasitarias maternas classificaveis outra parte compliquem gravidez , parto puerperio;doenc infecc parasitar matern classific outr part compliqu gravidez , part puerperi
+O99;outras doencas mae , classificadas outra parte , complicam gravidez parto puerperio;outr doenc ma , classific outr part , complic gravidez part puerperi
+P00;feto recem - nascido afetados afeccoes maternas , obrigatoriamente relacionadas gravidez atual;fet recem - nasc afet afecco matern , obrigatori relacion gravidez atual
+P01;feto recem - nascido afetados complicacoes maternas gravidez;fet recem - nasc afet complic matern gravidez
+P02;feto recem - nascido afetados complicacoes placenta , cordao umbilical membranas;fet recem - nasc afet complic placent , corda umbilical membran
+P03;feto recem - nascido afetados outras complicacoes trabalho parto parto;fet recem - nasc afet outr complic trabalh part part
+P04;feto recem - nascido afetados influencias nocivas transmitidas feto via placenta leite materno;fet recem - nasc afet influenc nociv transmit fet via placent leit matern
+P05;crescimento fetal retardado desnutricao fetal;cresciment fetal retard desnutrica fetal
+P07;transtornos relacionados gestacao curta duracao peso baixo nascer classificados outra parte;transtorn relacion gestaca curt duraca pes baix nasc classific outr part
+P08;transtornos relacionados gestacao prolongada peso elevado nascer;transtorn relacion gestaca prolong pes elev nasc
+P10;laceracao intracraniana hemorragia devidas traumatismo parto;lacer intracranian hemorrag dev traumat part
+P11;outros traumatismos parto sistema nervoso central;outr traumat part sistem nervos central
+P12;lesao couro cabeludo devida traumatismo parto;lesa cour cabelud dev traumat part
+P13;lesoes esqueleto devidas traumatismo parto;leso esquelet dev traumat part
+P14;lesoes nascer sistema nervoso periferico;leso nasc sistem nervos perifer
+P15;outros traumatismos parto;outr traumat part
+P20;hipoxia intra - uterina;hipox intra - uterin
+P21;asfixia nascer;asfix nasc
+P22;desconforto ( angustia ) respiratorio ( ) recem - nascido;desconfort ( angust ) respiratori ( ) recem - nasc
+P23;pneumonia congenita;pneumon congenit
+P24;sindrome aspiracao neonatal;sindrom aspir neonatal
+P25;enfisema intersticial afeccoes correlatas originadas periodo perinatal;enfisem intersticial afecco correlat origin period perinatal
+P26;hemorragia pulmonar originada periodo perinatal;hemorrag pulmon origin period perinatal
+P27;doenca respiratoria cronica originada periodo perinatal;doenc respirator cronic origin period perinatal
+P28;outras afeccoes respiratorias originadas periodo perinatal;outr afecco respirator origin period perinatal
+P29;transtornos cardiovasculares originados periodo perinatal;transtorn cardiovascul origin period perinatal
+P35;doencas virais congenitas;doenc vir congenit
+P36;septicemia bacteriana recem - nascido;septicem bacterian recem - nasc
+P37;outras doencas infecciosas parasitarias congenitas;outr doenc infecc parasitar congenit
+P38;onfalite recem - nascido hemorragia leve;onfalit recem - nasc hemorrag lev
+P39;outras infeccoes especificas periodo perinatal;outr infecco especif period perinatal
+P50;perda sanguinea fetal;perd sanguin fetal
+P51;hemorragia umbilical recem - nascido;hemorrag umbilical recem - nasc
+P52;hemorragia intracraniana - traumatica feto recem - nascido;hemorrag intracranian - traumat fet recem - nasc
+P53;doenca hemorragica feto recem - nascido;doenc hemorrag fet recem - nasc
+P54;outras hemorragias neonatais;outr hemorrag neonat
+P55;doenca hemolitica feto recem - nascido;doenc hemolit fet recem - nasc
+P56;hidropsia fetal devida doenca hemolitica;hidrops fetal dev doenc hemolit
+P57;kernicterus;kernicterus
+P58;ictericia neonatal devida outras hemolises excessivas;icteric neonatal dev outr hemolis excess
+P59;ictericia neonatal devida outras causas especificadas;icteric neonatal dev outr caus especific
+P60;coagulacao intravascular disseminada feto recem - nascido;coagul intravascul dissemin fet recem - nasc
+P61;outros transtornos hematologicos perinatais;outr transtorn hematolog perinat
+P70;transtornos transitorios metabolismo carboidratos especificos feto recem - nascido;transtorn transitori metabol carboidrat especif fet recem - nasc
+P71;transtornos transitorios metabolismo calcio magnesio periodo neonatal;transtorn transitori metabol calci magnesi period neonatal
+P72;outros transtornos endocrinos transitorios periodo neonatal;outr transtorn endocrin transitori period neonatal
+P74;outros disturbios eletroliticos metabolicos transitorios periodo neonatal;outr disturbi eletrolit metabol transitori period neonatal
+P75;ileo meconial;ile meconial
+P76;outras obstrucoes intestinais recem - nascido;outr obstruco intestin recem - nasc
+P77;enterocolite necrotizante feto recem - nascido;enterocolit necrotiz fet recem - nasc
+P78;outros transtornos aparelho digestivo periodo perinatal;outr transtorn aparelh digest period perinatal
+P80;hipotermia recem - nascido;hipoterm recem - nasc
+P81;outros disturbios regulacao termica recem - nascido;outr disturbi regul termic recem - nasc
+P83;outras afeccoes comprometendo tegumento especificas feto recem - nascido;outr afecco compromet tegument especif fet recem - nasc
+P90;convulsoes recem - nascido;convulso recem - nasc
+P91;outros disturbios funcao cerebral recem - nascido;outr disturbi funca cerebral recem - nasc
+P92;problemas alimentacao recem - nascido;problem aliment recem - nasc
+P93;reacoes intoxicacoes devidas drogas administradas feto recem - nascido;reaco intoxic dev drog administr fet recem - nasc
+P94;transtornos tonus muscular recem - nascido;transtorn tonus muscul recem - nasc
+P95;morte fetal causa especificada;mort fetal caus especific
+P96;outras afeccoes originadas periodo perinatal;outr afecco origin period perinatal
+Q00;anencefalia malformacoes similares;anencefal malform simil
+Q01;encefalocele;encefalocel
+Q02;microcefalia;microcefal
+Q03;hidrocefalia congenita;hidrocefal congenit
+Q04;outras malformacoes congenitas cerebro;outr malform congenit cerebr
+Q05;espinha bifida;espinh bif
+Q06;outras malformacoes congenitas medula espinhal;outr malform congenit medul espinhal
+Q07;outras malformacoes congenitas sistema nervoso;outr malform congenit sistem nervos
+Q10;malformacoes congenitas palpebras , aparelho lacrimal orbita;malform congenit palpebr , aparelh lacrimal orbit
+Q11;anoftalmia , microftalmia macroftalmia;anoftalm , microftalm macroftalm
+Q12;malformacoes congenitas cristalino;malform congenit cristalin
+Q13;malformacoes congenitas camara anterior olho;malform congenit cam anterior olho
+Q14;malformacoes congenitas camara posterior olho;malform congenit cam posterior olho
+Q15;outras malformacoes congenitas olho;outr malform congenit olho
+Q16;malformacoes congenitas ouvido causando comprometimento audicao;malform congenit ouv caus compromet audica
+Q17;outras malformacoes congenitas orelha;outr malform congenit orelh
+Q18;outras malformacoes congenitas face pescoco;outr malform congenit fac pescoc
+Q20;malformacoes congenitas camaras comunicacoes cardiacas;malform congenit cam comunic cardiac
+Q21;malformacoes congenitas septos cardiacos;malform congenit sept cardiac
+Q22;malformacoes congenitas valvas pulmonar tricuspide;malform congenit valv pulmon tricuspid
+Q23;malformacoes congenitas valvas aortica mitral;malform congenit valv aortic mitral
+Q24;outras malformacoes congenitas coracao;outr malform congenit coraca
+Q25;malformacoes congenitas grandes arterias;malform congenit grand arter
+Q26;malformacoes congenitas grandes veias;malform congenit grand vei
+Q27;outras malformacoes congenitas sistema vascular periferico;outr malform congenit sistem vascul perifer
+Q28;outras malformacoes congenitas aparelho circulatorio;outr malform congenit aparelh circulatori
+Q30;malformacao congenita nariz;malform congenit nariz
+Q31;malformacoes congenitas laringe;malform congenit laring
+Q32;malformacoes congenitas traqueia bronquios;malform congenit traqu bronqui
+Q33;malformacoes congenitas pulmao;malform congenit pulma
+Q34;outras malformacoes congenitas aparelho respiratorio;outr malform congenit aparelh respiratori
+Q35;fenda palatina;fend palatin
+Q36;fenda labial;fend labial
+Q37;fenda labial fenda palatina;fend labial fend palatin
+Q38;outras malformacoes congenitas lingua , boca faringe;outr malform congenit lingu , boc faring
+Q39;malformacoes congenitas esofago;malform congenit esofag
+Q40;outras malformacoes congenitas trato digestivo superior;outr malform congenit trat digest superior
+Q41;ausencia , atresia estenose congenita intestino delgado;ausenc , atres estenos congenit intestin delg
+Q42;ausencia , atresia estenose congenita colon;ausenc , atres estenos congenit colon
+Q43;outras malformacoes congenitas intestino;outr malform congenit intestin
+Q44;malformacoes congenitas vesicula biliar , vias biliares figado;malform congenit vesicul bili , vias bili fig
+Q45;outras malformacoes congenitas aparelho digestivo;outr malform congenit aparelh digest
+Q50;malformacoes congenitas ovarios , trompas falopio ligamentos largos;malform congenit ovari , tromp falopi ligament larg
+Q51;malformacoes congenitas utero colo utero;malform congenit uter col uter
+Q52;outras malformacoes congenitas orgaos genitais femininos;outr malform congenit orga genit feminin
+Q53;testiculo - descido;testicul - desc
+Q54;hipospadias;hipospad
+Q55;outras malformacoes congenitas orgaos genitais masculinos;outr malform congenit orga genit masculin
+Q56;sexo indeterminado pseudo - hermafroditismo;sex indetermin pseud - hermafrodit
+Q60;agenesia renal outros defeitos reducao rim;agenes renal outr defeit reduca rim
+Q61;doencas cisticas rim;doenc cistic rim
+Q62;anomalias congenitas obstrutivas pelve renal malformacoes congenitas ureter;anomal congenit obstrut pelv renal malform congenit uret
+Q63;outras malformacoes congenitas rim;outr malform congenit rim
+Q64;outras malformacoes congenitas aparelho urinario;outr malform congenit aparelh urinari
+Q65;malformacoes congenitas quadril;malform congenit quadril
+Q66;deformidades congenitas;deform congenit
+Q67;deformidades osteomusculares congenitas cabeca , face , coluna torax;deform osteomuscul congenit cabec , fac , colun torax
+Q68;outras deformidades osteomusculares congenitas;outr deform osteomuscul congenit
+Q69;polidactilia;polidactil
+Q70;sindactilia;sindactil
+Q71;defeitos , reducao , membro superior;defeit , reduca , membr superior
+Q72;defeitos , reducao , membro inferior;defeit , reduca , membr inferior
+Q73;defeitos reducao membro especificado;defeit reduca membr especific
+Q74;outras malformacoes congenitas membros;outr malform congenit membr
+Q75;outras malformacoes congenitas ossos cranio face;outr malform congenit ossos crani fac
+Q76;malformacoes congenitas coluna vertebral ossos torax;malform congenit colun vertebral ossos torax
+Q77;osteocondrodisplasia anomalias crescimento ossos longos coluna vertebral;osteocondrodisplas anomal cresciment ossos long colun vertebral
+Q78;outras osteocondrodisplasias;outr osteocondrodisplas
+Q79;malformacoes congenitas sistema osteomuscular classificadas outra parte;malform congenit sistem osteomuscul classific outr part
+Q80;ictiose congenita;ictios congenit
+Q81;epidermolise bolhosa;epidermolis bolhos
+Q82;outras malformacoes congenitas pele;outr malform congenit pel
+Q83;malformacoes congenitas mama;malform congenit mam
+Q84;outras malformacoes congenitas tegumento;outr malform congenit tegument
+Q85;facomatoses classificadas outra parte;facomatos classific outr part
+Q86;sindromes malformacoes congenitas devidas causas exogenas conhecidas , classificadas outra parte;sindrom malform congenit dev caus exogen conhec , classific outr part
+Q87;outras sindromes malformacoes congenitas acometem multiplos sistemas;outr sindrom malform congenit acomet multipl sistem
+Q89;outras malformacoes congenitas classificadas outra parte;outr malform congenit classific outr part
+Q90;sindrome down;sindrom down
+Q91;sindrome edwards sindrome patau;sindrom edwards sindrom patau
+Q92;outras trissomias trissomias parciais autossomos , classificadas outra parte;outr trissom trissom parc autossom , classific outr part
+Q93;monossomias delecoes autossomos , classificadas outra parte;monossom deleco autossom , classific outr part
+Q95;rearranjos equilibrados marcadores estruturais , classificados outra parte;rearranj equilibr marcador estrutur , classific outr part
+Q96;sindrome turner;sindrom turn
+Q97;outras anomalias cromossomos sexuais , fenotipo feminino , classificadas outra parte;outr anomal cromossom sexu , fenotip feminin , classific outr part
+Q98;outras anomalias cromossomos sexuais , fenotipo masculino , classificadas outra parte;outr anomal cromossom sexu , fenotip masculin , classific outr part
+Q99;outras anomalias cromossomos , classificadas outra parte;outr anomal cromossom , classific outr part
+R00;anormalidades batimento cardiaco;anormal batiment cardiac
+R01;sopros outros ruidos cardiacos;sopr outr ruid cardiac
+R02;gangrena classificada outra parte;gangren classific outr part
+R03;valor anormal pressao arterial diagnostico;valor anormal pressa arterial diagnost
+R04;hemorragia vias respiratorias;hemorrag vias respirator
+R05;tosse;toss
+R06;anormalidades respiracao;anormal respir
+R07;dor garganta peito;dor gargant peit
+R09;outros sintomas sinais relativos aparelhos circulatorio respiratorio;outr sintom sin relat aparelh circulatori respiratori
+R10;dor abdominal pelvica;dor abdominal pelvic
+R11;nausea vomitos;naus vomit
+R12;pirose;piros
+R13;disfagia;disfag
+R14;flatulencia afeccoes correlatas;flatulent afecco correlat
+R15;incontinencia fecal;incontinent fecal
+R16;hepatomegalia esplenomegalia classificadas outra parte;hepatomegal esplenomegal classific outr part
+R17;ictericia especificada;icteric especific
+R18;ascite;ascit
+R19;outros sintomas sinais relativos aparelho digestivo abdome;outr sintom sin relat aparelh digest abdom
+R20;disturbios sensibilidade cutanea;disturbi sensibil cutan
+R21;eritema outras erupcoes cutaneas especificadas;eritem outr erupco cutan especific
+R22;tumefacao , massa tumoracao localizadas pele tecido subcutaneo;tumef , mass tumor localiz pel tec subcutan
+R23;outras alteracoes cutaneas;outr alter cutan
+R25;movimentos involuntarios anormais;moviment involuntari anorm
+R26;anormalidades marcha mobilidade;anormal march mobil
+R27;outros disturbios coordenacao;outr disturbi coorden
+R29;outros sintomas sinais relativos sistemas nervoso osteomuscular;outr sintom sin relat sistem nervos osteomuscul
+R30;dor associada miccao;dor assoc micca
+R31;hematuria especificada;hematur especific
+R32;incontinencia urinaria especificada;incontinent urinar especific
+R33;retencao urinaria;retenca urinar
+R34;anuria oliguria;anur oligur
+R35;poliuria;poliur
+R36;secrecao uretral;secreca uretral
+R39;outros sintomas sinais relativos aparelho urinario;outr sintom sin relat aparelh urinari
+R40;sonolencia , estupor coma;sonolent , estupor com
+R41;outros sintomas sinais relativos funcao cognitiva consciencia;outr sintom sin relat funca cognit conscienc
+R42;tontura instabilidade;tontur instabil
+R43;disturbios olfato paladar;disturbi olfat palad
+R44;outros sintomas sinais relativos sensacoes percepcoes gerais;outr sintom sin relat sensaco percepco ger
+R45;sintomas sinais relativos estado emocional;sintom sin relat estad emocional
+R46;sintomas sinais relativos aparencia comportamento;sintom sin relat aparent comport
+R47;disturbios fala classificados outra parte;disturbi fal classific outr part
+R48;dislexia outras disfuncoes simbolicas , classificadas outra parte;dislex outr disfunco simbol , classific outr part
+R49;disturbios voz;disturbi voz
+R50;febre origem desconhecida outras origens;febr orig desconhec outr origens
+R51;cefaleia;cefal
+R52;dor classificada outra parte;dor classific outr part
+R53;mal estar , fadiga;mal estar , fadig
+R54;senilidade;senil
+R55;sincope colapso;sincop colaps
+R56;convulsoes , classificadas outra parte;convulso , classific outr part
+R57;choque classificado outra parte;choqu classific outr part
+R58;hemorragia classificada outra parte;hemorrag classific outr part
+R59;aumento volume ganglios linfaticos;aument volum gangli linfat
+R60;edema classificado outra parte;edem classific outr part
+R61;hiperidrose;hiperidros
+R62;retardo desenvolvimento fisiologico normal;retard desenvolv fisiolog normal
+R63;sintomas sinais relativos ingestao alimentos liquidos;sintom sin relat ingesta aliment liqu
+R64;caquexia;caquex
+R68;outros sintomas sinais gerais;outr sintom sin ger
+R69;causas desconhecidas especificadas morbidade;caus desconhec especific morbidad
+R70;velocidade hemossedimentacao elevada outras anormalidades viscosidade plasmatica;veloc hemossediment elev outr anormal viscos plasmat
+R71;anormalidade hemacias;anormal hemac
+R72;anormalidade leucocitos classificada outra parte;anormal leucocit classific outr part
+R73;aumento glicemia;aument glicem
+R74;anormalidades niveis enzimas sericas;anormal niv enzim seric
+R75;evidencia laboratorial virus imunodeficiencia humana [ hiv ];evident laboratorial virus imunodeficient human [ hiv ]
+R76;outros achados imunologicos anormais soro;outr achad imunolog anorm sor
+R77;outras anormalidades proteinas plasmaticas;outr anormal protein plasmat
+R78;presenca drogas outras substancias normalmente encontradas sangue;presenc drog outr substanc normal encontr sang
+R79;outros achados anormais exames quimicos sangue;outr achad anorm exam quimic sang
+R80;proteinuria isolada;proteinur isol
+R81;glicosuria;glicosur
+R82;outros achados anormais urina;outr achad anorm urin
+R83;achados anormais liquido cefalorraquidiano;achad anorm liqu cefalorraquidian
+R84;achados anormais material proveniente orgaos respiratorios torax;achad anorm material provenient orga respiratori torax
+R85;achados anormais material proveniente orgaos digestivos cavidade abdominal;achad anorm material provenient orga digest cavidad abdominal
+R86;achados anormais material proveniente orgaos genitais masculinos;achad anorm material provenient orga genit masculin
+R87;achados anormais material proveniente orgaos genitais femininos;achad anorm material provenient orga genit feminin
+R89;achados anormais material proveniente outros orgaos , aparelhos , sistemas tecidos;achad anorm material provenient outr orga , aparelh , sistem tec
+R90;resultados anormais exames diagnostico imagem sistema nervoso central;result anorm exam diagnost imag sistem nervos central
+R91;achados anormais , exames diagnostico imagem , pulmao;achad anorm , exam diagnost imag , pulma
+R92;achados anormais , exames diagnostico imagem , mama;achad anorm , exam diagnost imag , mam
+R93;achados anormais exames diagnostico imagem outras estruturas corpo;achad anorm exam diagnost imag outr estrutur corp
+R94;resultados anormais estudos funcao;result anorm estud funca
+R95;sindrome morte subita infancia;sindrom mort subit infanc
+R96;outras mortes subitas causa desconhecida;outr mort subit caus desconhec
+R98;morte assistencia;mort assistent
+R99;outras causas mal definidas especificadas mortalidade;outr caus mal defin especific mortal
+S00;traumatismo superficial cabeca;traumat superficial cabec
+S01;ferimento cabeca;feriment cabec
+S02;fratura cranio ossos face;fratur crani ossos fac
+S03;luxacao , entorse distensao articulacoes ligamentos cabeca;luxaca , entors distensa articul ligament cabec
+S04;traumatismo nervos cranianos;traumat nerv cranian
+S05;traumatismo olho orbita ocular;traumat olho orbit ocul
+S06;traumatismo intracraniano;traumat intracranian
+S07;lesoes esmagamento cabeca;leso esmag cabec
+S08;amputacao traumatica parte cabeca;amput traumat part cabec
+S09;outros traumatismos cabeca especificados;outr traumat cabec especific
+S10;traumatismo superficial pescoco;traumat superficial pescoc
+S11;ferimento pescoco;feriment pescoc
+S12;fratura pescoco;fratur pescoc
+S13;luxacao , entorse distensao articulacoes ligamentos pescoco;luxaca , entors distensa articul ligament pescoc
+S14;traumatismo nervos medula espinhal nivel cervical;traumat nerv medul espinhal nivel cervical
+S15;traumatismo vasos sanguineos nivel pescoco;traumat vas sanguin nivel pescoc
+S16;traumatismo tendoes musculos pescoco;traumat tendo muscul pescoc
+S17;lesoes esmagamento pescoco;leso esmag pescoc
+S18;amputacao traumatica nivel pescoco;amput traumat nivel pescoc
+S19;outros traumatismos pescoco especificados;outr traumat pescoc especific
+S20;traumatismo superficial torax;traumat superficial torax
+S21;ferimento torax;feriment torax
+S22;fratura costela ( ) , esterno coluna toracica;fratur costel ( ) , estern colun torac
+S23;luxacao , entorse distensao articulacoes ligamentos torax;luxaca , entors distensa articul ligament torax
+S24;traumatismos nervos medula espinhal nivel torax;traumat nerv medul espinhal nivel torax
+S25;traumatismo vasos sanguineos torax;traumat vas sanguin torax
+S26;traumatismo coracao;traumat coraca
+S27;traumatismo outros orgaos intratoracicos especificados;traumat outr orga intratorac especific
+S28;lesao esmagamento torax amputacao traumatica parte torax;lesa esmag torax amput traumat part torax
+S29;outros traumatismos torax especificados;outr traumat torax especific
+S30;traumatismo superficial abdome , dorso pelve;traumat superficial abdom , dors pelv
+S31;ferimento abdome , dorso pelve;feriment abdom , dors pelv
+S32;fratura coluna lombar pelve;fratur colun lomb pelv
+S33;luxacao , entorse distensao articulacoes ligamentos coluna lombar pelve;luxaca , entors distensa articul ligament colun lomb pelv
+S34;traumatismo nervos medula lombar nivel abdome , dorso pelve;traumat nerv medul lomb nivel abdom , dors pelv
+S35;traumatismo vasos sanguineos nivel abdome , dorso pelve;traumat vas sanguin nivel abdom , dors pelv
+S36;traumatismo orgaos intra - abdominais;traumat orga intra - abdomin
+S37;traumatismo aparelho urinario orgaos pelvicos;traumat aparelh urinari orga pelvic
+S38;lesao esmagamento amputacao traumatica parte abdome , dorso pelve;lesa esmag amput traumat part abdom , dors pelv
+S39;outros traumatismos especificados abdome , dorso pelve;outr traumat especific abdom , dors pelv
+S40;traumatismo superficial ombro braco;traumat superficial ombro brac
+S41;ferimento ombro braco;feriment ombro brac
+S42;fratura ombro braco;fratur ombro brac
+S43;luxacao , entorse distensao articulacoes ligamentos cintura escapular;luxaca , entors distensa articul ligament cintur escapul
+S44;traumatismo nervos nivel ombro braco;traumat nerv nivel ombro brac
+S45;traumatismo vasos sanguineos nivel ombro braco;traumat vas sanguin nivel ombro brac
+S46;traumatismo tendao musculo nivel ombro braco;traumat tenda muscul nivel ombro brac
+S47;lesao esmagamento ombro braco;lesa esmag ombro brac
+S48;amputacao traumatica ombro braco;amput traumat ombro brac
+S49;outros traumatismos especificados ombro braco;outr traumat especific ombro brac
+S50;traumatismo superficial cotovelo antebraco;traumat superficial cotovel antebrac
+S51;ferimento antebraco;feriment antebrac
+S52;fratura antebraco;fratur antebrac
+S53;luxacao , entorse distensao articulacoes ligamentos cotovelo;luxaca , entors distensa articul ligament cotovel
+S54;traumatismo nervos nivel antebraco;traumat nerv nivel antebrac
+S55;traumatismo vasos sanguineos nivel antebraco;traumat vas sanguin nivel antebrac
+S56;traumatismo musculo tendao nivel antebraco;traumat muscul tenda nivel antebrac
+S57;lesao esmagamento antebraco;lesa esmag antebrac
+S58;amputacao traumatica cotovelo antebraco;amput traumat cotovel antebrac
+S59;outros traumatismos antebraco especificados;outr traumat antebrac especific
+S60;traumatismo superficial punho mao;traumat superficial punh ma
+S61;ferimento punho mao;feriment punh ma
+S62;fratura nivel punho mao;fratur nivel punh ma
+S63;luxacao , entorse distensao articulacoes ligamentos nivel punho mao;luxaca , entors distensa articul ligament nivel punh ma
+S64;traumatismo nervos nivel punho mao;traumat nerv nivel punh ma
+S65;traumatismo vasos sanguineos nivel punho mao;traumat vas sanguin nivel punh ma
+S66;traumatismo musculo tendao nivel punho mao;traumat muscul tenda nivel punh ma
+S67;lesao esmagamento punho mao;lesa esmag punh ma
+S68;amputacao traumatica nivel punho mao;amput traumat nivel punh ma
+S69;outros traumatismos especificados punho mao;outr traumat especific punh ma
+S70;traumatismo superficial quadril coxa;traumat superficial quadril cox
+S71;ferimento quadril coxa;feriment quadril cox
+S72;fratura femur;fratur femur
+S73;luxacao , entorse distensao articulacao ligamentos quadril;luxaca , entors distensa articul ligament quadril
+S74;traumatismo nervos nivel quadril coxa;traumat nerv nivel quadril cox
+S75;traumatismo vasos sanguineos nivel quadril coxa;traumat vas sanguin nivel quadril cox
+S76;traumatismo musculo tendao nivel quadril coxa;traumat muscul tenda nivel quadril cox
+S77;lesao esmagamento quadril coxa;lesa esmag quadril cox
+S78;amputacao traumatica quadril coxa;amput traumat quadril cox
+S79;outros traumatismos especificados quadril coxa;outr traumat especific quadril cox
+S80;traumatismo superficial perna;traumat superficial pern
+S81;ferimento perna;feriment pern
+S82;fratura perna , incluindo tornozelo;fratur pern , inclu tornozel
+S83;luxacao , entorse distensao articulacoes ligamentos joelho;luxaca , entors distensa articul ligament joelh
+S84;traumatismo nervos perifericos perna;traumat nerv perifer pern
+S85;traumatismo vasos sanguineos perna;traumat vas sanguin pern
+S86;traumatismos musculo tendao nivel perna;traumat muscul tenda nivel pern
+S87;traumatismo esmagamento perna;traumat esmag pern
+S88;amputacao traumatica perna;amput traumat pern
+S89;outros traumatismos especificados perna;outr traumat especific pern
+S90;traumatismo superficial tornozelo;traumat superficial tornozel
+S91;ferimentos tornozelo;feriment tornozel
+S92;fratura ( exceto tornozelo );fratur ( excet tornozel )
+S93;luxacao , entorse distensao articulacoes ligamentos nivel tornozelo;luxaca , entors distensa articul ligament nivel tornozel
+S94;traumatismo nervos nivel tornozelo;traumat nerv nivel tornozel
+S95;traumatismo vasos sanguineos nivel tornozelo;traumat vas sanguin nivel tornozel
+S96;traumatismos musculo tendao nivel tornozelo;traumat muscul tenda nivel tornozel
+S97;lesao esmagamento tornozelo;lesa esmag tornozel
+S98;amputacao traumatica tornozelo;amput traumat tornozel
+S99;outros traumatismos especificados tornozelo;outr traumat especific tornozel
+T00;traumatismos superficiais envolvendo multiplas regioes corpo;traumat superfic envolv multipl regio corp
+T01;ferimentos envolvendo multiplas regioes corpo;feriment envolv multipl regio corp
+T02;fraturas envolvendo multiplas regioes corpo;fratur envolv multipl regio corp
+T03;luxacoes , entorses distensoes envolvendo regioes multiplas corpo;luxaco , entors distenso envolv regio multipl corp
+T04;traumatismos esmagamento envolvendo multiplas regioes corpo;traumat esmag envolv multipl regio corp
+T05;amputacoes traumaticas envolvendo multiplas regioes corpo;amput traumat envolv multipl regio corp
+T06;outros traumatismos envolvendo regioes multiplas corpo , classificados outra parte;outr traumat envolv regio multipl corp , classific outr part
+T07;traumatismos multiplos especificados;traumat multipl especific
+T08;fratura coluna , nivel especificado;fratur colun , nivel especific
+T09;outros traumatismos coluna tronco , nivel especificado;outr traumat colun tronc , nivel especific
+T10;fratura membro superior , nivel especificado;fratur membr superior , nivel especific
+T11;outros traumatismos membro superior , nivel especificado;outr traumat membr superior , nivel especific
+T12;fratura membro inferior , nivel especificado;fratur membr inferior , nivel especific
+T13;outros traumatismos membro inferior , nivel especificado;outr traumat membr inferior , nivel especific
+T14;traumatismo regiao especificada corpo;traumat regia especific corp
+T15;corpo estranho parte externa olho;corp estranh part extern olho
+T16;corpo estranho ouvido;corp estranh ouv
+T17;corpo estranho trato respiratorio;corp estranh trat respiratori
+T18;corpo estranho aparelho digestivo;corp estranh aparelh digest
+T19;corpo estranho trato geniturinario;corp estranh trat geniturinari
+T20;queimadura corrosao cabeca pescoco;queimadur corrosa cabec pescoc
+T21;queimadura corrosao tronco;queimadur corrosa tronc
+T22;queimadura corrosao ombro membro superior , exceto punho mao;queimadur corrosa ombro membr superior , excet punh ma
+T23;queimadura corrosao punho mao;queimadur corrosa punh ma
+T24;queimadura corrosao quadril membro inferior , exceto tornozelo;queimadur corrosa quadril membr inferior , excet tornozel
+T25;queimadura corrosao tornozelo;queimadur corrosa tornozel
+T26;queimadura corrosao limitadas olho anexos;queimadur corrosa limit olho anex
+T27;queimadura corrosao trato respiratorio;queimadur corrosa trat respiratori
+T28;queimadura corrosao outros orgaos internos;queimadur corrosa outr orga intern
+T29;queimaduras corrosoes multiplas regioes corpo;queimadur corroso multipl regio corp
+T30;queimadura corrosao , parte especificada corpo;queimadur corrosa , part especific corp
+T31;queimaduras classificadas segundo extensao superficie corporal atingida;queimadur classific segund extensa superfic corporal ating
+T32;corrosoes classificadas segundo extensao superficie corporal atingida;corroso classific segund extensa superfic corporal ating
+T33;geladura superficial;geladur superficial
+T34;geladura necrose tecidos;geladur necros tec
+T35;geladura multiplas partes corpo especificadas;geladur multipl part corp especific
+T36;intoxicacao antibioticos sistemicos;intoxic antibiot sistem
+T37;intoxicacao outras substancias antiinfecciosas antiparasitarias sistemicas;intoxic outr substanc antiinfecc antiparasitar sistem
+T38;intoxicacao hormonios , substitutos sinteticos antagonistas classificados outra parte;intoxic hormoni , substitut sintet antagon classific outr part
+T39;intoxicacao analgesicos , antipireticos anti - reumaticos - opiaceos;intoxic analges , antipiret anti - reumat - opiac
+T40;intoxicacao narcoticos psicodislepticos [ alucinogenos ];intoxic narcot psicodislept [ alucinogen ]
+T41;intoxicacao anestesicos gases terapeuticos;intoxic anestes gas terapeut
+T42;intoxicacao antiepilepticos , sedativos - hipnoticos antiparkinsonianos;intoxic antiepilept , sedat - hipnot antiparkinsonian
+T43;intoxicacao drogas psicotropicas classificadas outra parte;intoxic drog psicotrop classific outr part
+T44;intoxicacao drogas afetam principalmente sistema nervoso autonomo;intoxic drog afet principal sistem nervos autonom
+T45;intoxicacao substancias acao essencialmente sistemica substancias hematologicas , classificadas outra parte;intoxic substanc aca essencial sistem substanc hematolog , classific outr part
+T46;intoxicacao substancias atuam primariamente sobre aparelho circulatorio;intoxic substanc atu primari sobr aparelh circulatori
+T47;intoxicacao substancias atuam primariamente sobre aparelho gastrointestinal;intoxic substanc atu primari sobr aparelh gastrointestinal
+T48;intoxicacao substancias atuam primariamente sobre musculos lisos esqueleticos sobre aparelho respiratorio;intoxic substanc atu primari sobr muscul lis esquelet sobr aparelh respiratori
+T49;intoxicacao substancias uso topico atuam primariamente sobre pele mucosas medicamentos utilizados oftalmologia , otorrinolaringologia odontologia;intoxic substanc uso topic atu primari sobr pel mucos medic utiliz oftalmolog , otorrinolaringolog odontolog
+T50;intoxicacao diureticos outras drogas , medicamentos substancias biologicas especificadas;intoxic diuret outr drog , medic substanc biolog especific
+T51;efeito toxico alcool;efeit toxic alcool
+T52;efeito toxico solventes organicos;efeit toxic solvent organ
+T53;efeito toxico derivados halogenicos hidrocarbonetos alifaticos aromaticos;efeit toxic deriv halogen hidrocarbonet alifat aromat
+T54;efeito toxico corrosivos;efeit toxic corros
+T55;efeito toxico saboes detergentes;efeit toxic sabo detergent
+T56;efeito toxico metais;efeit toxic met
+T57;efeito toxico outras substancias inorganicas;efeit toxic outr substanc inorgan
+T58;efeito toxico monoxido carbono;efeit toxic monox carbon
+T59;efeito toxico outros gases , fumacas vapores;efeit toxic outr gas , fumac vapor
+T60;efeito toxico pesticidas;efeit toxic pestic
+T61;efeito toxico substancias nocivas consumidas fruto mar;efeit toxic substanc nociv consum frut mar
+T62;efeito toxico outras substancias nocivas ingeridas alimento;efeit toxic outr substanc nociv inger aliment
+T63;efeito toxico contato animais venenosos;efeit toxic contat anim venen
+T64;efeito toxico aflatoxina outras micotoxinas contaminantes alimentos;efeit toxic aflatoxin outr micotoxin contamin aliment
+T65;efeito toxico outras substancias especificadas;efeit toxic outr substanc especific
+T66;efeitos especificados radiacao;efeit especific radiaca
+T67;efeitos calor luz;efeit calor luz
+T68;hipotermia;hipoterm
+T69;outros efeitos temperatura reduzida;outr efeit temperatur reduz
+T70;efeitos pressao atmosferica pressao agua;efeit pressa atmosfer pressa agu
+T71;asfixia;asfix
+T73;efeitos outras privacoes;efeit outr privaco
+T74;sindromes maus tratos;sindrom maus trat
+T75;efeitos outras causas externas;efeit outr caus extern
+T78;efeitos adversos classificados outra parte;efeit advers classific outr part
+T79;algumas complicacoes precoces traumatismos classificadas outra parte;algum complic precoc traumat classific outr part
+T80;complicacoes consequentes infusao , transfusao injecao terapeutica;complic consequent infusa , transfusa injeca terapeut
+T81;complicacoes procedimentos classificadas outra parte;complic proced classific outr part
+T82;complicacoes dispositivos proteticos , implantes enxertos cardiacos vasculares;complic disposit protet , implant enxert cardiac vascul
+T83;complicacoes dispositivos proteticos , implantes enxertos geniturinarios internos;complic disposit protet , implant enxert geniturinari intern
+T84;complicacoes dispositivos proteticos , implantes enxertos ortopedicos internos;complic disposit protet , implant enxert ortoped intern
+T85;complicacoes outros dispositivos proteticos , implantes enxertos internos;complic outr disposit protet , implant enxert intern
+T86;falha rejeicao orgaos tecidos transplantados;falh rejeica orga tec transplant
+T87;complicacoes proprias reimplante amputacao;complic propr reimplant amput
+T88;outras complicacoes cuidados medicos cirurgicos classificadas outra parte;outr complic cuid medic cirurg classific outr part
+T90;sequelas traumatismo cabeca;sequel traumat cabec
+T91;sequelas traumatismos pescoco tronco;sequel traumat pescoc tronc
+T92;sequelas traumatismos membro superior;sequel traumat membr superior
+T93;sequelas traumatismos membro inferior;sequel traumat membr inferior
+T94;sequelas traumatismos envolvendo multiplas regioes corpo especificadas;sequel traumat envolv multipl regio corp especific
+T95;sequelas queimaduras , corrosoes geladuras;sequel queimadur , corroso geladur
+T96;sequelas intoxicacao drogas , medicamentos substancias biologicas;sequel intoxic drog , medic substanc biolog
+T97;sequelas efeitos toxicos substancias origem predominantemente - medicinal;sequel efeit toxic substanc orig predomin - medicinal
+T98;sequelas outros efeitos causas externas especificados;sequel outr efeit caus extern especific
+V01;pedestre traumatizado colisao veiculo pedal;pedestr traumatiz colisa veicul pedal
+V02;pedestre traumatizado colisao veiculo motor duas tres rodas;pedestr traumatiz colisa veicul motor duas tres rod
+V03;"pedestre traumatizado colisao automovel [ carro ] , "" pick "" caminhonete";"pedestr traumatiz colisa automovel [ carr ] , "" pick "" caminhonet"
+V04;pedestre traumatizado colisao veiculo transporte pesado onibus;pedestr traumatiz colisa veicul transport pes onibus
+V05;pedestre traumatizado colisao trem [ comboio ] veiculo ferroviario;pedestr traumatiz colisa trem [ comboi ] veicul ferroviari
+V06;pedestre traumatizado colisao outro veiculo - motorizado;pedestr traumatiz colisa outr veicul - motoriz
+V09;pedestre traumatizado outros acidentes transporte acidentes transporte especificados;pedestr traumatiz outr acident transport acident transport especific
+V10;ciclista traumatizado colisao pedestre animal;ciclist traumatiz colisa pedestr animal
+V11;ciclista traumatizado colisao outro veiculo pedal;ciclist traumatiz colisa outr veicul pedal
+V12;ciclista traumatizado colisao veiculo motor duas tres rodas;ciclist traumatiz colisa veicul motor duas tres rod
+V13;"ciclista traumatizado colisao automovel , "" pick "" caminhonete";"ciclist traumatiz colisa automovel , "" pick "" caminhonet"
+V14;ciclista traumatizado colisao veiculo transporte pesado onibus;ciclist traumatiz colisa veicul transport pes onibus
+V15;ciclista traumatizado colisao trem veiculo ferroviario;ciclist traumatiz colisa trem veicul ferroviari
+V16;ciclista traumatizado colisao outro veiculo - motorizado;ciclist traumatiz colisa outr veicul - motoriz
+V17;ciclista traumatizado colisao objeto fixo parado;ciclist traumatiz colisa objet fix par
+V18;ciclista traumatizado acidente transporte colisao;ciclist traumatiz acident transport colisa
+V19;ciclista traumatizado outros acidentes transporte acidentes transporte especificados;ciclist traumatiz outr acident transport acident transport especific
+V20;motociclista traumatizado colisao pedestre animal;motocicl traumatiz colisa pedestr animal
+V21;motociclista traumatizado colisao veiculo pedal;motocicl traumatiz colisa veicul pedal
+V22;motociclista traumatizado colisao veiculo motor duas tres rodas;motocicl traumatiz colisa veicul motor duas tres rod
+V23;"motociclista traumatizado colisao automovel [ carro ] , "" pick "" caminhonete";"motocicl traumatiz colisa automovel [ carr ] , "" pick "" caminhonet"
+V24;motociclista traumatizado colisao veiculo transporte pesado onibus;motocicl traumatiz colisa veicul transport pes onibus
+V25;motociclista traumatizado colisao trem veiculo ferroviario;motocicl traumatiz colisa trem veicul ferroviari
+V26;motociclista traumatizado colisao outro veiculo - motorizado;motocicl traumatiz colisa outr veicul - motoriz
+V27;motociclista traumatizado colisao objeto fixo parado;motocicl traumatiz colisa objet fix par
+V28;motociclista traumatizado acidente transporte colisao;motocicl traumatiz acident transport colisa
+V29;motociclista traumatizado outros acidentes transporte acidentes transporte especificados;motocicl traumatiz outr acident transport acident transport especific
+V30;ocupante triciclo motorizado traumatizado colisao pedestre animal;ocup tricicl motoriz traumatiz colisa pedestr animal
+V31;ocupante triciclo motorizado traumatizado colisao veiculo pedal;ocup tricicl motoriz traumatiz colisa veicul pedal
+V32;ocupante triciclo motorizado traumatizado colisao outro veiculo motor duas tres rodas;ocup tricicl motoriz traumatiz colisa outr veicul motor duas tres rod
+V33;"ocupante triciclo motorizado traumatizado colisao automovel , "" pick "" caminhonete";"ocup tricicl motoriz traumatiz colisa automovel , "" pick "" caminhonet"
+V34;ocupante triciclo motorizado traumatizado colisao veiculo transporte pesado onibus;ocup tricicl motoriz traumatiz colisa veicul transport pes onibus
+V35;ocupante triciclo motorizado traumatizado colisao trem [ comboio ] veiculo ferroviario;ocup tricicl motoriz traumatiz colisa trem [ comboi ] veicul ferroviari
+V36;ocupante triciclo motorizado traumatizado colisao outro veiculo - motorizado;ocup tricicl motoriz traumatiz colisa outr veicul - motoriz
+V37;ocupante triciclo motorizado traumatizado colisao objeto fixo parado;ocup tricicl motoriz traumatiz colisa objet fix par
+V38;ocupante triciclo motorizado traumatizado acidente transporte colisao;ocup tricicl motoriz traumatiz acident transport colisa
+V39;ocupante triciclo motorizado traumatizado outros acidentes transporte acidentes transporte especificados;ocup tricicl motoriz traumatiz outr acident transport acident transport especific
+V40;ocupante automovel [ carro ] traumatizado colisao pedestre animal;ocup automovel [ carr ] traumatiz colisa pedestr animal
+V41;ocupante automovel [ carro ] traumatizado colisao veiculo pedal;ocup automovel [ carr ] traumatiz colisa veicul pedal
+V42;ocupante automovel [ carro ] traumatizado colisao outro veiculo motor duas tres rodas;ocup automovel [ carr ] traumatiz colisa outr veicul motor duas tres rod
+V43;"ocupante automovel [ carro ] traumatizado colisao automovel [ carro ] , "" pick "" caminhonete";"ocup automovel [ carr ] traumatiz colisa automovel [ carr ] , "" pick "" caminhonet"
+V44;ocupante automovel [ carro ] traumatizado colisao veiculo transporte pesado onibus;ocup automovel [ carr ] traumatiz colisa veicul transport pes onibus
+V45;ocupante automovel [ carro ] traumatizado colisao trem [ comboio ] veiculo ferroviario;ocup automovel [ carr ] traumatiz colisa trem [ comboi ] veicul ferroviari
+V46;ocupante automovel [ carro ] traumatizado colisao outro veiculo - motorizado;ocup automovel [ carr ] traumatiz colisa outr veicul - motoriz
+V47;ocupante automovel [ carro ] traumatizado colisao objeto fixo parado;ocup automovel [ carr ] traumatiz colisa objet fix par
+V48;ocupante automovel [ carro ] traumatizado acidente transporte colisao;ocup automovel [ carr ] traumatiz acident transport colisa
+V49;ocupante automovel [ carro ] traumatizado outro acidentes transporte acidentes transporte especificados;ocup automovel [ carr ] traumatiz outr acident transport acident transport especific
+V50;ocupante caminhonete traumatizado colisao pedestre animal;ocup caminhonet traumatiz colisa pedestr animal
+V51;ocupante caminhonete traumatizado colisao veiculo pedal;ocup caminhonet traumatiz colisa veicul pedal
+V52;ocupante caminhonete traumatizado colisao veiculo motor duas tres rodas;ocup caminhonet traumatiz colisa veicul motor duas tres rod
+V53;ocupante caminhonete traumatizado colisao automovel [ carro ] caminhonete;ocup caminhonet traumatiz colisa automovel [ carr ] caminhonet
+V54;ocupante caminhonete traumatizado colisao veiculo transporte pesado onibus;ocup caminhonet traumatiz colisa veicul transport pes onibus
+V55;ocupante caminhonete traumatizado colisao trem [ comboio ] veiculo ferroviario;ocup caminhonet traumatiz colisa trem [ comboi ] veicul ferroviari
+V56;ocupante caminhonete traumatizado colisao outro veiculo - motorizado;ocup caminhonet traumatiz colisa outr veicul - motoriz
+V57;ocupante caminhonete traumatizado colisao objeto fixo parado;ocup caminhonet traumatiz colisa objet fix par
+V58;ocupante caminhonete traumatizado acidente transporte colisao;ocup caminhonet traumatiz acident transport colisa
+V59;ocupante caminhonete traumatizado outros acidentes transporte acidentes transporte especificados;ocup caminhonet traumatiz outr acident transport acident transport especific
+V60;ocupante veiculo transporte pesado traumatizado colisao pedestre animal;ocup veicul transport pes traumatiz colisa pedestr animal
+V61;ocupante veiculo transporte pesado traumatizado colisao veiculo pedal;ocup veicul transport pes traumatiz colisa veicul pedal
+V62;ocupante veiculo transporte pesado traumatizado colisao veiculo motor duas tres rodas;ocup veicul transport pes traumatiz colisa veicul motor duas tres rod
+V63;ocupante veiculo transporte pesado traumatizado colisao automovel [ carro ] caminhonete;ocup veicul transport pes traumatiz colisa automovel [ carr ] caminhonet
+V64;ocupante veiculo transporte pesado traumatizado colisao outro veiculo transporte pesado onibus;ocup veicul transport pes traumatiz colisa outr veicul transport pes onibus
+V65;ocupante veiculo transporte pesado traumatizado colisao trem [ comboio ] veiculo ferroviario;ocup veicul transport pes traumatiz colisa trem [ comboi ] veicul ferroviari
+V66;ocupante veiculo transporte pesado traumatizado colisao outro veiculo - motorizado;ocup veicul transport pes traumatiz colisa outr veicul - motoriz
+V67;ocupante veiculo transporte pesado traumatizado colisao objeto fixo parado;ocup veicul transport pes traumatiz colisa objet fix par
+V68;ocupante veiculo transporte pesado traumatizado acidente transporte colisao;ocup veicul transport pes traumatiz acident transport colisa
+V69;ocupante veiculo transporte pesado traumatizado outros acidentes transporte especificados;ocup veicul transport pes traumatiz outr acident transport especific
+V70;ocupante onibus traumatizado colisao pedestre animal;ocup onibus traumatiz colisa pedestr animal
+V71;ocupante onibus traumatizado colisao veiculo pedal;ocup onibus traumatiz colisa veicul pedal
+V72;ocupante onibus traumatizado colisao outro veiculo motor duas tres rodas;ocup onibus traumatiz colisa outr veicul motor duas tres rod
+V73;ocupante onibus traumatizado colisao automovel [ carro ] caminhonete;ocup onibus traumatiz colisa automovel [ carr ] caminhonet
+V74;ocupante onibus traumatizado colisao veiculo transporte pesado onibus;ocup onibus traumatiz colisa veicul transport pes onibus
+V75;ocupante onibus traumatizado colisao trem [ comboio ] veiculo ferroviario;ocup onibus traumatiz colisa trem [ comboi ] veicul ferroviari
+V76;ocupante onibus traumatizado colisao outro veiculo - motorizado;ocup onibus traumatiz colisa outr veicul - motoriz
+V77;ocupante onibus traumatizado colisao objeto fixo parado;ocup onibus traumatiz colisa objet fix par
+V78;ocupante onibus traumatizado acidente transporte colisao;ocup onibus traumatiz acident transport colisa
+V79;ocupante onibus traumatizado outros acidentes transporte acidentes transporte especificados;ocup onibus traumatiz outr acident transport acident transport especific
+V80;pessoa montada animal ocupante veiculo tracao animal traumatizado acidente transporte;pesso mont animal ocup veicul traca animal traumatiz acident transport
+V81;ocupante trem [ comboio ] veiculo ferroviario traumatizado acidente transporte;ocup trem [ comboi ] veicul ferroviari traumatiz acident transport
+V82;ocupante bonde [ carro eletrico ] traumatizado acidente transporte;ocup bond [ carr eletr ] traumatiz acident transport
+V83;ocupante veiculo especial motor usado principalmente areas industriais traumatizado acidente transporte;ocup veicul especial motor usad principal are industri traumatiz acident transport
+V84;ocupante veiculo especial motor uso essencialmente agricola traumatizado acidente transporte;ocup veicul especial motor uso essencial agricol traumatiz acident transport
+V85;ocupante veiculo motor especial construcoes traumatizado acidente transporte;ocup veicul motor especial construco traumatiz acident transport
+V86;ocupante veiculo especial qualquer terreno outro veiculo motor projetado essencialmente uso via publica , traumatizado acidente transporte;ocup veicul especial qualqu terren outr veicul motor projet essencial uso via public , traumatiz acident transport
+V87;acidente transito tipo especificado , sendo desconhecido modo transporte vitima;acident transit tip especific , send desconhec mod transport vitim
+V88;acidente - - transito tipo especificado , sendo desconhecido modo transporte vitima;acident - - transit tip especific , send desconhec mod transport vitim
+V89;acidente veiculo motor - motorizado , tipo ( ) veiculo ( ) especificado ( );acident veicul motor - motoriz , tip ( ) veicul ( ) especific ( )
+V90;acidente embarcacao causando afogamento submersao;acident embarc caus afog submersa
+V91;acidente embarcacao causando outro tipo traumatismo;acident embarc caus outr tip traumat
+V92;afogamento submersao relacionados transporte agua acidente embarcacao;afog submersa relacion transport agu acident embarc
+V93;acidente bordo embarcacao , acidente embarcacao causando afogamento submersao;acident bord embarc , acident embarc caus afog submersa
+V94;outros acidentes transporte agua especificados;outr acident transport agu especific
+V95;acidente aeronave motor causando traumatismo ocupante;acident aeronav motor caus traumat ocup
+V96;acidente aeronave motor causando traumatismo ocupante;acident aeronav motor caus traumat ocup
+V97;outros acidentes especificados transporte aereo;outr acident especific transport aer
+V98;outros acidentes transporte especificados;outr acident transport especific
+V99;acidente transporte especificado;acident transport especific
+W00;queda nivel envolvendo gelo neve;qued nivel envolv gel nev
+W01;queda nivel escorregao , tropecao passos falsos [ traspes ];qued nivel escorrega , tropeca pass fals [ traspes ]
+W02;queda envolvendo patins rodas gelo , esqui pranchas rodas;qued envolv patins rod gel , esqu pranch rod
+W03;outras quedas nivel colisao empurrao outra pessoa;outr qued nivel colisa empurra outr pesso
+W04;queda , enquanto sendo carregado apoiado outra ( ) pessoa ( );qued , enquant send carreg apoi outr ( ) pesso ( )
+W05;queda envolvendo cadeira rodas;qued envolv cadeir rod
+W06;queda leito;qued leit
+W07;queda cadeira;qued cadeir
+W08;queda outro tipo mobilia;qued outr tip mobil
+W09;"queda envolvendo equipamento "" playground """;"qued envolv equip "" playground """
+W10;queda escadas degraus;qued escad degraus
+W11;queda escadas mao;qued escad ma
+W12;queda andaime;qued andaim
+W13;queda edificios outras estruturas;qued edifici outr estrutur
+W14;queda arvore;qued arvor
+W15;queda penhasco;qued penhasc
+W16;mergulho pulo agua causando outro traumatismo afogamento submersao;mergulh pul agu caus outr traumat afog submersa
+W17;outras quedas nivel outro;outr qued nivel outr
+W18;outras quedas nivel;outr qued nivel
+W19;queda especificacao;qued especific
+W20;impacto causado objeto lancado , projetado queda;impact caus objet lanc , projet qued
+W21;impacto acidental ativo passivo causado equipamento esportivo;impact acidental ativ passiv caus equip esport
+W22;impacto acidental ativo passivo causado outros objetos;impact acidental ativ passiv caus outr objet
+W23;apertado , colhido , comprimido esmagado dentro objetos;apert , colh , comprim esmag dentr objet
+W24;contato elevadores instrumentos transmissao , classificados outra parte;contat elev instrument transmissa , classific outr part
+W25;contato vidro cortante;contat vidr cortant
+W26;contato faca , espada punhal;contat fac , espad punhal
+W27;contato ferramentas manuais motor;contat ferrament manu motor
+W28;contato segadeira motorizada cortar aparar grama;contat segadeir motoriz cort apar gram
+W29;contato outros utensilios manuais aparelhos domesticos equipados motor;contat outr utensili manu aparelh domest equip motor
+W30;contato maquinaria agricola;contat maquin agricol
+W31;contato outras maquinas especificadas;contat outr maquin especific
+W32;projetil revolver;projetil revolv
+W33;rifle , espingarda armas fogo maior tamanho;rifl , espingard armas fog maior tamanh
+W34;projeteis outras armas fogo especificadas;projet outr armas fog especific
+W35;explosao ruptura caldeira;explosa ruptur caldeir
+W36;explosao ruptura cilindro gas;explosa ruptur cilindr gas
+W37;explosao ruptura pneumatico , tubulacao mangueira , pressurizados;explosa ruptur pneumat , tubul mangueir , pressuriz
+W38;explosao ruptura outros aparelhos pressurizados especificados;explosa ruptur outr aparelh pressuriz especific
+W39;queima fogos artificio;queim fog artifici
+W40;explosao outros materiais;explosa outr materi
+W41;exposicao jato alta pressao;exposica jat alta pressa
+W42;exposicao ruido;exposica ruid
+W43;exposicao vibracao;exposica vibraca
+W44;penetracao corpo estranho atraves olho orificio natural;penetr corp estranh atraves olho orifici natural
+W45;penetracao corpo objeto estranho atraves pele;penetr corp objet estranh atraves pel
+W46;contato agulha hipodermica;contat agulh hipoderm
+W49;exposicao outras forcas mecanicas inanimadas especificadas;exposica outr forc mecan inanim especific
+W50;golpe , pancada , pontape , mordedura escoriacao infligidos outra pessoa;golp , panc , pontap , mordedur escori inflig outr pesso
+W51;colisao duas pessoas;colisa duas pesso
+W52;esmagado , empurrado pisoteado multidao debandada massa pessoas;esmag , empurr pisot multida deband mass pesso
+W53;mordedura rato;mordedur rat
+W54;mordedura golpe provocado cao;mordedur golp provoc ca
+W55;mordedura golpe provocado outros animais mamiferos;mordedur golp provoc outr anim mamifer
+W56;contato animais marinhos;contat anim marinh
+W57;mordeduras picadas inseto outros artropodes , - venenosos;mordedur pic inset outr artropod , - venen
+W58;mordedura golpe provocado crocodilo aligator;mordedur golp provoc crocodil aligator
+W59;mordedura esmagamento provocado outros repteis;mordedur esmag provoc outr rept
+W60;contato espinhos plantas folhas agucadas;contat espinh plant folh aguc
+W64;exposicao outras forcas mecanicas animadas especificadas;exposica outr forc mecan anim especific
+W65;afogamento submersao durante banho banheira;afog submersa durant banh banheir
+W66;afogamento submersao consecutiva queda dentro banheira;afog submersa consecut qued dentr banheir
+W67;afogamento submersao piscina;afog submersa piscin
+W68;afogamento submersao consequente queda dentro piscina;afog submersa consequent qued dentr piscin
+W69;afogamento submersao aguas naturais;afog submersa agu natur
+W70;afogamento submersao consequentes queda dentro aguas naturais;afog submersa consequent qued dentr agu natur
+W73;outros afogamentos submersao especificados;outr afog submersa especific
+W74;afogamento submersao especificados;afog submersa especific
+W75;sufocacao estrangulamento acidental cama;sufoc estrangul acidental cam
+W76;outro enforcamento estrangulamento acidental;outr enforc estrangul acidental
+W77;risco respiracao devido desmoronamento , queda terra outras substancias;risc respir dev desmoron , qued terr outr substanc
+W78;inalacao conteudo gastrico;inal conteud gastric
+W79;inalacao ingestao alimentos causando obstrucao trato respiratorio;inal ingesta aliment caus obstruca trat respiratori
+W80;inalacao ingestao outros objetos causando obstrucao trato respiratorio;inal ingesta outr objet caus obstruca trat respiratori
+W81;confinado aprisionado ambiente pobre oxigenio;confin aprision ambient pobr oxigeni
+W83;outros riscos especificados respiracao;outr risc especific respir
+W84;riscos especificados respiracao;risc especific respir
+W85;exposicao linhas transmissao corrente eletrica;exposica linh transmissa corrent eletr
+W86;exposicao outra corrente eletrica especificada;exposica outr corrent eletr especific
+W87;exposicao corrente eletrica especificada;exposica corrent eletr especific
+W88;exposicao radiacao ionizante;exposica radiaca ioniz
+W89;exposicao fontes luminosas artificiais visiveis luz ultravioleta;exposica font lumin artific visiv luz ultraviolet
+W90;exposicao outros tipos radiacao - ionizante;exposica outr tip radiaca - ioniz
+W91;exposicao tipo especificado radiacao;exposica tip especific radiaca
+W92;exposicao calor excessivo origem artificial;exposica calor excess orig artificial
+W93;exposicao frio excessivo origem artificial;exposica fri excess orig artificial
+W94;exposicao alta , baixa variacoes pressao atmosferica;exposica alta , baix variaco pressa atmosfer
+W99;exposicao outros fatores ambientais artificiais especificados;exposica outr fator ambient artific especific
+X00;exposicao fogo - controlado edificio outro tipo construcao;exposica fog - control edifici outr tip construca
+X01;exposicao fogo - controlado edificio outro tipo construcao;exposica fog - control edifici outr tip construca
+X02;exposicao fogo controlado edificio outro tipo construcao;exposica fog control edifici outr tip construca
+X03;exposicao fogo controlado edificio outro tipo construcao;exposica fog control edifici outr tip construca
+X04;exposicao combustao substancia inflamavel;exposica combusta substanc inflam
+X05;exposicao combustao roupa dormir;exposica combusta roup dorm
+X06;exposicao combustao outro tipo roupa acessorios;exposica combusta outr tip roup acessori
+X08;exposicao outro tipo especificado fumaca , fogo chamas;exposica outr tip especific fumac , fog cham
+X09;exposicao tipo especificado fumaca , fogo chamas;exposica tip especific fumac , fog cham
+X10;contato bebidas , alimentos , gordura oleo cozinha quentes;contat beb , aliment , gordur ole cozinh quent
+X11;contato agua corrente quente torneira;contat agu corrent quent torneir
+X12;contato outros liquidos quentes;contat outr liqu quent
+X13;contato vapor ' agua vapores quentes;contat vapor ' agu vapor quent
+X14;contato gases quentes;contat gas quent
+X15;contato aparelhos domesticos quentes;contat aparelh domest quent
+X16;contato aquecedores , radiadores tubulacao;contat aquecedor , radiador tubul
+X17;contato motores , maquinas ferramentas quentes;contat motor , maquin ferrament quent
+X18;contato outros metais quentes;contat outr met quent
+X19;contato outras fontes calor substancias quentes especificados;contat outr font calor substanc quent especific
+X20;contato serpentes lagartos venenosos;contat serpent lagart venen
+X21;contato aranhas venenosas;contat aranh venen
+X22;contato escorpioes;contat escorpio
+X23;contato abelhas , vespas vespoes;contat abelh , vesp vespo
+X24;contato centopeias miriapodes venenosas ( tropicais );contat centop miriapod venen ( tropic )
+X25;contato outros artropodes venenosos;contat outr artropod venen
+X26;contato animais plantas marinhos venenosos;contat anim plant marinh venen
+X27;contato outros animais venenosos especificados;contat outr anim venen especific
+X28;contato outras plantas venenosas especificadas;contat outr plant venen especific
+X29;contato animais plantas venenosos , especificacao;contat anim plant venen , especific
+X30;exposicao calor natural excessivo;exposica calor natural excess
+X31;exposicao frio natural excessivo;exposica fri natural excess
+X32;exposicao luz solar;exposica luz sol
+X33;vitima raio;vitim rai
+X34;vitima terremoto;vitim terremot
+X35;vitima erupcao vulcanica;vitim erupca vulcan
+X36;vitima avalanche , desabamento terra outros movimentos superficie terrestre;vitim avalanch , desab terr outr moviment superfic terrestr
+X37;vitima tempestade cataclismica;vitim tempestad cataclism
+X38;vitima inundacao;vitim inund
+X39;exposicao outras forcas natureza especificadas;exposica outr forc natur especific
+X40;envenenamento [ intoxicacao ] acidental exposicao analgesicos , antipireticos anti - reumaticos , - opiaceos;envenen [ intoxic ] acidental exposica analges , antipiret anti - reumat , - opiac
+X41;envenenamento [ intoxicacao ] acidental exposicao anticonvulsivantes [ antiepilepticos ] , sedativos , hipnoticos , antiparkinsonianos psicotropicos classificadas outra parte;envenen [ intoxic ] acidental exposica anticonvulsiv [ antiepilept ] , sedat , hipnot , antiparkinsonian psicotrop classific outr part
+X42;envenenamento [ intoxicacao ] acidental exposicao narcoticos psicodislepticos [ alucinogenos ] classificados outra parte;envenen [ intoxic ] acidental exposica narcot psicodislept [ alucinogen ] classific outr part
+X43;envenenamento [ intoxicacao ] acidental exposicao outras substancias farmacologicas acao sobre sistema nervoso autonomo;envenen [ intoxic ] acidental exposica outr substanc farmacolog aca sobr sistem nervos autonom
+X44;envenenamento [ intoxicacao ] acidental exposicao outras drogas , medicamentos substancias biologicas especificadas;envenen [ intoxic ] acidental exposica outr drog , medic substanc biolog especific
+X45;envenenamento [ intoxicacao ] acidental exposicao alcool;envenen [ intoxic ] acidental exposica alcool
+X46;envenenamento [ intoxicacao ] acidental exposicao solventes organicos hidrocarbonetos halogenados vapores;envenen [ intoxic ] acidental exposica solvent organ hidrocarbonet halogen vapor
+X47;intoxicacao acidental exposicao outros gases vapores;intoxic acidental exposica outr gas vapor
+X48;envenenamento [ intoxicacao ] acidental exposicao pesticidas;envenen [ intoxic ] acidental exposica pestic
+X49;envenenamento [ intoxicacao ] acidental exposicao outras substancias quimicas nocivas especificadas;envenen [ intoxic ] acidental exposica outr substanc quimic nociv especific
+X50;excesso exercicios movimentos vigorosos repetitivos;excess exercici moviment vigor repetit
+X51;viagem movimento;viag moviment
+X52;estadia prolongada ambiente agravitacional;estad prolong ambient agravitacional
+X53;falta alimento;falt aliment
+X54;falta agua;falt agu
+X57;privacao especificada;privaca especific
+X58;exposicao outros fatores especificados;exposica outr fator especific
+X59;exposicao fatores especificados;exposica fator especific
+X60;auto - intoxicacao exposicao , intencional , analgesicos , antipireticos anti - reumaticos , - opiaceos;aut - intoxic exposica , intencional , analges , antipiret anti - reumat , - opiac
+X61;auto - intoxicacao exposicao , intencional , drogas anticonvulsivantes [ antiepilepticos ] sedativos , hipnoticos , antiparkinsonianos psicotropicos classificados outra parte;aut - intoxic exposica , intencional , drog anticonvulsiv [ antiepilept ] sedat , hipnot , antiparkinsonian psicotrop classific outr part
+X62;auto - intoxicacao exposicao , intencional , narcoticos psicodislepticos [ alucinogenos ] classificados outra parte;aut - intoxic exposica , intencional , narcot psicodislept [ alucinogen ] classific outr part
+X63;auto - intoxicacao exposicao , intencional , outras substancias farmacologicas acao sobre sistema nervoso autonomo;aut - intoxic exposica , intencional , outr substanc farmacolog aca sobr sistem nervos autonom
+X64;auto - intoxicacao exposicao , intencional , outras drogas , medicamentos substancias biologicas especificadas;aut - intoxic exposica , intencional , outr drog , medic substanc biolog especific
+X65;auto - intoxicacao voluntaria alcool;aut - intoxic voluntar alcool
+X66;auto - intoxicacao intencional solventes organicos , hidrocarbonetos halogenados vapores;aut - intoxic intencional solvent organ , hidrocarbonet halogen vapor
+X67;auto - intoxicacao intencional outros gases vapores;aut - intoxic intencional outr gas vapor
+X68;auto - intoxicacao exposicao , intencional , pesticidas;aut - intoxic exposica , intencional , pestic
+X69;auto - intoxicacao exposicao , intencional , outros produtos quimicos substancias nocivas especificadas;aut - intoxic exposica , intencional , outr produt quimic substanc nociv especific
+X70;lesao autoprovocada intencionalmente enforcamento , estrangulamento sufocacao;lesa autoprovoc intencional enforc , estrangul sufoc
+X71;lesao autoprovocada intencionalmente afogamento submersao;lesa autoprovoc intencional afog submersa
+X72;lesao autoprovocada intencionalmente disparo arma fogo mao;lesa autoprovoc intencional dispar arma fog ma
+X73;lesao autoprovocada intencionalmente disparo espingarda , carabina , arma fogo maior calibre;lesa autoprovoc intencional dispar espingard , carabin , arma fog maior calibr
+X74;lesao autoprovocada intencionalmente disparo outra arma fogo arma fogo especificada;lesa autoprovoc intencional dispar outr arma fog arma fog especific
+X75;lesao autoprovocada intencionalmente dispositivos explosivos;lesa autoprovoc intencional disposit explos
+X76;lesao autoprovocada intencionalmente fumaca , fogo chamas;lesa autoprovoc intencional fumac , fog cham
+X77;lesao autoprovocada intencionalmente vapor agua , gases objetos quentes;lesa autoprovoc intencional vapor agu , gas objet quent
+X78;lesao autoprovocada intencionalmente objeto cortante penetrante;lesa autoprovoc intencional objet cortant penetr
+X79;lesao autoprovocada intencionalmente objeto contundente;lesa autoprovoc intencional objet contundent
+X80;lesao autoprovocada intencionalmente precipitacao lugar elevado;lesa autoprovoc intencional precipit lug elev
+X81;lesao autoprovocada intencionalmente precipitacao permanencia diante objeto movimento;lesa autoprovoc intencional precipit permanent diant objet moviment
+X82;lesao autoprovocada intencionalmente impacto veiculo motor;lesa autoprovoc intencional impact veicul motor
+X83;lesao autoprovocada intencionalmente outros meios especificados;lesa autoprovoc intencional outr mei especific
+X84;lesao autoprovocada intencionalmente meios especificados;lesa autoprovoc intencional mei especific
+X85;agressao meio drogas , medicamentos substancias biologicas;agressa mei drog , medic substanc biolog
+X86;agressao meio substancias corrosivas;agressa mei substanc corros
+X87;agressao pesticidas;agressa pestic
+X88;agressao meio gases vapores;agressa mei gas vapor
+X89;agressao meio outros produtos quimicos substancias nocivas especificados;agressa mei outr produt quimic substanc nociv especific
+X90;agressao meio produtos quimicos substancias nocivas especificados;agressa mei produt quimic substanc nociv especific
+X91;agressao meio enforcamento , estrangulamento sufocacao;agressa mei enforc , estrangul sufoc
+X92;agressao meio afogamento submersao;agressa mei afog submersa
+X93;agressao meio disparo arma fogo mao;agressa mei dispar arma fog ma
+X94;agressao meio disparo espingarda , carabina arma fogo maior calibre;agressa mei dispar espingard , carabin arma fog maior calibr
+X95;agressao meio disparo outra arma fogo arma especificada;agressa mei dispar outr arma fog arma especific
+X96;agressao meio material explosivo;agressa mei material explos
+X97;agressao meio fumaca , fogo chamas;agressa mei fumac , fog cham
+X98;agressao meio vapor agua , gases objetos quentes;agressa mei vapor agu , gas objet quent
+X99;agressao meio objeto cortante penetrante;agressa mei objet cortant penetr
+Y00;agressao meio objeto contundente;agressa mei objet contundent
+Y01;agressao meio projecao lugar elevado;agressa mei projeca lug elev
+Y02;agressao meio projecao colocacao vitima diante objeto movimento;agressa mei projeca coloc vitim diant objet moviment
+Y03;agressao meio impacto veiculo motor;agressa mei impact veicul motor
+Y04;agressao meio forca corporal;agressa mei forc corporal
+Y05;agressao sexual meio forca fisica;agressa sexual mei forc fisic
+Y06;negligencia abandono;negligent abandon
+Y07;outras sindromes maus tratos;outr sindrom maus trat
+Y08;agressao outros meios especificados;agressa outr mei especific
+Y09;agressao meios especificados;agressa mei especific
+Y10;envenenamento [ intoxicacao ] exposicao analgesicos , antipireticos anti - reumaticos - opiaceos , intencao determinada;envenen [ intoxic ] exposica analges , antipiret anti - reumat - opiac , intenca determin
+Y11;envenenamento [ intoxicacao ] exposicao anticonvulsivantes [ antiepilepticos ] , sedativos , hipnoticos , antiparkinsonianos psicotropicos classificados outra parte , intencao determinada;envenen [ intoxic ] exposica anticonvulsiv [ antiepilept ] , sedat , hipnot , antiparkinsonian psicotrop classific outr part , intenca determin
+Y12;envenenamento [ intoxicacao ] exposicao narcoticos psicodislepticos [ alucinogenos ] classificados outra parte , intencao determinada;envenen [ intoxic ] exposica narcot psicodislept [ alucinogen ] classific outr part , intenca determin
+Y13;envenenamento [ intoxicacao ] exposicao outras substancias farmacologicas acao sobre sistema nervoso autonomo , intencao determinada;envenen [ intoxic ] exposica outr substanc farmacolog aca sobr sistem nervos autonom , intenca determin
+Y14;envenenamento [ intoxicacao ] exposicao outras drogas , medicamentos substancias biologicas especificadas , intencao determinada;envenen [ intoxic ] exposica outr drog , medic substanc biolog especific , intenca determin
+Y15;envenenamento [ intoxicacao ] exposicao alcool , intencao determinada;envenen [ intoxic ] exposica alcool , intenca determin
+Y16;envenenamento [ intoxicacao ] exposicao solventes organicos hidrocarbonetos halogenados vapores , intencao determinada;envenen [ intoxic ] exposica solvent organ hidrocarbonet halogen vapor , intenca determin
+Y17;envenenamento [ intoxicacao ] exposicao outros gases vapores , intencao determinada;envenen [ intoxic ] exposica outr gas vapor , intenca determin
+Y18;envenenamento [ intoxicacao ] exposicao pesticidas , intencao determinada;envenen [ intoxic ] exposica pestic , intenca determin
+Y19;envenenamento [ intoxicacao ] exposicao outros produtos quimicos substancias nocivas especificados , intencao determinada;envenen [ intoxic ] exposica outr produt quimic substanc nociv especific , intenca determin
+Y20;enforcamento , estrangulamento sufocacao , intencao determinada;enforc , estrangul sufoc , intenca determin
+Y21;afogamento submersao , intencao determinada;afog submersa , intenca determin
+Y22;disparo pistola , intencao determinada;dispar pistol , intenca determin
+Y23;disparo fuzil , carabina arma fogo maior calibre , intencao determinada;dispar fuzil , carabin arma fog maior calibr , intenca determin
+Y24;disparo outra arma fogo arma fogo especificada , intencao determinada;dispar outr arma fog arma fog especific , intenca determin
+Y25;contato material explosivo , intencao determinada;contat material explos , intenca determin
+Y26;exposicao fumaca , fogo chamas , intencao determinada;exposica fumac , fog cham , intenca determin
+Y27;exposicao vapor agua , gases objetos quentes , intencao determinada;exposica vapor agu , gas objet quent , intenca determin
+Y28;contato objeto cortante penetrante , intencao determinada;contat objet cortant penetr , intenca determin
+Y29;contato objeto contundente , intencao determinada;contat objet contundent , intenca determin
+Y30;queda , salto empurrado lugar elevado , intencao determinada;qued , salt empurr lug elev , intenca determin
+Y31;queda , permanencia corrida diante objeto movimento , intencao determinada;qued , permanent corr diant objet moviment , intenca determin
+Y32;impacto veiculo motor , intencao determinada;impact veicul motor , intenca determin
+Y33;outros fatos eventos especificados , intencao determinada;outr fat event especific , intenca determin
+Y34;fatos eventos especificados intencao determinada;fat event especific intenca determin
+Y35;intervencao legal;intervenca legal
+Y36;operacoes guerra;oper guerr
+Y40;efeitos adversos antibioticos sistemicos;efeit advers antibiot sistem
+Y41;efeitos adversos outros antiinfecciosos antiparasitarios sistemicos;efeit advers outr antiinfecc antiparasitari sistem
+Y42;efeitos adversos hormonios substitutos sinteticos antagonistas , classificados outra parte;efeit advers hormoni substitut sintet antagon , classific outr part
+Y43;efeitos adversos substancias acao primariamente sistemica;efeit advers substanc aca primari sistem
+Y44;efeitos adversos substancias farmacologicas atuam primariamente sobre constituintes sangue;efeit advers substanc farmacolog atu primari sobr constituint sang
+Y45;efeitos adversos substancias analgesicas , antipireticas antiinflamatorias;efeit advers substanc analges , antipiret antiinflamator
+Y46;efeitos adversos drogas anticonvulsivantes ( antiepilepticas ) antiparkinsonianas;efeit advers drog anticonvulsiv ( antiepilept ) antiparkinsonian
+Y47;efeitos adversos sedativos , hipnoticos tranquilizantes [ ansioliticos ];efeit advers sedat , hipnot tranquiliz [ ansiolit ]
+Y48;efeitos adversos anestesicos gases terapeuticos;efeit advers anestes gas terapeut
+Y49;efeitos adversos substancias psicotropicas , classificadas outra parte;efeit advers substanc psicotrop , classific outr part
+Y50;efeitos adversos estimulantes sistema nervoso central , classificados outra parte;efeit advers estimul sistem nervos central , classific outr part
+Y51;efeitos adversos drogas atuam primariamente sobre sistema nervoso autonomo;efeit advers drog atu primari sobr sistem nervos autonom
+Y52;efeitos adversos substancias atuam primariamente sobre aparelho cardiovascular;efeit advers substanc atu primari sobr aparelh cardiovascul
+Y53;efeitos adversos substancias atuam primariamente sobre aparelho gastrointestinal;efeit advers substanc atu primari sobr aparelh gastrointestinal
+Y54;efeitos adversos substancias atuam primariamente sobre metabolismo agua , sais minerais acido urico;efeit advers substanc atu primari sobr metabol agu , sais miner acid uric
+Y55;efeitos adversos substancias atuam primariamente sobre musculos lisos esqueleticos sobre aparelho respiratorio;efeit advers substanc atu primari sobr muscul lis esquelet sobr aparelh respiratori
+Y56;efeitos adversos substancias uso topico atuam primariamente sobre pele membranas mucosas drogas uso oftalmologico , otorrinolaringologico dentario;efeit advers substanc uso topic atu primari sobr pel membran mucos drog uso oftalmolog , otorrinolaringolog dentari
+Y57;efeitos adversos outras drogas medicamentos especificadas;efeit advers outr drog medic especific
+Y58;efeitos adversos vacinas bacterianas;efeit advers vacin bacterian
+Y59;efeitos adversos outras vacinas substancias biologicas especificadas;efeit advers outr vacin substanc biolog especific
+Y60;corte , puncao , perfuracao hemorragia acidentais durante prestacao cuidados medicos cirurgicos;cort , punca , perfur hemorrag acident durant prestaca cuid medic cirurg
+Y61;objeto estranho deixado acidentalmente corpo durante prestacao cuidados cirurgicos medicos;objet estranh deix acidental corp durant prestaca cuid cirurg medic
+Y62;assepsia insuficiente durante prestacao cuidados cirurgicos medicos;asseps insuficient durant prestaca cuid cirurg medic
+Y63;erros dosagem durante prestacao cuidados medicos cirurgicos;erros dosag durant prestaca cuid medic cirurg
+Y64;medicamentos substancias biologicas contaminados;medic substanc biolog contamin
+Y65;outros acidentes durante prestacao cuidados medicos cirurgicos;outr acident durant prestaca cuid medic cirurg
+Y66;administracao cuidado medico cirurgico;administr cuid medic cirurg
+Y69;acidente especificado durante prestacao cuidado medico cirurgico;acident especific durant prestaca cuid medic cirurg
+Y70;dispositivos ( aparelhos ) anestesiologia , associados incidentes adversos;disposit ( aparelh ) anestesiolog , assoc incident advers
+Y71;dispositivos ( aparelhos ) cardiovasculares , associados incidentes adversos;disposit ( aparelh ) cardiovascul , assoc incident advers
+Y72;dispositivos ( aparelhos ) utilizados otorrinolaringologia , associados incidentes adversos;disposit ( aparelh ) utiliz otorrinolaringolog , assoc incident advers
+Y73;dispositivos ( aparelhos ) usados gastroenterologia urologia , associados incidentes adversos;disposit ( aparelh ) usad gastroenterolog urolog , assoc incident advers
+Y74;dispositivos ( aparelhos ) gerais uso hospitalar pessoal , associados incidentes adversos;disposit ( aparelh ) ger uso hospital pessoal , assoc incident advers
+Y75;dispositivos ( aparelhos ) utilizados neurologia , associados incidentes adversos;disposit ( aparelh ) utiliz neurolog , assoc incident advers
+Y76;dispositivos ( aparelhos ) utilizados obstetricia ginecologia , associados incidentes adversos;disposit ( aparelh ) utiliz obstetric ginecolog , assoc incident advers
+Y77;dispositivos ( aparelhos ) utilizados oftalmologia , associados incidentes adversos;disposit ( aparelh ) utiliz oftalmolog , assoc incident advers
+Y78;dispositivos ( aparelhos ) utilizados radiologia , associados incidentes adversos;disposit ( aparelh ) utiliz radiolog , assoc incident advers
+Y79;dispositivos ( aparelhos ) ortopedicos , associado incidentes adversos;disposit ( aparelh ) ortoped , assoc incident advers
+Y80;dispositivos ( aparelhos ) utilizados medicina fisica ( fisiatria ) , associado incidentes adversos;disposit ( aparelh ) utiliz medicin fisic ( fisiatr ) , assoc incident advers
+Y81;dispositivos ( aparelhos ) utilizados cirurgia geral cirurgia plastica , associados incidente adversos;disposit ( aparelh ) utiliz cirurg geral cirurg plastic , assoc incident advers
+Y82;outros dispositivos ( aparelhos ) associados incidentes adversos especificados;outr disposit ( aparelh ) assoc incident advers especific
+Y83;reacao anormal paciente complicacao tardia , causadas intervencao cirurgica outros atos cirurgicos , mencao acidente durante intervencao;reaca anormal pacient complic tard , caus intervenca cirurg outr atos cirurg , menca acident durant intervenca
+Y84;reacao anormal paciente complicacao tardia , causadas outros procedimentos medicos , mencao acidente durante procedimento;reaca anormal pacient complic tard , caus outr proced medic , menca acident durant proced
+Y85;sequelas acidentes transporte;sequel acident transport
+Y86;sequelas outros acidentes;sequel outr acident
+Y87;sequelas lesao autoprovocada intencionalmente , agressao fato cuja intencao indeterminada;sequel lesa autoprovoc intencional , agressa fat cuj intenca indetermin
+Y88;sequelas cuidado medico cirurgico considerados causa externa;sequel cuid medic cirurg consider caus extern
+Y89;sequelas outras causas externas;sequel outr caus extern
+Y90;evidencia alcoolismo determinada taxas alcoolemia;evident alcool determin tax alcoolem
+Y91;evidencia alcoolismo determinada nivel intoxicacao;evident alcool determin nivel intoxic
+Y95;circunstancia relativa condicoes nosocomiais ( hospitalares );circunst relat condico nosocomi ( hospital )
+Y96;circunstancia relativa condicoes trabalho;circunst relat condico trabalh
+Y97;circunstancias relativas condicoes poluicao ambiental;circunstanc relat condico poluica ambiental
+Y98;circunstancias relativas condicoes modo vida;circunstanc relat condico mod vid
+Z00;exame geral investigacao pessoas queixas diagnostico relatado;exam geral investig pesso queix diagnost relat
+Z01;outros exames investigacoes especiais pessoas queixa diagnostico relatado;outr exam investig espec pesso queix diagnost relat
+Z02;exame medico consulta finalidades administrativas;exam medic consult final administr
+Z03;observacao avaliacao medica doencas afeccoes suspeitas;observ avali medic doenc afecco suspeit
+Z04;exame observacao outras razoes;exam observ outr razo
+Z08;exame seguimento apos tratamento neoplasia maligna;exam seguiment apos tratament neoplas malign
+Z09;exame seguimento apos tratamento outras afeccoes neoplasias malignas;exam seguiment apos tratament outr afecco neoplas malign
+Z10;"exame geral rotina ( "" check "" ) subpopulacao definida";"exam geral rotin ( "" check "" ) subpopul defin"
+Z11;"exame especial rastreamento ( "" screening "" ) doencas infecciosas parasitarias";"exam especial rastreament ( "" screening "" ) doenc infecc parasitar"
+Z12;"exame especial rastreamento ( "" screening "" ) neoplasias";"exam especial rastreament ( "" screening "" ) neoplas"
+Z13;"exame especial rastreamento ( "" screening "" ) outros transtornos doencas";"exam especial rastreament ( "" screening "" ) outr transtorn doenc"
+Z20;contato exposicao doencas transmissiveis;contat exposica doenc transmissiv
+Z21;estado infeccao assintomatica virus imunodeficiencia humana [ hiv ];estad infecca assintomat virus imunodeficient human [ hiv ]
+Z22;portador doenca infecciosa;portador doenc infecc
+Z23;necessidade imunizacao contra unica doenca bacteriana;necess imuniz contr unic doenc bacterian
+Z24;necessidade imunizacao contra algumas doencas virais unicas;necess imuniz contr algum doenc vir unic
+Z25;necessidade imunizacao contra outras doencas virais unicas;necess imuniz contr outr doenc vir unic
+Z26;necessidade imunizacao contra outras doencas infecciosas unicas;necess imuniz contr outr doenc infecc unic
+Z27;necessidade imunizacao associada contra combinacoes doencas infecciosas;necess imuniz assoc contr combin doenc infecc
+Z28;imunizacao realizada;imuniz realiz
+Z29;necessidade outras medidas profilaticas;necess outr med profilat
+Z30;anticoncepcao;anticoncepca
+Z31;medidas procriacao;med procriaca
+Z32;exame teste gravidez;exam test gravidez
+Z33;gravidez achado casual;gravidez achad casual
+Z34;supervisao gravidez normal;supervisa gravidez normal
+Z35;supervisao gravidez alto risco;supervisa gravidez alto risc
+Z36;"rastreamento ( "" screening "" ) pre - natal";"rastreament ( "" screening "" ) pre - natal"
+Z37;resultado parto;result part
+Z38;nascidos vivos [ nado - vivos ] segundo local nascimento;nasc viv [ nad - viv ] segund local nasciment
+Z39;assistencia exame pos - natal;assistent exam pos - natal
+Z40;cirurgia profilatica;cirurg profilat
+Z41;procedimentos outros propositos exceto cuidados saude;proced outr proposit excet cuid saud
+Z42;seguimento envolvendo cirurgia plastica;seguiment envolv cirurg plastic
+Z43;atencao orificios artificiais;atenca orifici artific
+Z44;colocacao ajustamento aparelhos protese externa;coloc ajust aparelh protes extern
+Z45;ajustamento manuseio dispositivo implantado;ajust manusei disposit implant
+Z46;colocacao ajustamento outros aparelhos;coloc ajust outr aparelh
+Z47;outros cuidados seguimento ortopedico;outr cuid seguiment ortoped
+Z48;outro seguimento cirurgico;outr seguiment cirurg
+Z49;cuidados envolvendo dialise;cuid envolv dialis
+Z50;cuidados envolvendo uso procedimentos reabilitacao;cuid envolv uso proced reabilit
+Z51;outros cuidados medicos;outr cuid medic
+Z52;doadores orgaos tecidos;doador orga tec
+Z53;pessoas contato servicos saude procedimentos especificos realizados;pesso contat servic saud proced especif realiz
+Z54;convalescenca;convalescenc
+Z55;problemas relacionados educacao alfabetizacao;problem relacion educ alfabetiz
+Z56;problemas relacionados emprego desemprego;problem relacion empreg desempreg
+Z57;exposicao ocupacional fatores risco;exposica ocupacional fator risc
+Z58;problemas relacionados ambiente fisico;problem relacion ambient fisic
+Z59;problemas relacionados habitacao condicoes economicas;problem relacion habit condico econom
+Z60;problemas relacionados meio social;problem relacion mei social
+Z61;problemas relacionados eventos negativos vida infancia;problem relacion event negat vid infanc
+Z62;outros problemas relacionados educacao crianca;outr problem relacion educ crianc
+Z63;outros problemas relacionados grupo primario apoio , inclusive situacao familiar;outr problem relacion grup primari apoi , inclusiv situaca famili
+Z64;problemas relacionados algumas outras circunstancias psicossociais;problem relacion algum outr circunstanc psicossoc
+Z65;problemas relacionados outras circunstancias psicossociais;problem relacion outr circunstanc psicossoc
+Z70;aconselhamento relativo atitudes , comportamento orientacao materia sexualidade;aconselh relat atitud , comport orient mater sexual
+Z71;pessoas contato servicos saude outros aconselhamentos conselho medico , classificados outra parte;pesso contat servic saud outr aconselh conselh medic , classific outr part
+Z72;problemas relacionados estilo vida;problem relacion estil vid
+Z73;problemas relacionados organizacao modo vida;problem relacion organiz mod vid
+Z74;problemas relacionados dependencia pessoa oferece cuidados saude;problem relacion dependent pesso oferec cuid saud
+Z75;problemas relacionados facilidades medicas outros cuidados saude;problem relacion facil medic outr cuid saud
+Z76;pessoas contato servicos saude outras circunstancias;pesso contat servic saud outr circunstanc
+Z80;historia familiar neoplasia maligna;histor famili neoplas malign
+Z81;historia familiar transtornos mentais comportamentais;histor famili transtorn ment comportament
+Z82;historia familiar algumas incapacidades doencas cronicas conduzem incapacitacao;histor famili algum incapac doenc cronic conduz incapacit
+Z83;historia familiar outros transtornos especificos;histor famili outr transtorn especif
+Z84;historia familiar outras afeccoes;histor famili outr afecco
+Z85;historia pessoal neoplasia maligna;histor pessoal neoplas malign
+Z86;historia pessoal algumas outras doencas;histor pessoal algum outr doenc
+Z87;historia pessoal outras doencas afeccoes;histor pessoal outr doenc afecco
+Z88;historia pessoal alergia drogas , medicamentos substancias biologicas;histor pessoal alerg drog , medic substanc biolog
+Z89;ausencia adquirida membros;ausenc adquir membr
+Z90;ausencia adquirida orgaos classificados outra parte;ausenc adquir orga classific outr part
+Z91;historia pessoal fatores risco , classificados outra parte;histor pessoal fator risc , classific outr part
+Z92;historia pessoal tratamento medico;histor pessoal tratament medic
+Z93;orificios artificiais;orifici artific
+Z94;orgaos tecidos transplantados;orga tec transplant
+Z95;presenca implantes enxertos cardiacos vasculares;presenc implant enxert cardiac vascul
+Z96;presenca outros implantes funcionais;presenc outr implant funcion
+Z97;presenca outros dispositivos proteticos;presenc outr disposit protet
+Z98;outros estados pos - cirurgicos;outr estad pos - cirurg
+Z99;dependencia maquinas dispositivos capacitantes , classificados outra parte;dependent maquin disposit capacit , classific outr part
+U04;sindrome respiratoria aguda grave [ severe acute respiratory syndrome sars ];sindrom respirator agud grav [ sever acut respiratory syndrom sars ]
+U80;agente resistente penicilina antibioticos relacionados;agent resistent penicilin antibiot relacion
+U81;agente resistente vancomicina antibioticos relacionados;agent resistent vancomicin antibiot relacion
+U88;agente resistente multiplos antibioticos;agent resistent multipl antibiot
+U89;agente resistente outros antibioticos antibioticos especificados;agent resistent outr antibiot antibiot especific
+U99;cid 10 revisao disponivel;cid 10 revisa dispon
