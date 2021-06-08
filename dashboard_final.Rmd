@@ -1,0 +1,1689 @@
+---
+title: "Brazilian Court Decisions"
+always_allow_html: yes
+output: 
+  flexdashboard::flex_dashboard:
+    vertical_layout: scroll
+    orientation: rows 
+    css: styles.css
+    favicon: favicon.png 
+---
+
+```{r Setup, include=FALSE}
+knitr::opts_chunk$set(echo = F, warning = F, message = F, error = TRUE)
+
+```
+
+```{r Preprocessing, echo=FALSE, results='hide', message=FALSE, warning=FALSE, fig.show='hide'}
+
+install.and.load <- function(vPacotes)
+{
+   for (pac in vPacotes) {
+      if (!require(pac, character.only=T)) {
+         install.packages(pac)
+         library(pac, character.only=T)
+      }
+   }
+}
+
+install.and.load(c('here', 'ggplot2', 'scales', 'grid', 'gridExtra', 
+                   'dplyr', 'tidyr', 'stringr', 'plotly', 'ggthemes', 'flexdashboard'))
+
+if (!require("processx")) install.packages("processx")
+
+cairo_pdf <- 'pdf'
+
+mycat <- function(text){
+  cat(gsub(pattern = "\n", replacement = "  \n", x = text))
+}
+
+# --------------------------------------------------=
+# returns string w/o leading or trailing whitespace
+trim <- function (x) gsub("^\\s+|\\s+$", "", x)
+trim_all <- function(x) gsub(" ", "", x, fixed = TRUE)
+trim_rs <- function(x) gsub("r$", "", x)
+
+# --------------------------------------------------=
+
+options(digits=10, scipen=99)
+
+
+COLOR_GRID <- "#f0f0f0"
+OKABE_ITO <- c(
+   "sky_blue"       =rgb( 86, 180, 233, maxColorValue=255), 
+   "blue"           =rgb(  0, 114, 178, maxColorValue=255),
+   "reddish_purple" =rgb(204, 121, 167, maxColorValue=255),
+   "vermillion"     =rgb(213,  94,   0, maxColorValue=255),
+   "bluish_green"   =rgb(  0, 158, 115, maxColorValue=255),
+   "yellow"         =rgb(240, 228,  66, maxColorValue=255),
+   "orange"         =rgb(230, 159,   0, maxColorValue=255), 
+   "black"          =rgb(  0,   0,   0, maxColorValue=255))
+
+
+OkabeIto <- function(x) {
+   return (as.character(OKABE_ITO[x]))   
+}
+
+GRAYS <- c('#cccccc', '#999999', '#666666', '#333333')
+
+BLUES <- c('#AADDFF', '#77AACC', '#447799', '#114466')
+
+LBLUE <- '#B3CDE3'
+
+GREENS <- c("#00d19c", "#009e74", "#004f3b")
+# GREENS <- c("#aaffc5", "#77cc98", "#116636")
+
+doc.colors <- c(BLUES[1], BLUES[2], BLUES[4])
+names(doc.colors) <- c("R", "1a", "2a")
+
+proc.colors <- GRAYS
+names(proc.colors) <- c("PROCEDIMENTO", "REEMBOLSO", "TRATAMENTO", "MEDICAMENTO_EME")
+
+flag.colors <- c("#004f3b", "#cccccc")
+names(flag.colors) <- c("Provided", "Not provided")
+
+levels.colors <- c(GREENS[1], GREENS[2], GREENS[3])
+names(levels.colors) <- c("lower", "equal", "higher")
+
+m <- list(
+  l = 50,
+  r = 50,
+  b = 100,
+  t = 100,
+  pad = 4
+)
+
+f <- list(
+  size = 16
+)
+
+tit <- list(
+  size = 12
+)
+
+
+af <- list(
+  size = 12
+)
+
+xform <- list(categoryorder = "array",
+              categoryarray = c("R", 
+                                "1a", 
+                                "2a"))
+
+```
+
+```{r Database, echo=FALSE, results='hide', message=FALSE, warning=FALSE, fig.show='hide'}
+
+# dfAppellbyCID_dm <- readRDS(file = "in/dfAppellbyCID_dm.Rds")
+# dfRepTrialAppell_dm <- readRDS(file = "in/dfRepTrialAppell_dm.Rds")
+
+dfRepTrialAppell_dm <- readRDS(file = "in/dfRepTrialAppell_dm.Rds")
+dfAppellbyCID_dm <- readRDS(file = "in/dfAppellbyCID_dm.Rds")
+
+dfRepTrialAppell_reemb <- readRDS(file = "in/dfRepTrialAppell_reemb.Rds")
+
+dfRepTrial_req <- readRDS(file = "in/dfRepTrial_req.Rds")
+dfAppellbyCID_reemb <- readRDS(file = "in/dfAppellbyCID_reemb.Rds")
+
+
+```
+
+All law suits {data-navmenu="Moral damage" data-icon="fa-file-alt"} 
+=========================================================================================================
+
+### 
+> All law suits
+
+
+Row
+---------------------------------------------------------------------------------------------------------
+
+### Report
+```{r}
+dfPlot <- dfRepTrialAppell_dm %>% filter(!(document == "R" & value == "0"))
+R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
+
+valueBox(value = R_N,icon = "fa-balance-scale", color = doc.colors[1])
+```
+
+### Lower Court
+```{r}
+valueBox(value = R_L,icon = "fa-balance-scale",color = doc.colors[2])
+
+```
+
+### Appellate Court
+```{r}
+valueBox(value = R_A,icon = "fa-balance-scale",color = doc.colors[3])
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r, fig.align="center"}
+
+#5.1 a
+#remover os valores onde R é zero para melhorar a forma do boxplot
+
+
+group_cids <- unique(dfPlot[,c('CID_GRUPO','CID_NOME')])
+
+## Juntar Pregancy, parto e pós parto
+
+cid_en_names <- c("Undefined", "Respiratory", "Digestive", "Eye", "Congenital", "Neoplasm", "Not informed", "Infectious",
+  "Endocrine", "Mental", "Circulatory", "Musculoskeletal", "Genitourinary", "Nervous",
+  "Poisoning", "Skin", "Blood", "Perinatal", "Childbirth and  post-childbirth", "Exams", "Health services",
+  "Ear", "Death")
+
+group_cids$CID_NOME_EN <- cid_en_names
+
+R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
+
+
+xform <- list(categoryorder = "array",
+              categoryarray = c("R", 
+                                "1a", 
+                                "2a"))
+
+viz <- plot_ly(dfPlot, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = "Granted values for moral damages: \nall law suits and appeals analyzed",
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")), 
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+```
+
+
+
+Row
+-------------------------------------   
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == group_cids[1, "CID_GRUPO"])
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[1, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+### 
+
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[2, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[2, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+
+### 
+
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[3, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[3, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+          ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[4, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[4, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+### 
+
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[5, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[5, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+### 
+
+
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[6, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[6, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[7, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[7, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+### 
+
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[8, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[8, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+### 
+
+
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[9, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[9, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[10, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[10, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+### 
+
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[11, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[11, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+### 
+
+
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[12, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[12, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[13, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
+               showlegend = FALSE, width = 500, height = 500) %>%
+  layout(
+         title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[13, "CID_NOME_EN"], " chapter: \nall law suits and appeals analyzed"),
+         yaxis = list(font = f, title = "Amount (R$)"), 
+         xaxis = list(font = f, title = "", 
+           ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+           tickvals = list("R", "1a", "2a"),
+           tickmode = "array",
+           categoryarray = c("R","1a", "2a"),
+           categoryorder = "array"),
+          
+         margin = m)
+
+viz
+
+
+```
+
+
+Granted appeals {data-navmenu="Moral damage" data-icon="fa-check-circle"} 
+=========================================================================================================
+
+###
+> Granted appeals
+
+Row
+---------------------------------------------------------------------------------------------------------
+
+### Report
+```{r}
+
+dfPlot <- dfRepTrialAppell_dm %>%
+  filter(Filename %in% dfAppellbyCID_dm$Filename)
+dfPlot <- dfPlot %>% filter(!(document == "R" & value == "0"))
+
+R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
+
+valueBox(value = R_N,icon = "fa-balance-scale", color = doc.colors[1])
+```
+
+### Lower Court
+```{r}
+valueBox(value = R_L,icon = "fa-balance-scale",color = doc.colors[2])
+
+```
+
+### Appellate Court
+```{r}
+valueBox(value = R_A,icon = "fa-balance-scale",color = doc.colors[3])
+```
+
+
+Row {data-width: 1000}
+---------------------------------------------------------------------------------------------------------
+
+### 
+
+```{r}
+
+#5.2 a
+
+viz <- plot_ly(dfPlot, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = "Granted values for moral damages related to \nthe same law suits: only granted appeals",
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+
+```
+
+
+Row
+-------------------------------------
+
+###
+
+```{r}
+# 5.4 a
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[1, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[1, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[2, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[2, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[3, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[3, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[4, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[4, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[5, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[5, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[6, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[6, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+Row
+-------------------------------------
+
+###
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[7, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[7, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[8, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[8, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[9, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[9, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[10, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[10, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[11, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[11, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+# 5.4 a
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[12, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[12, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[13, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
+
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = paste0("Granted values for moral damages related to\n the same law suits of the ",group_cids[13, "CID_NOME_EN"]," chapter:\nonly granted appeals"),
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")"), paste0("Appellate Court \n(N = ",R_A[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+
+Denied appeals {data-navmenu="Moral damage" data-icon="fa-times-circle"}
+=========================================================================================================
+###
+> Denied appeals
+
+Row
+---------------------------------------------------------------------------------------------------------
+
+### Report
+```{r}
+
+
+dfPlot <- dfRepTrialAppell_dm %>%
+  filter(!(Filename %in% dfAppellbyCID_dm$Filename))
+dfPlot <- dfPlot %>% filter(!(document == "R" & value == "0"))
+
+R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
+R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
+
+valueBox(value = R_N,icon = "fa-balance-scale", color = doc.colors[1])
+```
+
+### Lower Court
+```{r}
+valueBox(value = R_L,icon = "fa-balance-scale",color = doc.colors[2])
+
+```
+
+### Appellate Court
+```{r}
+valueBox(value = R_A,icon = "fa-balance-scale",color = doc.colors[3])
+```
+
+Row {data-width: 1000}
+-------------------------------------
+
+### 
+
+```{r}
+
+#5.3 a
+
+
+viz <- plot_ly(dfPlot, y = ~value, color = ~document, type = "box", colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout(title = "Granted values for moral damages related to \nthe same law suits: only denied appeals",
+         yaxis = list(font=f, title = "Amount (R$)"), 
+         xaxis = list(font=f, title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[1, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", as.character(group_cids[1, "CID_NOME_EN"]), " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[2, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[2, "CID_NOME_EN"], " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[3, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[3, "CID_NOME_EN"] ," chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)", dtick=10000), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[4, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", as.character(group_cids[4, "CID_NOME_EN"]), " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[5, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[5, "CID_NOME_EN"], " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[6, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[6, "CID_NOME_EN"] ," chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)", dtick=10000), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[7, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", as.character(group_cids[7, "CID_NOME_EN"]), " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[8, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[8, "CID_NOME_EN"], " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[9, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[9, "CID_NOME_EN"] ," chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)", dtick=10000), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[10, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", as.character(group_cids[10, "CID_NOME_EN"]), " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[11, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[11, "CID_NOME_EN"], " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[12, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", group_cids[12, "CID_NOME_EN"] ," chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)", dtick=10000), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+Row
+-------------------------------------
+
+### 
+
+```{r}
+
+dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[13, "CID_GRUPO"]))
+R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
+R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
+
+viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
+               colors = doc.colors,  showlegend = FALSE, 
+               width = 500, height = 500) %>%
+  layout( title = paste0("Granted values for moral damages related to \nthe same law suits of the ", as.character(group_cids[13, "CID_NOME_EN"]), " chapter:\nonly denied appeals"),
+         yaxis = list(font=f,title = "Amount (R$)"), 
+         xaxis = list(font=f,title = "", 
+                      ticktext = list(paste0("Report \n(N = ",R_N[[1]],")"), paste0("Lower Court \n(N = ",R_L[[1]],")")),
+                      tickvals = list("R", "1a", "2a"),
+                      tickmode = "array",
+                      categoryarray = c("R","1a", "2a"),
+                      categoryorder = "array"),
+         margin = m)
+
+viz
+```
+
+
+Other claims 
+=========================================================================================================
+<!-- {data-icon="fa-briefcase-medical"} -->
+###
+> Other claims
+
+Row {data-width: 1000}
+-------------------------------------
+### 
+```{r}
+cids_names <- c("Undefined", "Infectious", "Neoplasm", "Blood", "Endocrine", "Mental", "Nervous", "Eye", "Ear", 
+                       "Circulatory", "Respiratory", "Digestive", "Skin", "Musculoskeletal", "Genitourinary", "Childbirth and post-childbirth", 
+                       "Perinatal", "Congenital", "Exams", "Poisoning", "Death", "Health services", "Not informed")
+
+names(cids_names) <- c("Indefinido", "Infecciosas", "Tumores", "Sangue", "Endócrinas", "Mentais", "Sistema nervoso", "Oftalmológicas", "Auditivas",
+                       "Ap. circulatório", "Ap. respiratório", "Ap. Digestivo",  "Dermatológicas", "Osteomuscular", "Ap. Urinário", "Parto e pós-parto",
+                       "Gravidez", "Congênitas", "Exames", "Envenenamento", "Morte", "Serviço saúde", "Não informado")
+
+# cids_names[[dfRepTrialAppell_reemb$CID_NOME]]
+
+dfRepTrialAppell_reemb[, "CID_NOME_EN"] <- cids_names[dfRepTrialAppell_reemb$CID_NOME]
+
+#só casos que tiveram primeira instância
+temp <- dfRepTrialAppell_reemb %>% 
+  filter((!(Filename %in% dfAppellbyCID_reemb$Filename)))
+
+#só casos que tiveram reembolso
+documents_id <- temp %>% 
+  filter(document == "1a") %>% filter(REEMBOLSO == "1") %>% select(Filename)
+
+temp <- dfRepTrialAppell_reemb
+temp[temp$document == "1a", "document"] <- "primeira"
+temp[temp$document == "2a", "document"] <- "segunda"
+
+temp <- temp %>% 
+  filter(Filename %in% documents_id$Filename) %>%
+  select(Filename, document, RVALOR, CID_NOME, CID_NOME_EN) %>% 
+  group_by(Filename, CID_NOME) %>% 
+  spread(document, RVALOR) %>%
+  mutate(diff_Trial = primeira - R) %>% as.data.frame()
+
+temp$diff_Trial_quali <- "equal"
+temp[temp$diff_Trial > 0, "diff_Trial_quali"] <- "higher"
+temp[temp$diff_Trial < 0, "diff_Trial_quali"] <- "lower"
+
+temp$CID_NOME_EN <- as.factor(temp$CID_NOME_EN)
+temp$diff_Trial_quali <- as.factor(temp$diff_Trial_quali)
+
+temp2 <- temp %>% group_by(CID_NOME_EN, diff_Trial_quali) %>% 
+  summarise(n=length(diff_Trial)) 
+  # complete(CID_NOME, nesting(diff_Trial_quali), fill = list(n = 0))
+
+yform <- list(categoryorder = "array",
+              categoryarray = temp2$n)
+
+temp3 <- temp2 %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined") %>% group_by(CID_NOME_EN) %>% summarise(sum = sum(n))
+# temp3 <- temp2 %>% filter(CID_NOME_EN != "Undefined") %>% group_by(CID_NOME_EN) %>% summarise(sum = sum(n))
+
+n_order <- temp3[order(-temp3$sum),]
+
+dfPlot <- temp2 %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined")
+# dfPlot <- temp2 %>% filter(CID_NOME_EN != "Undefined")
+
+dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN) 
+dfPlot$diff_Trial_quali <- factor(dfPlot$diff_Trial_quali, levels = c("lower", "equal", "higher")) 
+
+viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~n, color=~diff_Trial_quali, colors = levels.colors, 
+                type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
+  layout(yaxis = list(font=f,title ='', yform),
+         xaxis = list(font=f,title=''),
+         barmode = 'group',
+         title = 'Material damages granted by chapter:\nonly denied appeals',
+         autosize = FALSE,
+         margin = m) 
+
+viz
+```
+
+Row
+-------------------------------------
+###
+```{r}
+documents_req <- dfRepTrialAppell_reemb %>% filter(REEMBOLSO == 1 & document == "2a") %>% select("Filename")
+
+#só casos que tiveram primeira instância
+temp <- dfRepTrialAppell_reemb %>% 
+  filter((!(Filename %in% dfAppellbyCID_reemb$Filename)))
+documents_req2 <- dfRepTrialAppell_reemb %>% filter(Filename %in% temp$Filename & REEMBOLSO == 1) %>% select("Filename")
+
+documents_all <- rbind(documents_req, documents_req2)
+
+cids_names <- c("Undefined", "Infectious", "Neoplasm", "Blood", "Endocrine", "Mental", "Nervous", "Eye", "Ear", 
+                "Circulatory", "Respiratory", "Digestive", "Skin", "Musculoskeletal", "Genitourinary", "Childbirth and post-childbirth", 
+                "Perinatal", "Congenital", "Exams", "Poisoning", "Death", "Health services", "Not informed")
+
+names(cids_names) <- c("Indefinido", "Infecciosas", "Tumores", "Sangue", "Endócrinas", "Mentais", "Sistema nervoso", "Oftalmológicas", "Auditivas",
+                       "Ap. circulatório", "Ap. respiratório", "Ap. Digestivo",  "Dermatológicas", "Osteomuscular", "Ap. Urinário", "Parto e pós-parto",
+                       "Gravidez", "Congênitas", "Exames", "Envenenamento", "Morte", "Serviço saúde", "Não informado")
+
+dfRepTrialAppell_reemb[, "CID_NOME_EN"] <- cids_names[dfRepTrialAppell_reemb$CID_NOME]
+
+dfReemb <- dfRepTrialAppell_reemb %>%
+  group_by(CID_NOME, document, CID_NOME_EN) %>%
+  filter(REEMBOLSO == "1" & Filename %in% documents_all$Filename & CID_NOME_EN != "Undefined" & CID_NOME_EN != "Not informed") %>%
+  tally()
+
+temp <- dfReemb %>% spread(document, n)
+temp[is.na(temp$`1a`), "1a"] <- 0
+temp[is.na(temp$`2a`), "2a"] <- 0
+
+colnames(temp) <- c("CID_NOME", "CID_NOME_EN", "primeira", "segunda", "R")
+
+dfPlot <- temp %>% group_by(CID_NOME, CID_NOME_EN) %>% mutate(Provided = primeira + segunda,
+                                                              Not_provided = R - segunda - primeira)
+
+dfPlot <- dfPlot %>% select(-c(R, primeira, segunda)) %>% gather(key = type, value = value, -c(CID_NOME, CID_NOME_EN))
+
+dfPlot[dfPlot$type == "Not_provided", "type"] <- "Not provided"
+
+temp <- dfPlot %>%
+  group_by(CID_NOME_EN) %>% summarise(sum = sum(value))
+
+n_order <- temp[order(-temp$sum),]
+
+dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN)
+
+
+dfPlot$type <- factor(dfPlot$type, levels = c("Provided", "Not provided")) 
+
+viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~value, color=~type, colors = flag.colors,
+                type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
+  layout(barmode = 'stack',
+         title = 'Relation between material damage claims \nand decisions of such claims by chapter',
+         xaxis = list(font=f, title ='', dtick=10),
+         yaxis = list(font=f, title =''),
+         margin = m) 
+
+viz
+```
+
+
+###
+```{r}
+documents_req <- dfRepTrial_req %>% filter(type == "PROCEDIMENTO" & document == "R" & value == "1") %>% select("Filename")
+
+cids_names <- c("Undefined", "Infectious", "Neoplasm", "Blood", "Endocrine", "Mental", "Nervous", "Eye", "Ear", 
+                "Circulatory", "Respiratory", "Digestive", "Skin", "Musculoskeletal", "Genitourinary", "Childbirth and post-childbirth", 
+                "Perinatal", "Congenital", "Exams", "Poisoning", "Death", "Health services", "Not informed")
+
+names(cids_names) <- c("Indefinido", "Infecciosas", "Tumores", "Sangue", "Endócrinas", "Mentais", "Sistema nervoso", "Oftalmológicas", "Auditivas",
+                       "Ap. circulatório", "Ap. respiratório", "Ap. Digestivo",  "Dermatológicas", "Osteomuscular", "Ap. Urinário", "Parto e pós-parto",
+                       "Gravidez", "Congênitas", "Exames", "Envenenamento", "Morte", "Serviço saúde", "Não informado")
+
+dfRepTrial_req[, "CID_NOME_EN"] <- cids_names[dfRepTrial_req$CID_NOME]
+
+
+
+temp <- dfRepTrial_req %>%
+  group_by(CID_NOME, document, type, value, CID_NOME_EN) %>%
+  filter(type == "PROCEDIMENTO" & Filename %in% documents_req$Filename & CID_NOME_EN != "Undefined") %>%
+  tally()
+
+
+temp <- temp %>% filter(document != "R")
+
+temp2 <- temp %>%
+  group_by(CID_NOME_EN) %>% summarise(sum = sum(n))
+
+n_order <- temp2[order(-temp2$sum),]
+
+dfPlot <- temp %>% filter(CID_NOME_EN != "Undefined" & CID_NOME_EN != "Not informed")
+
+dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN)
+
+
+values_name <- c("Provided", "Not provided")
+names(values_name) <- c("1", "0")
+
+dfPlot[, "names_EN"] <- values_name[dfPlot$value]
+dfPlot$names_EN <- factor(dfPlot$names_EN, levels = c("Provided", "Not provided")) 
+
+viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~n, color=~names_EN, colors = flag.colors,
+                type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
+  layout(barmode = 'stack',
+         title = 'Relation between procedure claims and \nlower Court decisions of such claims by chapter',
+         xaxis = list(font=f, title ='', dtick=10),
+         yaxis = list(font=f, title =''),
+         margin = m) 
+
+viz
+```
+
+Row
+-------------------------------------
+###
+```{r}
+documents_req <- dfRepTrial_req %>% filter(type == "MEDICAMENTO_EME" & document == "R" & value == "1") %>% select("Filename")
+
+temp <- dfRepTrial_req %>%
+  group_by(CID_NOME, document, type, value, CID_NOME_EN) %>%
+  filter(type == "MEDICAMENTO_EME" & Filename %in% documents_req$Filename & CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined") %>%
+  tally()
+
+temp <- temp %>% filter(document != "R")
+
+temp2 <- temp %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined") %>%
+  group_by(CID_NOME_EN) %>% summarise(sum = sum(n))
+
+n_order <- temp2[order(-temp2$sum),]
+
+dfPlot <- temp %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined")
+
+dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN) 
+
+
+values_name <- c("Provided", "Not provided")
+names(values_name) <- c("1", "0")
+
+dfPlot[, "names_EN"] <- values_name[dfPlot$value]
+dfPlot$names_EN <- factor(dfPlot$names_EN, levels = c("Provided", "Not provided")) 
+
+viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~n, color=~names_EN, colors = flag.colors,
+                type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
+  layout(barmode = 'stack',
+         title = 'Relation between medicine/exam claims and \nlower Court decisions of such claims by chapter',
+         xaxis = list(font=f, title ='', dtick=10),
+         yaxis = list(font=f, title =''),
+         margin = m) 
+
+viz
+```
+
+###
+```{r}
+documents_req <- dfRepTrial_req %>% filter(type == "TRATAMENTO" & document == "R" & value == "1") %>% select("Filename")
+
+temp <- dfRepTrial_req %>%
+  group_by(CID_NOME, document, type, value, CID_NOME_EN) %>%
+  filter(type == "TRATAMENTO" & Filename %in% documents_req$Filename & CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined") %>%
+  tally()
+
+temp <- temp %>% filter(document != "R")
+
+temp2 <- temp %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined") %>%
+  group_by(CID_NOME_EN) %>% summarise(sum = sum(n))
+
+n_order <- temp2[order(-temp2$sum),]
+
+dfPlot <- temp %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined")
+
+dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN) 
+
+
+values_name <- c("Provided", "Not provided")
+names(values_name) <- c("1", "0")
+
+dfPlot[, "names_EN"] <- values_name[dfPlot$value]
+dfPlot$names_EN <- factor(dfPlot$names_EN, levels = c("Provided", "Not provided")) 
+
+viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~n, color=~names_EN, colors = flag.colors,
+                type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
+  layout(barmode = 'stack',
+         title = 'Relation between treatment claims and \nlower Court decisions of such claims by chapter',
+         xaxis = list(font=f, title ='', dtick=10),
+         yaxis = list(font=f, title =''),
+         margin = m) 
+
+viz
+```
+
+
