@@ -177,13 +177,15 @@ def evaluate(dataset_directory, word_embedding_file_path, model_file_path, tag_v
 
 
 def predict(dataset_directory, predictions_directory, word_embedding_file_path, model_file_path,
-            tag_vocabulary_file_path, char_vocabulary_file_path, use_char_embedding):
+            tag_vocabulary_file_path, char_vocabulary_file_path, use_char_embedding,
+            max_word_size):
 
     print("Loading dataset...")
     textual_dataset = TextualDataset(word_embedding_file_path=word_embedding_file_path,
                                      tag_vocabulary_file_path=tag_vocabulary_file_path,
                                      char_vocabulary_file_path=char_vocabulary_file_path,
-                                     use_char_embedding=use_char_embedding)
+                                     use_char_embedding=use_char_embedding,
+                                     max_word_size=max_word_size)
     textual_dataset.load_for_prediction(dataset_directory=dataset_directory)
 
     print("Loading model...")
