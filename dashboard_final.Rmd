@@ -16,6 +16,8 @@ knitr::opts_chunk$set(echo = F, warning = F, message = F, error = TRUE)
 
 ```{r Preprocessing, echo=FALSE, results='hide', message=FALSE, warning=FALSE, fig.show='hide'}
 
+# general functions and R package loads
+
 install.and.load <- function(vPacotes)
 {
    for (pac in vPacotes) {
@@ -37,17 +39,15 @@ mycat <- function(text){
   cat(gsub(pattern = "\n", replacement = "  \n", x = text))
 }
 
-# --------------------------------------------------=
 # returns string w/o leading or trailing whitespace
 trim <- function (x) gsub("^\\s+|\\s+$", "", x)
 trim_all <- function(x) gsub(" ", "", x, fixed = TRUE)
 trim_rs <- function(x) gsub("r$", "", x)
 
-# --------------------------------------------------=
 
 options(digits=10, scipen=99)
 
-
+# color palletes
 COLOR_GRID <- "#f0f0f0"
 OKABE_ITO <- c(
    "sky_blue"       =rgb( 86, 180, 233, maxColorValue=255), 
@@ -85,6 +85,10 @@ names(flag.colors) <- c("Provided", "Not provided")
 levels.colors <- c(GREENS[1], GREENS[2], GREENS[3])
 names(levels.colors) <- c("lower", "equal", "higher")
 
+
+# plots definitions
+
+#margin
 m <- list(
   l = 50,
   r = 50,
@@ -93,18 +97,21 @@ m <- list(
   pad = 4
 )
 
+#font
 f <- list(
   size = 16
 )
 
+#title
 tit <- list(
   size = 12
 )
 
-
 af <- list(
   size = 12
 )
+
+# document array - levels definition
 
 xform <- list(categoryorder = "array",
               categoryarray = c("R", 
@@ -115,8 +122,7 @@ xform <- list(categoryorder = "array",
 
 ```{r Database, echo=FALSE, results='hide', message=FALSE, warning=FALSE, fig.show='hide'}
 
-# dfAppellbyCID_dm <- readRDS(file = "in/dfAppellbyCID_dm.Rds")
-# dfRepTrialAppell_dm <- readRDS(file = "in/dfRepTrialAppell_dm.Rds")
+# database loads
 
 dfRepTrialAppell_dm <- readRDS(file = "in/dfRepTrialAppell_dm.Rds")
 dfAppellbyCID_dm <- readRDS(file = "in/dfAppellbyCID_dm.Rds")
@@ -138,25 +144,35 @@ All law suits {data-navmenu="Moral damage" data-icon="fa-file-alt"}
 
 Row
 ---------------------------------------------------------------------------------------------------------
+```{r}
+
+# database for plotting All law suits
+dfPlot <- dfRepTrialAppell_dm %>% filter(!(document == "R" & value == "0"))
+```
+
 
 ### Report
 ```{r}
-dfPlot <- dfRepTrialAppell_dm %>% filter(!(document == "R" & value == "0"))
-R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
-R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
-R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
 
+# display number of reports documents
+R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
 valueBox(value = R_N,icon = "fa-balance-scale", color = doc.colors[1])
 ```
 
 ### Lower Court
 ```{r}
+
+# display number of lower court documents
+R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
 valueBox(value = R_L,icon = "fa-balance-scale",color = doc.colors[2])
 
 ```
 
 ### Appellate Court
 ```{r}
+
+# display number of appellate court documents
+R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
 valueBox(value = R_A,icon = "fa-balance-scale",color = doc.colors[3])
 ```
 
@@ -167,31 +183,25 @@ Row
 
 ```{r, fig.align="center"}
 
-#5.1 a
-#remover os valores onde R é zero para melhorar a forma do boxplot
-
-
+# get group of unique CIDS (CID_GRUPO, CID_NOME)
 group_cids <- unique(dfPlot[,c('CID_GRUPO','CID_NOME')])
 
-## Juntar Pregancy, parto e pós parto
-
+# unify "Pregancy", "Childbirth and  post-childbirth"
 cid_en_names <- c("Undefined", "Respiratory", "Digestive", "Eye", "Congenital", "Neoplasm", "Not informed", "Infectious",
   "Endocrine", "Mental", "Circulatory", "Musculoskeletal", "Genitourinary", "Nervous",
   "Poisoning", "Skin", "Blood", "Perinatal", "Childbirth and  post-childbirth", "Exams", "Health services",
   "Ear", "Death")
 
+# translate CID_NOME: PT > EN
 group_cids$CID_NOME_EN <- cid_en_names
 
+# count documents for display on the axis
 R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
 
 
-xform <- list(categoryorder = "array",
-              categoryarray = c("R", 
-                                "1a", 
-                                "2a"))
-
+# generate plot:: Granted values for moral damages: \nall law suits and appeals analyzed
 viz <- plot_ly(dfPlot, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -219,11 +229,15 @@ Row
 
 ```{r}
 
+# filter Undefined chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == group_cids[1, "CID_GRUPO"])
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Undefined chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -247,12 +261,15 @@ viz
 
 
 ```{r}
-
+# filter Respiratory chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[2, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Respiratory chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -278,11 +295,15 @@ viz
 
 ```{r}
 
+# filter Digestive chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[3, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Digestive chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -308,12 +329,15 @@ Row
 ### 
 
 ```{r}
-
+# filter Eye chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[4, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Eye chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -338,11 +362,15 @@ viz
 
 ```{r}
 
+# filter Congenital chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[5, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Congenital chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -368,11 +396,15 @@ viz
 
 ```{r}
 
+# filter Neoplasm chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[6, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Neoplasm chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -399,11 +431,15 @@ Row
 
 ```{r}
 
+# filter Not informed chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[7, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Not informed chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -428,11 +464,15 @@ viz
 
 ```{r}
 
+# filter Infectious chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[8, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Infectious chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -458,11 +498,15 @@ viz
 
 ```{r}
 
+# filter Endocrine chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[9, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Endocrine chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -489,11 +533,15 @@ Row
 
 ```{r}
 
+# filter Mental chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[10, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Mental chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -518,11 +566,15 @@ viz
 
 ```{r}
 
+# filter Circulatory chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[11, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Circulatory chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -548,11 +600,15 @@ viz
 
 ```{r}
 
+# filter Musculoskeletal chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[12, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Musculoskeletal chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -580,11 +636,15 @@ Row
 
 ```{r}
 
+# filter Genitourinary chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[13, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Genitourinary chapter: all law suits and appeals analyzed
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", colors = doc.colors, 
                showlegend = FALSE, width = 500, height = 500) %>%
   layout(
@@ -614,28 +674,37 @@ Granted appeals {data-navmenu="Moral damage" data-icon="fa-check-circle"}
 Row
 ---------------------------------------------------------------------------------------------------------
 
-### Report
 ```{r}
 
+# database for plotting Granted appeals
 dfPlot <- dfRepTrialAppell_dm %>%
   filter(Filename %in% dfAppellbyCID_dm$Filename)
 dfPlot <- dfPlot %>% filter(!(document == "R" & value == "0"))
+```
 
+
+### Report
+```{r}
+
+# display number of reports documents
 R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
-R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
-R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
-
 valueBox(value = R_N,icon = "fa-balance-scale", color = doc.colors[1])
 ```
 
 ### Lower Court
 ```{r}
+
+# display number of lower court documents
+R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
 valueBox(value = R_L,icon = "fa-balance-scale",color = doc.colors[2])
 
 ```
 
 ### Appellate Court
 ```{r}
+
+# display number of appellate court documents
+R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
 valueBox(value = R_A,icon = "fa-balance-scale",color = doc.colors[3])
 ```
 
@@ -647,7 +716,7 @@ Row {data-width: 1000}
 
 ```{r}
 
-#5.2 a
+# generate plot:: Granted values for moral damages related to the same law suits: only granted appeals
 
 viz <- plot_ly(dfPlot, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
@@ -673,14 +742,16 @@ Row
 ###
 
 ```{r}
-# 5.4 a
 
+# filter Unfefined chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[1, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Undefined chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -702,12 +773,15 @@ viz
 
 ```{r}
 
+# filter Respiratory chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[2, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Respiratory chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -728,12 +802,15 @@ viz
 
 ```{r}
 
+# filter Digestive chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[3, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Digestive chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -758,12 +835,15 @@ Row
 
 ```{r}
 
+# filter Eye chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[4, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Eye chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -785,12 +865,15 @@ viz
 
 ```{r}
 
+# filter Congenital chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[5, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Congenital chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -811,12 +894,15 @@ viz
 
 ```{r}
 
+# filter Neoplasm chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[6, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Neoplasm chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -840,12 +926,15 @@ Row
 
 ```{r}
 
+# filter Not informed chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[7, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Not informed chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -867,12 +956,15 @@ viz
 
 ```{r}
 
+# filter Infectious chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[8, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Infectious chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -893,12 +985,15 @@ viz
 
 ```{r}
 
+# filter Endocrine chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[9, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Endocrine chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -922,12 +1017,15 @@ Row
 
 ```{r}
 
+#filter Mental chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[10, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Mental chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -949,12 +1047,15 @@ viz
 
 ```{r}
 
+# filter Corculatory chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[11, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Circulatory chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -974,14 +1075,16 @@ viz
 ### 
 
 ```{r}
-# 5.4 a
 
+# filter Musculoskeletal chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[12, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the  Muskuloskeletal chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1005,12 +1108,15 @@ Row
 
 ```{r}
 
+# filter Genitourinary chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[13, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 R_A <- dfPlot_filter %>% filter(document == "2a") %>% summarise(n())
 
-
+# generate plot:: Granted values for moral damages related to the same law suits of the Genitourinary chapter: only granted appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1036,29 +1142,36 @@ Denied appeals {data-navmenu="Moral damage" data-icon="fa-times-circle"}
 Row
 ---------------------------------------------------------------------------------------------------------
 
-### Report
 ```{r}
 
-
+# database for plotting Denied appeals
 dfPlot <- dfRepTrialAppell_dm %>%
   filter(!(Filename %in% dfAppellbyCID_dm$Filename))
 dfPlot <- dfPlot %>% filter(!(document == "R" & value == "0"))
+```
 
+### Report
+```{r}
+
+# display number of reports documents
 R_N <- dfPlot %>% filter(document == "R") %>% summarise(n())
-R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
-R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
-
 valueBox(value = R_N,icon = "fa-balance-scale", color = doc.colors[1])
 ```
 
 ### Lower Court
 ```{r}
+
+# display number of lower court documents
+R_L <- dfPlot %>% filter(document == "1a") %>% summarise(n())
 valueBox(value = R_L,icon = "fa-balance-scale",color = doc.colors[2])
 
 ```
 
 ### Appellate Court
 ```{r}
+
+# display number of appllate court documents
+R_A <- dfPlot %>% filter(document == "2a") %>% summarise(n())
 valueBox(value = R_A,icon = "fa-balance-scale",color = doc.colors[3])
 ```
 
@@ -1069,9 +1182,7 @@ Row {data-width: 1000}
 
 ```{r}
 
-#5.3 a
-
-
+# generate plot:: Granted values for moral damages related to the same law suits: only denied appeals
 viz <- plot_ly(dfPlot, y = ~value, color = ~document, type = "box", colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
   layout(title = "Granted values for moral damages related to \nthe same law suits: only denied appeals",
@@ -1095,10 +1206,14 @@ Row
 
 ```{r}
 
+# filter Undefined chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[1, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Undefined chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1119,10 +1234,14 @@ viz
 
 ```{r}
 
+# filter Respiratory chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[2, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Respiratory chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1143,10 +1262,14 @@ viz
 
 ```{r}
 
+# filter Digestive chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[3, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Digestive chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1170,10 +1293,14 @@ Row
 
 ```{r}
 
+# filter Eye chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[4, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Eye chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1194,10 +1321,14 @@ viz
 
 ```{r}
 
+# filter Congenital chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[5, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Congenital chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1218,10 +1349,14 @@ viz
 
 ```{r}
 
+# filter Neoplasm chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[6, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Neoplasm chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1245,10 +1380,14 @@ Row
 
 ```{r}
 
+# filter Not informed chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[7, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Not informed chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1269,10 +1408,14 @@ viz
 
 ```{r}
 
+# filter Infectious chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[8, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Infectious chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1293,10 +1436,14 @@ viz
 
 ```{r}
 
+# filter Endocrine chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[9, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Endocrine chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1320,10 +1467,14 @@ Row
 
 ```{r}
 
+# filter Mental chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[10, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Mental chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1344,10 +1495,14 @@ viz
 
 ```{r}
 
+# filter Circulatory chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[11, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Circulatory chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1368,10 +1523,14 @@ viz
 
 ```{r}
 
+# filter Musculoskeletal chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[12, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# Granted values for moral damages related to the same law suits of the Musculoskeletal chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1395,10 +1554,14 @@ Row
 
 ```{r}
 
+# filter Genitourinary chapter
 dfPlot_filter <- dfPlot %>% filter(CID_GRUPO == as.character(group_cids[13, "CID_GRUPO"]))
+
+# count documents for display on the axis
 R_N <- dfPlot_filter %>% filter(document == "R") %>% summarise(n())
 R_L <- dfPlot_filter %>% filter(document == "1a") %>% summarise(n())
 
+# generate plot:: Granted values for moral damages related to the same law suits of the Genitourinary chapter: only denied appeals
 viz <- plot_ly(dfPlot_filter, y = ~value, color = ~document, type = "box", 
                colors = doc.colors,  showlegend = FALSE, 
                width = 500, height = 500) %>%
@@ -1426,6 +1589,8 @@ Row {data-width: 1000}
 -------------------------------------
 ### 
 ```{r}
+
+# cids translations
 cids_names <- c("Undefined", "Infectious", "Neoplasm", "Blood", "Endocrine", "Mental", "Nervous", "Eye", "Ear", 
                        "Circulatory", "Respiratory", "Digestive", "Skin", "Musculoskeletal", "Genitourinary", "Childbirth and post-childbirth", 
                        "Perinatal", "Congenital", "Exams", "Poisoning", "Death", "Health services", "Not informed")
@@ -1434,22 +1599,22 @@ names(cids_names) <- c("Indefinido", "Infecciosas", "Tumores", "Sangue", "Endóc
                        "Ap. circulatório", "Ap. respiratório", "Ap. Digestivo",  "Dermatológicas", "Osteomuscular", "Ap. Urinário", "Parto e pós-parto",
                        "Gravidez", "Congênitas", "Exames", "Envenenamento", "Morte", "Serviço saúde", "Não informado")
 
-# cids_names[[dfRepTrialAppell_reemb$CID_NOME]]
-
 dfRepTrialAppell_reemb[, "CID_NOME_EN"] <- cids_names[dfRepTrialAppell_reemb$CID_NOME]
 
-#só casos que tiveram primeira instância
+# only Lower court decisions
 temp <- dfRepTrialAppell_reemb %>% 
   filter((!(Filename %in% dfAppellbyCID_reemb$Filename)))
 
-#só casos que tiveram reembolso
+# only cases with  material damage provided
 documents_id <- temp %>% 
   filter(document == "1a") %>% filter(REEMBOLSO == "1") %>% select(Filename)
 
+# only Lower court and Appellate court decisions
 temp <- dfRepTrialAppell_reemb
 temp[temp$document == "1a", "document"] <- "primeira"
 temp[temp$document == "2a", "document"] <- "segunda"
 
+# calculate decision: Lower court decision minus Report requirement 
 temp <- temp %>% 
   filter(Filename %in% documents_id$Filename) %>%
   select(Filename, document, RVALOR, CID_NOME, CID_NOME_EN) %>% 
@@ -1457,6 +1622,7 @@ temp <- temp %>%
   spread(document, RVALOR) %>%
   mutate(diff_Trial = primeira - R) %>% as.data.frame()
 
+# translate Trial decision:: equal, higher, lower :: than report requirement
 temp$diff_Trial_quali <- "equal"
 temp[temp$diff_Trial > 0, "diff_Trial_quali"] <- "higher"
 temp[temp$diff_Trial < 0, "diff_Trial_quali"] <- "lower"
@@ -1466,22 +1632,21 @@ temp$diff_Trial_quali <- as.factor(temp$diff_Trial_quali)
 
 temp2 <- temp %>% group_by(CID_NOME_EN, diff_Trial_quali) %>% 
   summarise(n=length(diff_Trial)) 
-  # complete(CID_NOME, nesting(diff_Trial_quali), fill = list(n = 0))
 
 yform <- list(categoryorder = "array",
               categoryarray = temp2$n)
 
+# do not display Not Informed & Undefined chapter
 temp3 <- temp2 %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined") %>% group_by(CID_NOME_EN) %>% summarise(sum = sum(n))
-# temp3 <- temp2 %>% filter(CID_NOME_EN != "Undefined") %>% group_by(CID_NOME_EN) %>% summarise(sum = sum(n))
 
 n_order <- temp3[order(-temp3$sum),]
 
 dfPlot <- temp2 %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined")
-# dfPlot <- temp2 %>% filter(CID_NOME_EN != "Undefined")
 
 dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN) 
 dfPlot$diff_Trial_quali <- factor(dfPlot$diff_Trial_quali, levels = c("lower", "equal", "higher")) 
 
+# generate plot:: Material damages granted by chapter:\nonly denied appeals 
 viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~n, color=~diff_Trial_quali, colors = levels.colors, 
                 type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
   layout(yaxis = list(font=f,title ='', yform),
@@ -1500,13 +1665,14 @@ Row
 ```{r}
 documents_req <- dfRepTrialAppell_reemb %>% filter(REEMBOLSO == 1 & document == "2a") %>% select("Filename")
 
-#só casos que tiveram primeira instância
+# only Lower court decisions
 temp <- dfRepTrialAppell_reemb %>% 
   filter((!(Filename %in% dfAppellbyCID_reemb$Filename)))
 documents_req2 <- dfRepTrialAppell_reemb %>% filter(Filename %in% temp$Filename & REEMBOLSO == 1) %>% select("Filename")
 
 documents_all <- rbind(documents_req, documents_req2)
 
+# cid translation
 cids_names <- c("Undefined", "Infectious", "Neoplasm", "Blood", "Endocrine", "Mental", "Nervous", "Eye", "Ear", 
                 "Circulatory", "Respiratory", "Digestive", "Skin", "Musculoskeletal", "Genitourinary", "Childbirth and post-childbirth", 
                 "Perinatal", "Congenital", "Exams", "Poisoning", "Death", "Health services", "Not informed")
@@ -1516,6 +1682,7 @@ names(cids_names) <- c("Indefinido", "Infecciosas", "Tumores", "Sangue", "Endóc
                        "Gravidez", "Congênitas", "Exames", "Envenenamento", "Morte", "Serviço saúde", "Não informado")
 
 dfRepTrialAppell_reemb[, "CID_NOME_EN"] <- cids_names[dfRepTrialAppell_reemb$CID_NOME]
+
 
 dfReemb <- dfRepTrialAppell_reemb %>%
   group_by(CID_NOME, document, CID_NOME_EN) %>%
@@ -1528,8 +1695,9 @@ temp[is.na(temp$`2a`), "2a"] <- 0
 
 colnames(temp) <- c("CID_NOME", "CID_NOME_EN", "primeira", "segunda", "R")
 
-dfPlot <- temp %>% group_by(CID_NOME, CID_NOME_EN) %>% mutate(Provided = primeira + segunda,
-                                                              Not_provided = R - segunda - primeira)
+dfPlot <-
+  temp %>% group_by(CID_NOME, CID_NOME_EN) %>% mutate(Provided = primeira + segunda,
+                                                      Not_provided = R - segunda - primeira)
 
 dfPlot <- dfPlot %>% select(-c(R, primeira, segunda)) %>% gather(key = type, value = value, -c(CID_NOME, CID_NOME_EN))
 
@@ -1559,6 +1727,8 @@ viz
 
 ###
 ```{r}
+
+# filter procedure claims
 documents_req <- dfRepTrial_req %>% filter(type == "PROCEDIMENTO" & document == "R" & value == "1") %>% select("Filename")
 
 cids_names <- c("Undefined", "Infectious", "Neoplasm", "Blood", "Endocrine", "Mental", "Nervous", "Eye", "Ear", 
@@ -1572,12 +1742,11 @@ names(cids_names) <- c("Indefinido", "Infecciosas", "Tumores", "Sangue", "Endóc
 dfRepTrial_req[, "CID_NOME_EN"] <- cids_names[dfRepTrial_req$CID_NOME]
 
 
-
+# filter procedure claims
 temp <- dfRepTrial_req %>%
   group_by(CID_NOME, document, type, value, CID_NOME_EN) %>%
   filter(type == "PROCEDIMENTO" & Filename %in% documents_req$Filename & CID_NOME_EN != "Undefined") %>%
   tally()
-
 
 temp <- temp %>% filter(document != "R")
 
@@ -1586,10 +1755,10 @@ temp2 <- temp %>%
 
 n_order <- temp2[order(-temp2$sum),]
 
+# do not display Undefined & Not informed
 dfPlot <- temp %>% filter(CID_NOME_EN != "Undefined" & CID_NOME_EN != "Not informed")
 
 dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN)
-
 
 values_name <- c("Provided", "Not provided")
 names(values_name) <- c("1", "0")
@@ -1597,6 +1766,8 @@ names(values_name) <- c("1", "0")
 dfPlot[, "names_EN"] <- values_name[dfPlot$value]
 dfPlot$names_EN <- factor(dfPlot$names_EN, levels = c("Provided", "Not provided")) 
 
+
+# generate plot:: Relation between procedure claims and lower Court decisions of such claims by chapter
 viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~n, color=~names_EN, colors = flag.colors,
                 type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
   layout(barmode = 'stack',
@@ -1612,8 +1783,11 @@ Row
 -------------------------------------
 ###
 ```{r}
+
+# filter medicine / exams claims
 documents_req <- dfRepTrial_req %>% filter(type == "MEDICAMENTO_EME" & document == "R" & value == "1") %>% select("Filename")
 
+# filter medicine / exams claims
 temp <- dfRepTrial_req %>%
   group_by(CID_NOME, document, type, value, CID_NOME_EN) %>%
   filter(type == "MEDICAMENTO_EME" & Filename %in% documents_req$Filename & CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined") %>%
@@ -1626,10 +1800,10 @@ temp2 <- temp %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefin
 
 n_order <- temp2[order(-temp2$sum),]
 
+# do not display Undefined & Not informed
 dfPlot <- temp %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined")
 
 dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN) 
-
 
 values_name <- c("Provided", "Not provided")
 names(values_name) <- c("1", "0")
@@ -1637,6 +1811,7 @@ names(values_name) <- c("1", "0")
 dfPlot[, "names_EN"] <- values_name[dfPlot$value]
 dfPlot$names_EN <- factor(dfPlot$names_EN, levels = c("Provided", "Not provided")) 
 
+# generate plot:: Relation between medicine/exam claims and lower Court decisions of such claims by chapter
 viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~n, color=~names_EN, colors = flag.colors,
                 type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
   layout(barmode = 'stack',
@@ -1650,8 +1825,11 @@ viz
 
 ###
 ```{r}
+
+# filter treatment claims
 documents_req <- dfRepTrial_req %>% filter(type == "TRATAMENTO" & document == "R" & value == "1") %>% select("Filename")
 
+# filter treatment claims
 temp <- dfRepTrial_req %>%
   group_by(CID_NOME, document, type, value, CID_NOME_EN) %>%
   filter(type == "TRATAMENTO" & Filename %in% documents_req$Filename & CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined") %>%
@@ -1664,10 +1842,10 @@ temp2 <- temp %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefin
 
 n_order <- temp2[order(-temp2$sum),]
 
+# do not display Not informed & Undefined
 dfPlot <- temp %>% filter(CID_NOME_EN != "Not informed" & CID_NOME_EN != "Undefined")
 
 dfPlot$CID_NOME_EN <- factor(dfPlot$CID_NOME_EN, levels = n_order$CID_NOME_EN) 
-
 
 values_name <- c("Provided", "Not provided")
 names(values_name) <- c("1", "0")
@@ -1675,6 +1853,7 @@ names(values_name) <- c("1", "0")
 dfPlot[, "names_EN"] <- values_name[dfPlot$value]
 dfPlot$names_EN <- factor(dfPlot$names_EN, levels = c("Provided", "Not provided")) 
 
+# generate plot:: Relation between treatment claims and lower Court decisions of such claims by chapter
 viz <-  plot_ly(dfPlot, y= ~CID_NOME_EN , x = ~n, color=~names_EN, colors = flag.colors,
                 type = "bar", showlegend = TRUE, width = 700, height = 500) %>%
   layout(barmode = 'stack',
