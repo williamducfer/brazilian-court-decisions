@@ -4,7 +4,7 @@ dfRep_orig <-
   read.csv(
     file = here(
       'in',
-      'kp_relatorios_extracted_annotations_with_icd_preprocessed.csv'
+      'report_preprocessed.csv'
     ),
     sep = ';',
     stringsAsFactors = F,
@@ -177,7 +177,7 @@ dfTrial_orig <-
   read.csv(
     file = here(
       'in',
-      'kp_primeira_instancia_extracted_annotations_preprocessed.csv'
+      'lower_preprocessed.csv'
     ),
     sep = ';',
     stringsAsFactors = F,
@@ -344,7 +344,7 @@ dfAppell_orig <-
   read.csv(
     file = here(
       'in',
-      'kp_segunda_instancia_extracted_annotations_preprocessed.csv'
+      'appellate_preprocessed.csv'
     ),
     sep = ';',
     stringsAsFactors = F,
