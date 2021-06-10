@@ -81,8 +81,7 @@ def grid_search(dataset_dir):
             print('\n\n')
 
 
-def train_cv(dataset_dir, c1, c2):
-    training_dir = "%s/training" % dataset_dir
+def train_cv(training_dir, c1, c2):
 
     # Reads data using CoNLLCorpusReader
     cross_validation_corpus = nltk.corpus.reader.conll.ConllCorpusReader(training_dir, '.*.txt', ['words', 'pos', 'chunk'])
@@ -136,9 +135,7 @@ def train_cv(dataset_dir, c1, c2):
     print('Mean quality of cross-validation: precision = %f, recall = %f, f1 = %f' % (np.mean(cv_score_dict['precision']), np.mean(cv_score_dict['recall']), np.mean(cv_score_dict['f1'])))
 
 
-def evaluate(dataset_dir, c1, c2):
-    training_dir = "%s/training" % dataset_dir
-    test_dir = "%s/test" % dataset_dir
+def evaluate(training_dir, test_dir, c1, c2):
 
     assert c1 is not None
     assert c2 is not None
@@ -185,18 +182,24 @@ if __name__ == '__main__':
     args_parser = argparse.ArgumentParser()
 
     args_parser.add_argument('action', choices=['grid_search', 'evaluate'], help='Specifies whether grid_search or evaluate.')
-    args_parser.add_argument('dataset_dir', help='Dataset directory to perform a specified action.')
+    args_parser.add_argument('training_dataset_dir', help='Training dataset directory.')
+    args_parser.add_argument('-e', '--evaluation_dataset_dir', help='Evaluation dataset directory.')
     args_parser.add_argument('-c1', '--c1_value', type=float, help='Value for parameter c1. Used for action evaluate.')
     args_parser.add_argument('-c2', '--c2_value', type=float , help='Value for parameter c2. Used for action evaluate.')
 
     args = args_parser.parse_args()
 
-    dataset_directory = args.dataset_dir
+    training_dataset_dir = args.training_dataset_dir
 
     if args.action == 'grid_search':
-        grid_search(dataset_directory)
+        grid_search(training_dataset_dir)
     elif args.action == 'evaluate':
         c1_value = args.c1_value
         c2_value = args.c2_value
 
-        evaluate(dataset_directory, c1_value, c2_value)
+        evaluation_dataset_dir = args.evaluation_dataset_dir
+
+        assert evaluation_dataset_dir is not None, "Error: 'evaluation_dataset_dir' cannot be 'None' when in evaluation."
+
+        evaluate(training_dataset_dir, evaluation_dataset_dir, c1_value, c2_value)
+
