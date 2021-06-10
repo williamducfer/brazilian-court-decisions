@@ -49,7 +49,7 @@ First, execute preprocessing_for_dashboard.R to generate the input files for the
 ### Files
 *preprocessing_for_dashboard.R* script preprocesses extracted annotations generated in the previous step of lower Court decisions, Appellate Court reports, and Appellate Court decisions.
 
-The files required as input to preprocessing must have the following names: report_preprocessed.csv; lower_preprocessed.csv; appellate_preprocessed.csv. And they must be stored in the *<in>* folder. Next, we list the column names for each one. All types are strings.
+The files required as input to preprocessing must have the following names: report_preprocessed.csv; lower_preprocessed.csv; appellate_preprocessed.csv. And they must be stored in the &lt;in&gt; folder. Next, we list the column names for each one. All types are strings.
 
 report_preprocessed.csv columns name:
 - Filename
