@@ -37,7 +37,7 @@ tensorboard==1.15.0
 tensorflow==1.15.0
 tensorflow-estimator==1.15.1
 termcolor==1.1.0
-tokenization @ git+https://github.com/williamducfer/portuguese-tokenization@9b2e358f3908c0d368f0955aa23658f393fe71e1
+-e git+https://github.com/williamducfer/portuguese-tokenization@9b2e358f3908c0d368f0955aa23658f393fe71e1#egg=tokenization
 tqdm==4.60.0
 typing-extensions==3.7.4.3
 Werkzeug==1.0.1
