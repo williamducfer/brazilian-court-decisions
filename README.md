@@ -51,41 +51,41 @@ First, execute preprocessing_for_dashboard.R to generate the input files for the
 The files required as input must have the following names: report_preprocessed.csv; lower_preprocessed.csv; appellate_preprocessed.csv. And they must be stored in the <in> folder. Next, we list the column names for each one. All types are strings.
 
 report_preprocessed.csv columns name:
--Filename
--#CAUSA_SAUDE_MOTIVACAO
--#PEDIU_MEDICAMENTO_EXAME
--#PEDIU_PROCEDIMENTO
--#PEDIU_REEMBOLSO
--#PEDIU_TRATAMENTO
--#VALOR_DANO_MORAL
--#VALOR_HONORARIOS
--#VALOR_REEMBOLSO
--CID_CLASSIFICACAO
--CID_GRUPO
--#VALOR_DANO_MORAL_PREPROCESSED
--#VALOR_REEMBOLSO_PREPROCESSED
+- Filename
+- #CAUSA_SAUDE_MOTIVACAO
+- #PEDIU_MEDICAMENTO_EXAME
+- #PEDIU_PROCEDIMENTO
+- #PEDIU_REEMBOLSO
+- #PEDIU_TRATAMENTO
+- #VALOR_DANO_MORAL
+- #VALOR_HONORARIOS
+- #VALOR_REEMBOLSO
+- CID_CLASSIFICACAO
+- CID_GRUPO
+- #VALOR_DANO_MORAL_PREPROCESSED
+- #VALOR_REEMBOLSO_PREPROCESSED
 
 lower_preprocessed.csv columns name:
--Filename
--#MEDICAMENTO_EXAME
--#PROCEDIMENTO
--#REEMBOLSO
--#TRATAMENTO
--#VALOR_DANO_MORAL
--#VALOR_HONORARIOS
--#VALOR_REEMBOLSO
--#VALOR_DANO_MORAL_PREPROCESSED
--#VALOR_REEMBOLSO_PREPROCESSED
+- Filename
+- #MEDICAMENTO_EXAME
+- #PROCEDIMENTO
+- #REEMBOLSO
+- #TRATAMENTO
+- #VALOR_DANO_MORAL
+- #VALOR_HONORARIOS
+- #VALOR_REEMBOLSO
+- #VALOR_DANO_MORAL_PREPROCESSED
+- #VALOR_REEMBOLSO_PREPROCESSED
 
 appellate_preprocessed.csv columns name:
--Filename
--#EXCLUIU
--#REEMBOLSO
--#VALOR_DANO_MORAL
--#VALOR_HONORARIOS
--#VALOR_REEMBOLSO
--#VALOR_DANO_MORAL_PREPROCESSED
--#VALOR_REEMBOLSO_PREPROCESSED
+- Filename
+- #EXCLUIU
+- #REEMBOLSO
+- #VALOR_DANO_MORAL
+- #VALOR_HONORARIOS
+- #VALOR_REEMBOLSO
+- #VALOR_DANO_MORAL_PREPROCESSED
+- #VALOR_REEMBOLSO_PREPROCESSED
 
 *dashboard_final.R* script generates an HTML dashboard that let one analyze the decisions made by a Brazilian Court.
 The files required as input were generated from preprocessing_for_dashboard.R and stored in the <in> folder.
