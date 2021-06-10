@@ -251,7 +251,7 @@ def get_icd_classification(diseases_entries, icd_entries):
 
 
 if __name__ == "__main__":
-    args_parser = argparse.ArgumentParser('Script to obtain the International Classification of Diseases (ICDs) '
+    args_parser = argparse.ArgumentParser(description='Script to obtain the International Classification of Diseases (ICDs) '
                                           'classifications and a certain grouping from the extracted annotations.')
 
     args_parser.add_argument('icd_file_path', help='Path to the file containing the ICDs entries.')

@@ -212,7 +212,7 @@ if __name__ == "__main__":
     num_folds = 5
     random_state_seed = 1
 
-    args_parser = argparse.ArgumentParser("Script to train, evaluate and predict a named entity model.")
+    args_parser = argparse.ArgumentParser(description="Script to train, evaluate and predict a named entity model.")
 
     args_parser.add_argument('action', choices=['train', 'train_cv', 'evaluate', 'predict', 'usage'], help='')
     args_parser.add_argument('-d', '--dataset_directory', help='Directory containing dataset files to perform the specified '

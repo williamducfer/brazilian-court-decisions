@@ -50,7 +50,7 @@ def get_dataset_statistics(dataset_directory, word_embedding_file_path):
 
 
 if __name__ == "__main__":
-    args_parser = argparse.ArgumentParser("Script to obtain information about a dataset.")
+    args_parser = argparse.ArgumentParser(description="Script to obtain information about a dataset.")
 
     args_parser.add_argument('dataset_directory', help='Directory containing dataset files to be read.')
     args_parser.add_argument('word_embedding_file_path', help='File path to the word embedding file.')

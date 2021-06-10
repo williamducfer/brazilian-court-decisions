@@ -1,4 +1,3 @@
-#!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
 import argparse
@@ -10,7 +9,6 @@ import re
 csv_separator = ';'
 val_moral_damage_preprocessed_column_name = '#VALOR_DANO_MORAL_PREPROCESSED'
 val_material_damage_preprocessed_column_name = '#VALOR_REEMBOLSO_PREPROCESSED'
-minimum_wage_value = 1000
 
 def get_monetary_value_preprocessed(monetary_value):
     monetary_value_preprocessed = ''
@@ -63,16 +61,18 @@ def preprocess_monetary_values(monetary_value_entries):
 
 
 if __name__ == "__main__":
-    args_parser = argparse.ArgumentParser('Script to preprocess some columns of the extracted annotations.')
+    args_parser = argparse.ArgumentParser(description='Script to preprocess some columns of the extracted annotations.')
 
     args_parser.add_argument('extracted_annotations_file_path', help='Path to the file containing the extracted '
                                                                      'annotations.')
-    args_parser.add_argument('val_moral_damage_column_name', help='Value of moral damage column name in the file '
+    args_parser.add_argument('val_moral_damage_column_name', help='Column name for "value of moral damage" in the file '
                                                                   'containing the extracted annotations.')
-    args_parser.add_argument('val_material_damage_column_name', help='Value of material damage column name in the file '
+    args_parser.add_argument('val_material_damage_column_name', help='Column name for "value of material damage" in the file '
                                                                      'containing the extracted annotations.')
     args_parser.add_argument('output_file_path', help='Path to the output file that will contain the '
                                                       'preprocessed document.')
+
+    args_parser.add_argument('-m', '--minimum_wage_value', type=float, default=1000.0, help='Default value for minimum wage.')
 
     args = args_parser.parse_args()
 
@@ -80,6 +80,7 @@ if __name__ == "__main__":
     val_moral_damage_column_name = args.val_moral_damage_column_name
     val_material_damage_column_name = args.val_material_damage_column_name
     output_file_path = args.output_file_path
+    minimum_wage_value = args.minimum_wage_value
 
     print('Loading the extracted annotations from file "%s"...' % extracted_annotations_file_path)
     extracted_annotations = pd.read_csv(extracted_annotations_file_path, sep=csv_separator, header=0, index_col=None)
