@@ -254,7 +254,7 @@ if __name__ == "__main__":
     args_parser = argparse.ArgumentParser(description='Script to obtain the International Classification of Diseases (ICDs) '
                                           'classifications and a certain grouping from the extracted annotations.')
 
-    args_parser.add_argument('icd_file_path', help='Path to the file containing the ICDs entries.')
+    args_parser.add_argument('icd_category_file_path', help='Path to the file containing the ICDs entries.')
     args_parser.add_argument('grouping_file_path', help='Path to the file containing the grouping entries.')
     args_parser.add_argument('extracted_annotations_file_path', help='Path to the file containing the extracted '
                                                                      'annotations.')
@@ -266,14 +266,14 @@ if __name__ == "__main__":
 
     args = args_parser.parse_args()
 
-    icd_file_path = args.icd_file_path
+    icd_category_file_path = args.icd_category_file_path
     extracted_annotations_file_path = args.extracted_annotations_file_path
     disease_column_name = args.disease_column_name
     output_file_path = args.output_file_path
     grouping_file_path = args.grouping_file_path
 
-    print('Loading ICDs entries from file "%s"...' % icd_file_path)
-    icd_entries = pd.read_csv(icd_file_path, sep=csv_separator, header=0, index_col=None, dtype={'category': str,
+    print('Loading ICDs entries from file "%s"...' % icd_category_file_path)
+    icd_entries = pd.read_csv(icd_category_file_path, sep=csv_separator, header=0, index_col=None, dtype={'category': str,
                                                                                                  'description': str,
                                                                                                  'description_stem': str})
 
