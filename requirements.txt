@@ -10,7 +10,7 @@ importlib-metadata==3.10.1
 joblib==1.0.1
 Keras==2.2.4
 Keras-Applications==1.0.8
-keras-contrib @ git+https://www.github.com/keras-team/keras-contrib.git@3fc5ef709e061416f4bc8a92ca3750c824b5d2b0
+keras-contrib==2.0.8
 Keras-Preprocessing==1.1.0
 kiwisolver==1.3.1
 Markdown==3.3.4
@@ -20,6 +20,7 @@ numpy==1.18.1
 opt-einsum==3.3.0
 pandas==1.2.4
 Pillow==8.2.0
+pkg-resources==0.0.0
 protobuf==3.15.8
 pyparsing==2.4.7
 python-crfsuite==0.9.6
@@ -36,6 +37,7 @@ tensorboard==1.15.0
 tensorflow==1.15.0
 tensorflow-estimator==1.15.1
 termcolor==1.1.0
+tokenization @ git+https://github.com/williamducfer/portuguese-tokenization@9b2e358f3908c0d368f0955aa23658f393fe71e1
 tqdm==4.60.0
 typing-extensions==3.7.4.3
 Werkzeug==1.0.1
