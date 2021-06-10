@@ -14,13 +14,17 @@ After finding the best word embedding and the best neural network architecture t
 
 After training the model, it has to be evaluated, using the test data. *evaluate_best_models.py* script deals with models evaluation. In that script, one has to specify dataset directories to be evaluated, files of models, and char embedding information about each model.
 
-*predict_with_best_models.py* script is responsible for generating predictions with a trained model. In that script, one has to specify dataset directories to generate predictions, files of models, char embedding information about each model, and output directories to save the predictions. At the end of the execution, for each prediction directory, there are the same files than in the original directories with an extra column that corresponds to predictions, and an additional file called *extracted_annotations.csv*. That file has all the predictions, one file name per line. That file is the base for all following steps.
-
 ### Conditional random fields (CRF)
 
 *crf.py* script with *grid_search* parameter is used to find the best C1 and C2 hyperparameters for the model. If one would like to compare the candidate models in a fast way, he/she has to run the script *generate_qualities_csv_from_crf_grid_search_log_file.sh* that generates a CSV for fast comparison.
 
 After finding the best C1 and C2 parameters in the previous step, one has to run *crf.py* script with *evaluate* parameter. It will train the CRF model with the specified C1 and C2 parameters on the provided training directory, and will evaluate the model in the provided evaluation directory.
+
+---
+
+## Predictions (neural network model)
+
+*predict_with_best_models.py* script is responsible for generating predictions with a trained model. In that script, one has to specify dataset directories to generate predictions, files of models, char embedding information about each model, and output directories to save the predictions. At the end of the execution, for each prediction directory, there are the same files than in the original directories with an extra column that corresponds to predictions, and an additional file called *extracted_annotations.csv*. That file has all the predictions, one file per line. That CSV file is the base for all following steps.
 
 ---
 
